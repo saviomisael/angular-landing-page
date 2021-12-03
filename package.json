@@ -7,7 +7,8 @@
     "build": "ng build",
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
-    "lint": "eslint --ext ts src --max-warnings=0 --fix"
+    "lint": "eslint --ext ts src --max-warnings=0 --fix",
+    "prepare": "husky install"
   },
   "private": true,
   "dependencies": {
@@ -33,6 +34,7 @@
     "@typescript-eslint/parser": "^5.5.0",
     "eslint": "^8.3.0",
     "eslint-config-prettier": "^8.3.0",
+    "husky": "^7.0.4",
     "jasmine-core": "~3.10.0",
     "karma": "~6.3.0",
     "karma-chrome-launcher": "~3.1.0",
