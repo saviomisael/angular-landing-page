@@ -8,6 +8,57 @@
     "directives": [],
     "components": [
         {
+            "name": "ActiveRouteComponent",
+            "id": "component-ActiveRouteComponent-54b0eda71013df88c60be73fba95de03b412467c3382fcbc3df84e4425cc1c43e963e99105bdf09dc60bb8e418d09859b46aebf887437c27a3cdc7f13576e745",
+            "file": "src/app/home/active-route/active-route.component.ts",
+            "encapsulation": [],
+            "entryComponents": [],
+            "inputs": [],
+            "outputs": [],
+            "providers": [],
+            "selector": "app-active-route",
+            "styleUrls": [
+                "./active-route.component.scss"
+            ],
+            "styles": [],
+            "templateUrl": [
+                "./active-route.component.html"
+            ],
+            "viewProviders": [],
+            "inputsClass": [],
+            "outputsClass": [],
+            "propertiesClass": [
+                {
+                    "name": "activeRoute",
+                    "defaultValue": "'Home / Flash Offers / Grand Hilton Hotel'",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "string",
+                    "optional": false,
+                    "description": "",
+                    "line": 9
+                }
+            ],
+            "methodsClass": [],
+            "deprecated": false,
+            "deprecationMessage": "",
+            "hostBindings": [],
+            "hostListeners": [],
+            "description": "",
+            "rawdescription": "\n",
+            "type": "component",
+            "sourceCode": "import { Component } from '@angular/core';\n\n@Component({\n  selector: 'app-active-route',\n  templateUrl: './active-route.component.html',\n  styleUrls: ['./active-route.component.scss'],\n})\nexport class ActiveRouteComponent {\n  activeRoute = 'Home / Flash Offers / Grand Hilton Hotel';\n}\n",
+            "assetsDirs": [],
+            "styleUrlsData": [
+                {
+                    "data": ".active-route {\n  padding: 1.2rem;\n  margin-left: 3rem;\n}\n",
+                    "styleUrl": "./active-route.component.scss"
+                }
+            ],
+            "stylesData": "",
+            "templateData": "<p class=\"active-route\">{{ activeRoute }}</p>\n"
+        },
+        {
             "name": "AppComponent",
             "id": "component-AppComponent-894355d2937f09cc0fa367ce1778b752c7f2a80b757bf2ed09617c79715db585546ffc26e3bd99ba7bec79d0b77dec0e2750e34a3f6a70b215312c4c9305b2bb",
             "file": "src/app/app.component.ts",
@@ -48,21 +99,21 @@
             "templateData": "<h1>Not implemented yet</h1>\n"
         },
         {
-            "name": "NavTopComponent",
-            "id": "component-NavTopComponent-281522cf44cd1f8e6d4d041a441188716d201c69350475df7a59b1a9c477a84c09a14832586e09d22ec6669889bfa30793dcdbf117fb39432f26812f41d8c7ac",
-            "file": "src/app/home/navtop/navtop.component.ts",
+            "name": "NavBarComponent",
+            "id": "component-NavBarComponent-2559fbc4727ccb606f8eb660521cb7673e1f60a134f90325bde40f9ff5098604570594d125d98bdcb269d2f0c9c1ae58ac1f96c2e5efc95800b1c1ba6ad5e7e2",
+            "file": "src/app/home/nav-bar/nav-bar.component.ts",
             "encapsulation": [],
             "entryComponents": [],
             "inputs": [],
             "outputs": [],
             "providers": [],
-            "selector": "app-nav-top",
+            "selector": "app-nav-bar",
             "styleUrls": [
-                "./navtop.component.scss"
+                "./nav-bar.component.scss"
             ],
             "styles": [],
             "templateUrl": [
-                "./navtop.component.html"
+                "./nav-bar.component.html"
             ],
             "viewProviders": [],
             "inputsClass": [],
@@ -76,12 +127,52 @@
             "description": "",
             "rawdescription": "\n",
             "type": "component",
-            "sourceCode": "import { Component } from '@angular/core';\n\n@Component({\n  selector: 'app-nav-top',\n  templateUrl: './navtop.component.html',\n  styleUrls: ['./navtop.component.scss'],\n})\nexport class NavTopComponent {}\n",
+            "sourceCode": "import { Component } from '@angular/core';\n\n@Component({\n  selector: 'app-nav-bar',\n  templateUrl: './nav-bar.component.html',\n  styleUrls: ['./nav-bar.component.scss'],\n})\nexport class NavBarComponent {}\n",
             "assetsDirs": [],
             "styleUrlsData": [
                 {
-                    "data": "@import 'settings/colors';\n\n.nav-top {\n  background-color: $blue-light;\n  height: 6rem;\n  display: flex;\n  align-items: center;\n  justify-content: space-around;\n\n  & > .helptext {\n    margin-right: 40rem;\n  }\n\n  & > .link {\n  }\n}\n",
-                    "styleUrl": "./navtop.component.scss"
+                    "data": "@import 'settings/colors';\n\n.nav-bar {\n  & > .main {\n    display: flex;\n    align-items: center;\n    justify-content: space-around;\n    padding: 3rem;\n    transform: translateX(-1rem);\n  }\n}\n\n.form-search-location {\n  flex-basis: 30%;\n  display: flex;\n  border-radius: 0.6rem;\n  margin-right: 20rem;\n\n  & > .input {\n    color: $gray;\n    background-color: $blue-light;\n    border-top-left-radius: inherit;\n    border-bottom-left-radius: inherit;\n    padding-left: 1rem;\n    flex: 1;\n  }\n\n  & > .btn {\n    padding: 0.7rem 2rem;\n    background-color: $second;\n    border-top-right-radius: inherit;\n    border-bottom-right-radius: inherit;\n  }\n}\n\n.cart-box {\n  position: relative;\n  display: flex;\n\n  &::after {\n    content: attr(data-count);\n    position: absolute;\n    top: -0.8rem;\n    right: -0.8rem;\n    display: flex;\n    align-items: center;\n    justify-content: center;\n    width: 2rem;\n    height: 2rem;\n    background-color: $second;\n    border-radius: 50%;\n    color: $white;\n    font-size: 1rem;\n  }\n}\n\n.profile-box {\n  display: flex;\n  align-items: center;\n  column-gap: 1.4rem;\n\n  & > .name {\n    font-size: 1.4rem;\n  }\n\n  &::after {\n    content: url('/assets/images/chevron-down.svg');\n  }\n}\n\n.navigation {\n  padding: 1rem;\n  height: 6rem;\n  color: $white;\n  background-color: $first;\n  display: flex;\n  align-items: center;\n  justify-content: space-around;\n\n  & > * {\n    color: inherit;\n    font-size: 1.4rem;\n    font-weight: bold;\n  }\n\n  & > .link {\n    text-transform: uppercase;\n  }\n}\n",
+                    "styleUrl": "./nav-bar.component.scss"
+                }
+            ],
+            "stylesData": "",
+            "templateData": "<header class=\"nav-bar\">\n  <app-nav-top></app-nav-top>\n  <div class=\"main\">\n    <a class=\"logo\" href=\"#\"><img src=\"/assets/images/logo.png\" alt=\"Logo\" /></a>\n\n    <form class=\"form-search-location\">\n      <input type=\"text\" class=\"input\" placeholder=\"Search Location\" />\n      <button class=\"btn\"><img src=\"/assets/images/search.svg\" alt=\"Search icon\" /></button>\n    </form>\n    <figure data-count=\"2\" class=\"cart-box\">\n      <img src=\"/assets/images/shopping-cart.svg\" alt=\"Cart icon\" />\n    </figure>\n\n    <div class=\"profile-box\">\n      <img src=\"/assets/images/profile.png\" alt=\"User image\" class=\"profile\" />\n      <p class=\"name\">Nathan</p>\n    </div>\n  </div>\n  <nav class=\"navigation\">\n    <a href=\"#\" class=\"link\">All deals</a>\n    <a href=\"#\" class=\"link\">Hotels</a>\n    <a href=\"#\" class=\"link\">Activities</a>\n    <a href=\"#\" class=\"link\">Hotel day packages</a>\n    <a href=\"#\" class=\"link\">Restaurants</a>\n    <a href=\"#\" class=\"link\">Events</a>\n    <a href=\"#\" class=\"link\">Rodrigues</a>\n  </nav>\n  <app-active-route></app-active-route>\n</header>\n"
+        },
+        {
+            "name": "NavTopComponent",
+            "id": "component-NavTopComponent-2f53756038253ce475342adddacada50f4bf2731038e73c0777e724f414fead6f359a4e69e7641c534dead9695b1bf09a25475c35ec8f4838c93adc8134291dd",
+            "file": "src/app/home/nav-top/nav-top.component.ts",
+            "encapsulation": [],
+            "entryComponents": [],
+            "inputs": [],
+            "outputs": [],
+            "providers": [],
+            "selector": "app-nav-top",
+            "styleUrls": [
+                "./nav-top.component.scss"
+            ],
+            "styles": [],
+            "templateUrl": [
+                "./nav-top.component.html"
+            ],
+            "viewProviders": [],
+            "inputsClass": [],
+            "outputsClass": [],
+            "propertiesClass": [],
+            "methodsClass": [],
+            "deprecated": false,
+            "deprecationMessage": "",
+            "hostBindings": [],
+            "hostListeners": [],
+            "description": "",
+            "rawdescription": "\n",
+            "type": "component",
+            "sourceCode": "import { Component } from '@angular/core';\n\n@Component({\n  selector: 'app-nav-top',\n  templateUrl: './nav-top.component.html',\n  styleUrls: ['./nav-top.component.scss'],\n})\nexport class NavTopComponent {}\n",
+            "assetsDirs": [],
+            "styleUrlsData": [
+                {
+                    "data": "@import 'settings/colors';\n\n.nav-top {\n  background-color: $blue-light;\n  height: 6rem;\n  display: flex;\n  align-items: center;\n  justify-content: space-around;\n\n  & > .helptext {\n    margin-right: 40rem;\n  }\n\n  & > .link {\n    display: flex;\n    align-items: center;\n    column-gap: 2rem;\n\n    &.-gifticon::before {\n      content: url('/assets/images/gift.svg');\n      color: blue;\n    }\n\n    &.-staricon::before {\n      content: url('/assets/images/star.svg');\n      color: blue;\n    }\n  }\n}\n",
+                    "styleUrl": "./nav-top.component.scss"
                 }
             ],
             "stylesData": "",
@@ -178,13 +269,13 @@
         },
         {
             "name": "HomeModule",
-            "id": "module-HomeModule-c0e6d72c3d0530e334eddf8a1e1b146d9d60f00a9abc50a3271f902a2d432bc457dc6b19dfd7ce1c6fc69f20487f84b36713bedf6aa9629d369eaf49b21726c4",
+            "id": "module-HomeModule-5b4d3fecec0a63359526f4d4d5b8618acdf4d0cea1de41ef159749d9ac56496ee96c22dfe77889621d33267cc7eece3bf5fa77cc391475aa4ae963c7d9707d22",
             "description": "",
             "deprecationMessage": "",
             "deprecated": false,
             "file": "src/app/home/home.module.ts",
             "methods": [],
-            "sourceCode": "import { NgModule } from '@angular/core';\nimport { CommonModule } from '@angular/common';\nimport { NavTopComponent } from './navtop/navtop.component';\n\n@NgModule({\n  declarations: [NavTopComponent],\n  imports: [CommonModule],\n})\nexport class HomeModule {}\n",
+            "sourceCode": "import { NgModule } from '@angular/core';\nimport { CommonModule } from '@angular/common';\nimport { NavTopComponent } from './nav-top/nav-top.component';\nimport { NavBarComponent } from './nav-bar/nav-bar.component';\nimport { ActiveRouteComponent } from './active-route/active-route.component';\n\n@NgModule({\n  declarations: [NavTopComponent, NavBarComponent, ActiveRouteComponent],\n  imports: [CommonModule],\n  exports: [],\n})\nexport class HomeModule {}\n",
             "children": [
                 {
                     "type": "providers",
@@ -193,6 +284,12 @@
                 {
                     "type": "declarations",
                     "elements": [
+                        {
+                            "name": "ActiveRouteComponent"
+                        },
+                        {
+                            "name": "NavBarComponent"
+                        },
                         {
                             "name": "NavTopComponent"
                         }
@@ -233,7 +330,27 @@
                 "name": "Default",
                 "ctype": "miscellaneous",
                 "subtype": "variable",
-                "file": "src/app/home/navtop/NavTop.stories.ts",
+                "file": "src/app/home/active-route/ActiveRoute.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "Story<ActiveRouteComponent>",
+                "defaultValue": "(args: ActiveRouteComponent) => ({\n  props: args,\n})"
+            },
+            {
+                "name": "Default",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "src/app/home/nav-bar/NavBar.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "Story<NavBarComponent>",
+                "defaultValue": "(args: NavBarComponent) => ({\n  props: args,\n})"
+            },
+            {
+                "name": "Default",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "src/app/home/nav-top/NavTop.stories.ts",
                 "deprecated": false,
                 "deprecationMessage": "",
                 "type": "Story<NavTopComponent>",
@@ -294,12 +411,36 @@
                     "type": "literal type"
                 }
             ],
-            "src/app/home/navtop/NavTop.stories.ts": [
+            "src/app/home/active-route/ActiveRoute.stories.ts": [
                 {
                     "name": "Default",
                     "ctype": "miscellaneous",
                     "subtype": "variable",
-                    "file": "src/app/home/navtop/NavTop.stories.ts",
+                    "file": "src/app/home/active-route/ActiveRoute.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "Story<ActiveRouteComponent>",
+                    "defaultValue": "(args: ActiveRouteComponent) => ({\n  props: args,\n})"
+                }
+            ],
+            "src/app/home/nav-bar/NavBar.stories.ts": [
+                {
+                    "name": "Default",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "src/app/home/nav-bar/NavBar.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "Story<NavBarComponent>",
+                    "defaultValue": "(args: NavBarComponent) => ({\n  props: args,\n})"
+                }
+            ],
+            "src/app/home/nav-top/NavTop.stories.ts": [
+                {
+                    "name": "Default",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "src/app/home/nav-top/NavTop.stories.ts",
                     "deprecated": false,
                     "deprecationMessage": "",
                     "type": "Story<NavTopComponent>",
@@ -363,7 +504,7 @@
                 "status": "low"
             },
             {
-                "filePath": "src/app/home/navtop/NavTop.stories.ts",
+                "filePath": "src/app/home/active-route/ActiveRoute.stories.ts",
                 "type": "variable",
                 "linktype": "miscellaneous",
                 "linksubtype": "variable",
@@ -373,7 +514,45 @@
                 "status": "low"
             },
             {
-                "filePath": "src/app/home/navtop/navtop.component.ts",
+                "filePath": "src/app/home/active-route/active-route.component.ts",
+                "type": "component",
+                "linktype": "component",
+                "name": "ActiveRouteComponent",
+                "coveragePercent": 0,
+                "coverageCount": "0/2",
+                "status": "low"
+            },
+            {
+                "filePath": "src/app/home/nav-bar/NavBar.stories.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "Default",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "src/app/home/nav-bar/nav-bar.component.ts",
+                "type": "component",
+                "linktype": "component",
+                "name": "NavBarComponent",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "src/app/home/nav-top/NavTop.stories.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "Default",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "src/app/home/nav-top/nav-top.component.ts",
                 "type": "component",
                 "linktype": "component",
                 "name": "NavTopComponent",
