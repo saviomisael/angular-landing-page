@@ -46,18 +46,58 @@
             ],
             "stylesData": "",
             "templateData": "<h1>Not implemented yet</h1>\n"
+        },
+        {
+            "name": "NavTopComponent",
+            "id": "component-NavTopComponent-281522cf44cd1f8e6d4d041a441188716d201c69350475df7a59b1a9c477a84c09a14832586e09d22ec6669889bfa30793dcdbf117fb39432f26812f41d8c7ac",
+            "file": "src/app/home/navtop/navtop.component.ts",
+            "encapsulation": [],
+            "entryComponents": [],
+            "inputs": [],
+            "outputs": [],
+            "providers": [],
+            "selector": "app-nav-top",
+            "styleUrls": [
+                "./navtop.component.scss"
+            ],
+            "styles": [],
+            "templateUrl": [
+                "./navtop.component.html"
+            ],
+            "viewProviders": [],
+            "inputsClass": [],
+            "outputsClass": [],
+            "propertiesClass": [],
+            "methodsClass": [],
+            "deprecated": false,
+            "deprecationMessage": "",
+            "hostBindings": [],
+            "hostListeners": [],
+            "description": "",
+            "rawdescription": "\n",
+            "type": "component",
+            "sourceCode": "import { Component } from '@angular/core';\n\n@Component({\n  selector: 'app-nav-top',\n  templateUrl: './navtop.component.html',\n  styleUrls: ['./navtop.component.scss'],\n})\nexport class NavTopComponent {}\n",
+            "assetsDirs": [],
+            "styleUrlsData": [
+                {
+                    "data": "@import 'settings/colors';\n\n.nav-top {\n  background-color: $blue-light;\n  height: 6rem;\n  display: flex;\n  align-items: center;\n  justify-content: space-around;\n\n  & > .helptext {\n    margin-right: 40rem;\n  }\n\n  & > .link {\n  }\n}\n",
+                    "styleUrl": "./navtop.component.scss"
+                }
+            ],
+            "stylesData": "",
+            "templateData": "<div class=\"nav-top\">\n  <p class=\"helptext\"><strong>Questions? Need Help?</strong> Call us on (+123) 456 1500</p>\n  <a href=\"#\" class=\"link -gifticon\">BTP Gift Card</a>\n  <a href=\"#\" class=\"link -staricon\">Loyalty Program</a>\n</div>\n"
         }
     ],
     "modules": [
         {
             "name": "AppModule",
-            "id": "module-AppModule-d7cda4b9524a7d87f0510f1307f59fb0f68390762bfb38712cfc7bb89b1c31d7747521ae321a1f5962d7ebfc398cf9ae52c19ab011a65e64bc365601056bb2f6",
+            "id": "module-AppModule-67b8774bd6f16cf5feeb79b8ff352c2f068f9b37ab783b3fb6d42f7e7d18b2a244723da71f213b20cc01cfc322a9201a5edf6e2a4074156765cfdf50662b0e0f",
             "description": "",
             "deprecationMessage": "",
             "deprecated": false,
             "file": "src/app/app.module.ts",
             "methods": [],
-            "sourceCode": "import { NgModule } from '@angular/core';\nimport { BrowserModule } from '@angular/platform-browser';\n\nimport { AppRoutingModule } from './app-routing.module';\nimport { AppComponent } from './app.component';\n\n@NgModule({\n  declarations: [AppComponent],\n  imports: [BrowserModule, AppRoutingModule],\n  providers: [],\n  bootstrap: [AppComponent],\n})\nexport class AppModule {}\n",
+            "sourceCode": "import { NgModule } from '@angular/core';\nimport { BrowserModule } from '@angular/platform-browser';\n\nimport { AppRoutingModule } from './app-routing.module';\nimport { AppComponent } from './app.component';\nimport { HomeModule } from './home/home.module';\n\n@NgModule({\n  declarations: [AppComponent],\n  imports: [BrowserModule, AppRoutingModule, HomeModule],\n  providers: [],\n  bootstrap: [AppComponent],\n})\nexport class AppModule {}\n",
             "children": [
                 {
                     "type": "providers",
@@ -76,6 +116,9 @@
                     "elements": [
                         {
                             "name": "AppRoutingModule"
+                        },
+                        {
+                            "name": "HomeModule"
                         }
                     ]
                 },
@@ -132,6 +175,46 @@
                     "elements": []
                 }
             ]
+        },
+        {
+            "name": "HomeModule",
+            "id": "module-HomeModule-c0e6d72c3d0530e334eddf8a1e1b146d9d60f00a9abc50a3271f902a2d432bc457dc6b19dfd7ce1c6fc69f20487f84b36713bedf6aa9629d369eaf49b21726c4",
+            "description": "",
+            "deprecationMessage": "",
+            "deprecated": false,
+            "file": "src/app/home/home.module.ts",
+            "methods": [],
+            "sourceCode": "import { NgModule } from '@angular/core';\nimport { CommonModule } from '@angular/common';\nimport { NavTopComponent } from './navtop/navtop.component';\n\n@NgModule({\n  declarations: [NavTopComponent],\n  imports: [CommonModule],\n})\nexport class HomeModule {}\n",
+            "children": [
+                {
+                    "type": "providers",
+                    "elements": []
+                },
+                {
+                    "type": "declarations",
+                    "elements": [
+                        {
+                            "name": "NavTopComponent"
+                        }
+                    ]
+                },
+                {
+                    "type": "imports",
+                    "elements": []
+                },
+                {
+                    "type": "exports",
+                    "elements": []
+                },
+                {
+                    "type": "bootstrap",
+                    "elements": []
+                },
+                {
+                    "type": "classes",
+                    "elements": []
+                }
+            ]
         }
     ],
     "miscellaneous": {
@@ -145,6 +228,16 @@
                 "deprecationMessage": "",
                 "type": "",
                 "defaultValue": "require.context('./', true, /\\.spec\\.ts$/)"
+            },
+            {
+                "name": "Default",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "src/app/home/navtop/NavTop.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "Story<NavTopComponent>",
+                "defaultValue": "(args: NavTopComponent) => ({\n  props: args,\n})"
             },
             {
                 "name": "environment",
@@ -201,6 +294,18 @@
                     "type": "literal type"
                 }
             ],
+            "src/app/home/navtop/NavTop.stories.ts": [
+                {
+                    "name": "Default",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "src/app/home/navtop/NavTop.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "Story<NavTopComponent>",
+                    "defaultValue": "(args: NavTopComponent) => ({\n  props: args,\n})"
+                }
+            ],
             "src/environments/environment.prod.ts": [
                 {
                     "name": "environment",
@@ -253,6 +358,25 @@
                 "type": "component",
                 "linktype": "component",
                 "name": "AppComponent",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "src/app/home/navtop/NavTop.stories.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "Default",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "src/app/home/navtop/navtop.component.ts",
+                "type": "component",
+                "linktype": "component",
+                "name": "NavTopComponent",
                 "coveragePercent": 0,
                 "coverageCount": "0/1",
                 "status": "low"

@@ -1,0 +1,29 @@
+@import 'settings/colors';
+
+.nav-top {
+  background-color: $blue-light;
+  height: 6rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+
+  & > .helptext {
+    margin-right: 40rem;
+  }
+
+  & > .link {
+    display: flex;
+    align-items: center;
+    column-gap: 2rem;
+
+    &.-gifticon::before {
+      content: url('/assets/images/gift.svg');
+      color: blue;
+    }
+
+    &.-staricon::before {
+      content: url('/assets/images/star.svg');
+      color: blue;
+    }
+  }
+}
