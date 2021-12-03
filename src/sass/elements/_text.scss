@@ -1,0 +1,11 @@
+@import 'settings/colors';
+
+p {
+  color: $gray;
+  font-size: 1rem;
+}
+
+strong {
+  color: $gray;
+  font-weight: 700;
+}
