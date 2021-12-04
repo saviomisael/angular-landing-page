@@ -1,11 +1,11 @@
-@import 'settings/colors';
+@use 'settings' as colors;
 
 p {
-  color: $gray;
+  color: colors.$gray;
   font-size: 1rem;
 }
 
 strong {
-  color: $gray;
+  color: colors.$gray;
   font-weight: 700;
 }

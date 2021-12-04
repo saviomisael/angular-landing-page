@@ -1,4 +1,4 @@
-@import 'settings/colors';
+@use 'settings' as colors;
 
 .nav-bar {
   & > .main {
@@ -17,8 +17,8 @@
   margin-right: 20rem;
 
   & > .input {
-    color: $gray;
-    background-color: $blue-light;
+    color: colors.$gray;
+    background-color: colors.$blue-light;
     border-top-left-radius: inherit;
     border-bottom-left-radius: inherit;
     padding-left: 1rem;
@@ -27,7 +27,7 @@
 
   & > .btn {
     padding: 0.7rem 2rem;
-    background-color: $second;
+    background-color: colors.$second;
     border-top-right-radius: inherit;
     border-bottom-right-radius: inherit;
   }
@@ -47,9 +47,9 @@
     justify-content: center;
     width: 2rem;
     height: 2rem;
-    background-color: $second;
+    background-color: colors.$second;
     border-radius: 50%;
-    color: $white;
+    color: colors.$white;
     font-size: 1rem;
   }
 }
@@ -71,8 +71,8 @@
 .navigation {
   padding: 1rem;
   height: 6rem;
-  color: $white;
-  background-color: $first;
+  color: colors.$white;
+  background-color: colors.$first;
   display: flex;
   align-items: center;
   justify-content: space-around;

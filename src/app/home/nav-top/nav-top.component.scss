@@ -1,7 +1,7 @@
-@import 'settings/colors';
+@use 'settings' as colors;
 
 .nav-top {
-  background-color: $blue-light;
+  background-color: colors.$blue-light;
   height: 6rem;
   display: flex;
   align-items: center;
@@ -18,12 +18,10 @@
 
     &.-gifticon::before {
       content: url('/assets/images/gift.svg');
-      color: blue;
     }
 
     &.-staricon::before {
       content: url('/assets/images/star.svg');
-      color: blue;
     }
   }
 }
