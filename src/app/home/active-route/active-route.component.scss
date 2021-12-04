@@ -1,4 +1,7 @@
+@use 'settings' as colors;
+
 .active-route {
   padding: 1.2rem;
   margin-left: 3rem;
+  background-color: colors.$blue-light;
 }
