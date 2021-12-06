@@ -513,7 +513,7 @@
             "assetsDirs": [],
             "styleUrlsData": [
                 {
-                    "data": "@use 'settings' as colors;\n@use 'tools' as fonts;\n@use 'tools/placeholders';\n\n.hotel-details {\n  // TODO - move 9rem padding to main element when home component create\n  padding: 2rem 9rem 0;\n\n  & > .top {\n    display: flex;\n    align-items: center;\n    justify-content: space-between;\n  }\n}\n\n.title-box {\n  display: grid;\n  grid-template-rows: repeat(3, 1fr);\n  justify-items: start;\n  align-items: center;\n\n  & > .stars {\n    grid-row: 1 / 2;\n    align-self: end;\n\n    & > * {\n      width: 0.8rem;\n      height: 0.8rem;\n    }\n  }\n\n  & > .text {\n    grid-row: 2 / 3;\n  }\n\n  & > .offer {\n    @extend %flash-offer;\n\n    grid-row: 2 / 3;\n    transform: translateX(-140%);\n  }\n\n  & > .description {\n    font-size: 1.2rem;\n    grid-row: 3 / 3;\n    align-self: start;\n  }\n}\n\n.user-ratings {\n  background-color: colors.$second;\n  display: inline-block;\n  padding: 1.5rem 1.7rem;\n  border-radius: 0.4rem;\n\n  & > * {\n    color: colors.$white;\n  }\n\n  & > .text {\n    font-size: 0.8rem;\n  }\n\n  & > .value {\n    font-size: 1.4rem;\n\n    & > .max {\n      font-size: 1rem;\n    }\n  }\n}\n\n.details-box {\n  display: grid;\n  grid-template-columns: repeat(4, 1fr);\n  grid-template-rows: repeat(2, 1fr);\n  gap: 2rem;\n\n  & > .poster {\n    position: relative;\n    flex-basis: 65%;\n    grid-column: 1 / span 3;\n    grid-row: 1 / span 2;\n\n    &::before {\n      content: '';\n      position: absolute;\n      left: 0;\n      top: 0;\n      width: 100%;\n      height: 100%;\n      background-image: linear-gradient(to bottom, rgba(colors.$blue, 0.6), rgba(colors.$white, 0.16));\n      border-radius: 1rem;\n    }\n  }\n}\n\n.pricing-box {\n  background-color: colors.$first;\n  padding: 2.9rem 2.3rem;\n  border-radius: 0.8rem;\n  @include fonts.font-nunito;\n  display: grid;\n  grid-template-columns: 1fr 1fr;\n  color: colors.$white;\n\n  & > .btn {\n    // TODO - move to placeholders\n    grid-column: 1 / span 2;\n    background-color: colors.$second;\n    border-radius: 0.4rem;\n    font-size: 1.4rem;\n  }\n}\n\n.price-cell {\n  & > * {\n    color: colors.$white;\n  }\n\n  & > .price {\n    font-weight: 800;\n  }\n}\n\n.description-cell {\n  text-align: right;\n  font-weight: 400;\n\n  & > * {\n    font-size: 1.2rem;\n    color: colors.$white;\n  }\n\n  & > .item {\n    display: grid;\n    grid-template-columns: 1fr 1fr;\n\n    &::before {\n      content: url('/assets/images/guest.svg');\n    }\n\n    &.-room::before {\n      content: url('/assets/images/room.svg');\n    }\n  }\n}\n",
+                    "data": "@use 'settings' as colors;\n@use 'tools' as fonts;\n@use 'tools/placeholders';\n\n.hotel-details {\n  // TODO - move 9rem padding to main element when home component create\n  padding: 2rem 9rem 0;\n\n  & > .top {\n    display: flex;\n    align-items: center;\n    justify-content: space-between;\n  }\n}\n\n.title-box {\n  display: grid;\n  grid-template-rows: repeat(3, 1fr);\n  justify-items: start;\n  align-items: center;\n\n  & > .stars {\n    grid-row: 1 / 2;\n    align-self: end;\n\n    & > * {\n      width: 0.8rem;\n      height: 0.8rem;\n    }\n  }\n\n  & > .text {\n    grid-row: 2 / 3;\n  }\n\n  & > .offer {\n    @extend %flash-offer;\n\n    grid-row: 2 / 3;\n    transform: translateX(-140%);\n  }\n\n  & > .description {\n    font-size: 1.2rem;\n    grid-row: 3 / 3;\n    align-self: start;\n  }\n}\n\n.user-ratings {\n  background-color: colors.$second;\n  display: inline-block;\n  padding: 1.5rem 1.7rem;\n  border-radius: 0.4rem;\n\n  & > * {\n    color: colors.$white;\n  }\n\n  & > .text {\n    font-size: 0.8rem;\n  }\n\n  & > .value {\n    font-size: 1.4rem;\n\n    & > .max {\n      font-size: 1rem;\n    }\n  }\n}\n\n.details-box {\n  display: grid;\n  grid-template-columns: repeat(4, 1fr);\n  grid-template-rows: repeat(2, 1fr);\n  gap: 2rem;\n\n  & > .poster {\n    position: relative;\n    flex-basis: 65%;\n    grid-column: 1 / span 3;\n    grid-row: 1 / span 2;\n\n    &::before {\n      content: '';\n      position: absolute;\n      left: 0;\n      top: 0;\n      width: 100%;\n      height: 100%;\n      background-image: linear-gradient(to bottom, rgba(colors.$blue, 0.6), rgba(colors.$white, 0.16));\n      border-radius: 1rem;\n    }\n  }\n}\n\n.pricing-box {\n  // TODO insert phone icon\n  background-color: colors.$first;\n  padding: 2.9rem 2.3rem;\n  border-radius: 0.8rem;\n  @include fonts.font-nunito;\n  display: grid;\n  grid-template-columns: 1fr 1fr;\n  color: colors.$white;\n\n  & > .btn {\n    @extend %button-default;\n\n    grid-column: 1 / span 2;\n  }\n}\n\n.price-cell {\n  & > * {\n    color: colors.$white;\n  }\n\n  & > .price {\n    font-weight: 800;\n  }\n}\n\n.description-cell {\n  text-align: right;\n  font-weight: 400;\n\n  & > * {\n    font-size: 1.2rem;\n    color: colors.$white;\n  }\n\n  & > .item {\n    display: grid;\n    grid-template-columns: 1fr 1fr;\n\n    &::before {\n      content: url('/assets/images/guest.svg');\n    }\n\n    &.-room::before {\n      content: url('/assets/images/room.svg');\n    }\n  }\n}\n",
                     "styleUrl": "./hotel-details.component.scss"
                 }
             ],
@@ -645,7 +645,7 @@
         },
         {
             "name": "OtherPackagesComponent",
-            "id": "component-OtherPackagesComponent-370cf837930c2151afbd11bbf9694e0a526fcb6fd19ee04d3522482249e6aa73cdf806b87e6b34b7e1f29c7463c7bd11eefc22a0a1a3aece15cc12bd31dbcc61",
+            "id": "component-OtherPackagesComponent-66f413b01cbbc6354a95b297a4c58b42f1e7b1a431bb27550d8b2063cc380afae658d88f7da52f8b19f18e1b5444138cf28117de845ea747e0c5af3af33da099",
             "file": "src/app/home/other-packages/other-packages.component.ts",
             "encapsulation": [],
             "entryComponents": [],
@@ -676,6 +676,49 @@
             ],
             "methodsClass": [
                 {
+                    "name": "isFirst",
+                    "args": [
+                        {
+                            "name": "array",
+                            "type": "ViewModel[]",
+                            "deprecated": false,
+                            "deprecationMessage": ""
+                        },
+                        {
+                            "name": "item",
+                            "type": "ViewModel",
+                            "deprecated": false,
+                            "deprecationMessage": ""
+                        }
+                    ],
+                    "optional": false,
+                    "returnType": "boolean",
+                    "typeParameters": [],
+                    "line": 21,
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "jsdoctags": [
+                        {
+                            "name": "array",
+                            "type": "ViewModel[]",
+                            "deprecated": false,
+                            "deprecationMessage": "",
+                            "tagName": {
+                                "text": "param"
+                            }
+                        },
+                        {
+                            "name": "item",
+                            "type": "ViewModel",
+                            "deprecated": false,
+                            "deprecationMessage": "",
+                            "tagName": {
+                                "text": "param"
+                            }
+                        }
+                    ]
+                },
+                {
                     "name": "ngOnInit",
                     "args": [],
                     "optional": false,
@@ -693,11 +736,11 @@
             "description": "",
             "rawdescription": "\n",
             "type": "component",
-            "sourceCode": "import { Component, OnInit } from '@angular/core';\nimport { first, Observable } from 'rxjs';\nimport { OtherPackageService } from '../shared/services/other-package.service';\nimport { fillOtherPackageStars } from '../shared/utils/rxjs-operators';\nimport { OtherPackage as ViewModel } from '../shared/viewmodels/other-package.viewmodel';\n\n@Component({\n  selector: 'app-other-packages',\n  templateUrl: './other-packages.component.html',\n  styleUrls: ['./other-packages.component.scss'],\n})\nexport class OtherPackagesComponent implements OnInit {\n  packages$!: Observable<ViewModel[]>;\n\n  constructor(private service: OtherPackageService) {}\n\n  ngOnInit(): void {\n    this.packages$ = this.service.getOtherPackages().pipe(fillOtherPackageStars());\n  }\n}\n",
+            "sourceCode": "import { Component, OnInit } from '@angular/core';\nimport { Observable } from 'rxjs';\nimport { OtherPackageService } from '../shared/services/other-package.service';\nimport { fillOtherPackageStars } from '../shared/utils/rxjs-operators';\nimport { OtherPackage as ViewModel } from '../shared/viewmodels/other-package.viewmodel';\n\n@Component({\n  selector: 'app-other-packages',\n  templateUrl: './other-packages.component.html',\n  styleUrls: ['./other-packages.component.scss'],\n})\nexport class OtherPackagesComponent implements OnInit {\n  packages$!: Observable<ViewModel[]>;\n\n  constructor(private service: OtherPackageService) {}\n\n  ngOnInit(): void {\n    this.packages$ = this.service.getOtherPackages().pipe(fillOtherPackageStars());\n  }\n\n  isFirst(array: ViewModel[], item: ViewModel) {\n    return array.indexOf(item) === 0;\n  }\n}\n",
             "assetsDirs": [],
             "styleUrlsData": [
                 {
-                    "data": "@use 'tools/placeholders';\n@use 'settings' as colors;\n\n.other-packages {\n  & > .title {\n    font-size: 3.6rem;\n    text-transform: uppercase;\n    text-align: center;\n  }\n}\n\n.panel-box {\n  display: grid;\n  grid-template-columns: repeat(3, 1fr);\n  gap: 3rem;\n}\n\n.other-package {\n  position: relative;\n  border-radius: 0.8rem;\n  color: colors.$white;\n\n  & > .offer {\n    @extend %flash-offer;\n\n    position: absolute;\n    top: 2%;\n    left: 0;\n  }\n\n  & > .poster {\n    border-top-left-radius: inherit;\n    border-top-right-radius: inherit;\n  }\n\n  & > .left {\n    background-color: colors.$first;\n    border-bottom-left-radius: inherit;\n    border-bottom-right-radius: inherit;\n  }\n}\n\n.stars-box {\n  & > .icon {\n    width: 0.8rem;\n    height: 0.8rem;\n  }\n}\n",
+                    "data": "@use 'tools/placeholders';\n@use 'settings' as colors;\n@use 'tools' as mixins;\n\n.other-packages {\n  & > .title {\n    font-size: 3.6rem;\n    text-transform: uppercase;\n    text-align: center;\n  }\n}\n\n.panel-box {\n  display: grid;\n  grid-template-columns: repeat(3, 1fr);\n  gap: 3rem;\n}\n\n.other-package {\n  position: relative;\n  border-radius: 0.8rem;\n  color: colors.$white;\n  display: flex;\n  flex-direction: column;\n\n  & > .offer {\n    @extend %flash-offer;\n\n    position: absolute;\n    top: 2%;\n    left: 0;\n    border-top-left-radius: 0;\n    border-bottom-left-radius: 0;\n  }\n\n  & > .poster {\n    border-top-left-radius: inherit;\n    border-top-right-radius: inherit;\n    height: 25rem;\n  }\n\n  & > .left {\n    background-color: colors.$first;\n    border-bottom-left-radius: inherit;\n    border-bottom-right-radius: inherit;\n    padding: 2rem;\n  }\n\n  &:first-child {\n    flex-direction: row;\n    grid-column: 1 / span 2;\n\n    & > .poster {\n      border-radius: 0;\n      border-top-left-radius: inherit;\n      border-bottom-left-radius: inherit;\n      height: 100%;\n    }\n\n    & > .left {\n      border-radius: 0;\n      border-top-right-radius: inherit;\n      border-bottom-right-radius: inherit;\n      row-gap: 1rem;\n\n      & > .griditem:first-child {\n        align-self: flex-end;\n      }\n\n      & > .description {\n        font-size: 1.4rem;\n      }\n\n      & > .location {\n        align-self: flex-end;\n      }\n\n      & > .guests {\n        align-self: center;\n      }\n\n      & > .rooms {\n        align-self: flex-start;\n      }\n    }\n  }\n}\n\n.stars-box {\n  & > .icon {\n    width: 0.8rem;\n    height: 0.8rem;\n  }\n}\n\n.left-panel-box {\n  display: grid;\n  grid-template-columns: 1fr 1fr;\n  row-gap: 1.5rem;\n  align-items: center;\n\n  & > .griditem {\n    grid-column: 1 / span 2;\n\n    &:last-child {\n      grid-column: 2 / 3;\n    }\n\n    &.-penultimate {\n      grid-column: 1 /2;\n    }\n  }\n\n  & > .text {\n    font-size: 1.2rem;\n    font-weight: 400;\n  }\n\n  & > .location {\n    @include mixins.flex-icon('/assets/images/location.svg');\n  }\n\n  & > .guests {\n    @include mixins.flex-icon('/assets/images/guest.svg');\n  }\n\n  & > .rooms {\n    @include mixins.flex-icon('/assets/images/room.svg');\n  }\n\n  & > .price {\n    font-size: 1.4rem;\n    font-weight: 400;\n\n    &.-line {\n      text-decoration: line-through;\n    }\n  }\n\n  & > .discountprice {\n    font-size: 2.4rem;\n    font-weight: 700;\n  }\n\n  & > .btn {\n    @extend %button-default;\n\n    place-self: center end;\n  }\n}\n",
                     "styleUrl": "./other-packages.component.scss"
                 }
             ],
@@ -731,7 +774,7 @@
             "implements": [
                 "OnInit"
             ],
-            "templateData": "<section class=\"other-packages\">\n  <h2 class=\"title _padding-x-big\">Other Packages</h2>\n\n  <div class=\"panel-box\">\n    <article class=\"other-package\" *ngFor=\"let package of packages$ | async as packages\">\n      <p class=\"offer\">Flash Offer</p>\n      <img class=\"poster\" [src]=\"package.poster\" [alt]=\"package.name\" />\n      <aside class=\"left\">\n        <figure *ngIf=\"packages.indexOf(package) === 0\" class=\"stars-box\">\n          <img *ngFor=\"let star of package.stars\" [src]=\"star\" alt=\"star icon\" class=\"icon\" />\n        </figure>\n\n        <h3>{{ package.name }}</h3>\n\n        <p>{{ package.description }}</p>\n\n        <p>{{ package.location }}</p>\n\n        <p>{{ package.guests_count }}</p>\n\n        <p>{{ package.rooms_count }}</p>\n\n        <p>{{ package.price }}</p>\n        <p>{{ package.price_with_discount }}</p>\n\n        <button>Book Now</button>\n      </aside>\n    </article>\n  </div>\n</section>\n"
+            "templateData": "<section class=\"other-packages\">\n  <h2 class=\"title _padding-x-big\">Other Packages</h2>\n\n  <div class=\"panel-box\">\n    <article class=\"other-package\" *ngFor=\"let package of packages$ | async as packages\">\n      <p class=\"offer\" *ngIf=\"package.is_offer\">Flash Offer</p>\n      <img class=\"poster\" [src]=\"package.poster\" [alt]=\"package.name\" />\n      <div class=\"left left-panel-box\">\n        <figure class=\"stars-box griditem\" *ngIf=\"isFirst(packages, package)\">\n          <img *ngFor=\"let star of package.stars\" [src]=\"star\" alt=\"star icon\" class=\"icon\" />\n        </figure>\n\n        <h3 class=\"griditem _padding-bottom-small\">{{ package.name }}</h3>\n\n        <p class=\"griditem description\" *ngIf=\"isFirst(packages, package)\">{{ package.description }}</p>\n\n        <p class=\"griditem text location\">{{ package.location }}</p>\n\n        <p class=\"griditem text guests\">{{ package.guests_count }} x Guests</p>\n\n        <p class=\"griditem text rooms _padding-bottom-small\">{{ package.rooms_count }} x Room</p>\n\n        <p class=\"griditem price\" [class.-penultimate]=\"!package.has_discount\" [class.-line]=\"package.has_discount\">\n          $ {{ package.price | number }}\n        </p>\n\n        <p class=\"griditem -penultimate discountprice\" *ngIf=\"package.has_discount\">\n          $ {{ package.price_with_discount | number }}\n        </p>\n\n        <button class=\"griditem btn\">Book Now</button>\n      </div>\n    </article>\n  </div>\n</section>\n"
         },
         {
             "name": "PackageSummeryComponent",
@@ -961,21 +1004,21 @@
                 "name": "Default",
                 "ctype": "miscellaneous",
                 "subtype": "variable",
-                "file": "src/app/home/hotel-details-navigation/HotelDetailsNavigation.stories.ts",
-                "deprecated": false,
-                "deprecationMessage": "",
-                "type": "Story<HotelDetailsNavigationComponent>",
-                "defaultValue": "(args: HotelDetailsNavigationComponent) => ({\n  props: args,\n})"
-            },
-            {
-                "name": "Default",
-                "ctype": "miscellaneous",
-                "subtype": "variable",
                 "file": "src/app/home/nav-bar/NavBar.stories.ts",
                 "deprecated": false,
                 "deprecationMessage": "",
                 "type": "Story<NavBarComponent>",
                 "defaultValue": "(args: NavBarComponent) => ({\n  props: args,\n})"
+            },
+            {
+                "name": "Default",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "src/app/home/hotel-details-navigation/HotelDetailsNavigation.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "Story<HotelDetailsNavigationComponent>",
+                "defaultValue": "(args: HotelDetailsNavigationComponent) => ({\n  props: args,\n})"
             },
             {
                 "name": "Default",
@@ -991,16 +1034,6 @@
                 "name": "Default",
                 "ctype": "miscellaneous",
                 "subtype": "variable",
-                "file": "src/app/home/other-packages/OtherPackages.stories.ts",
-                "deprecated": false,
-                "deprecationMessage": "",
-                "type": "Story<OtherPackagesComponent>",
-                "defaultValue": "(args: OtherPackagesComponent) => ({\n  props: args,\n})"
-            },
-            {
-                "name": "Default",
-                "ctype": "miscellaneous",
-                "subtype": "variable",
                 "file": "src/app/home/package-summery/PackageSummery.stories.ts",
                 "deprecated": false,
                 "deprecationMessage": "",
@@ -1008,14 +1041,14 @@
                 "defaultValue": "(args: PackageSummeryComponent) => ({\n  props: args,\n})"
             },
             {
-                "name": "environment",
+                "name": "Default",
                 "ctype": "miscellaneous",
                 "subtype": "variable",
-                "file": "src/environments/environment.ts",
+                "file": "src/app/home/other-packages/OtherPackages.stories.ts",
                 "deprecated": false,
                 "deprecationMessage": "",
-                "type": "object",
-                "defaultValue": "{\n  production: false,\n}"
+                "type": "Story<OtherPackagesComponent>",
+                "defaultValue": "(args: OtherPackagesComponent) => ({\n  props: args,\n})"
             },
             {
                 "name": "environment",
@@ -1026,6 +1059,16 @@
                 "deprecationMessage": "",
                 "type": "object",
                 "defaultValue": "{\n  production: true,\n}"
+            },
+            {
+                "name": "environment",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "src/environments/environment.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "object",
+                "defaultValue": "{\n  production: false,\n}"
             },
             {
                 "name": "fillStars",
@@ -1107,18 +1150,6 @@
                     "defaultValue": "(args: HotelDetailsComponent) => ({\n  props: args,\n})"
                 }
             ],
-            "src/app/home/hotel-details-navigation/HotelDetailsNavigation.stories.ts": [
-                {
-                    "name": "Default",
-                    "ctype": "miscellaneous",
-                    "subtype": "variable",
-                    "file": "src/app/home/hotel-details-navigation/HotelDetailsNavigation.stories.ts",
-                    "deprecated": false,
-                    "deprecationMessage": "",
-                    "type": "Story<HotelDetailsNavigationComponent>",
-                    "defaultValue": "(args: HotelDetailsNavigationComponent) => ({\n  props: args,\n})"
-                }
-            ],
             "src/app/home/nav-bar/NavBar.stories.ts": [
                 {
                     "name": "Default",
@@ -1129,6 +1160,18 @@
                     "deprecationMessage": "",
                     "type": "Story<NavBarComponent>",
                     "defaultValue": "(args: NavBarComponent) => ({\n  props: args,\n})"
+                }
+            ],
+            "src/app/home/hotel-details-navigation/HotelDetailsNavigation.stories.ts": [
+                {
+                    "name": "Default",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "src/app/home/hotel-details-navigation/HotelDetailsNavigation.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "Story<HotelDetailsNavigationComponent>",
+                    "defaultValue": "(args: HotelDetailsNavigationComponent) => ({\n  props: args,\n})"
                 }
             ],
             "src/app/home/nav-top/NavTop.stories.ts": [
@@ -1143,18 +1186,6 @@
                     "defaultValue": "(args: NavTopComponent) => ({\n  props: args,\n})"
                 }
             ],
-            "src/app/home/other-packages/OtherPackages.stories.ts": [
-                {
-                    "name": "Default",
-                    "ctype": "miscellaneous",
-                    "subtype": "variable",
-                    "file": "src/app/home/other-packages/OtherPackages.stories.ts",
-                    "deprecated": false,
-                    "deprecationMessage": "",
-                    "type": "Story<OtherPackagesComponent>",
-                    "defaultValue": "(args: OtherPackagesComponent) => ({\n  props: args,\n})"
-                }
-            ],
             "src/app/home/package-summery/PackageSummery.stories.ts": [
                 {
                     "name": "Default",
@@ -1167,16 +1198,16 @@
                     "defaultValue": "(args: PackageSummeryComponent) => ({\n  props: args,\n})"
                 }
             ],
-            "src/environments/environment.ts": [
+            "src/app/home/other-packages/OtherPackages.stories.ts": [
                 {
-                    "name": "environment",
+                    "name": "Default",
                     "ctype": "miscellaneous",
                     "subtype": "variable",
-                    "file": "src/environments/environment.ts",
+                    "file": "src/app/home/other-packages/OtherPackages.stories.ts",
                     "deprecated": false,
                     "deprecationMessage": "",
-                    "type": "object",
-                    "defaultValue": "{\n  production: false,\n}"
+                    "type": "Story<OtherPackagesComponent>",
+                    "defaultValue": "(args: OtherPackagesComponent) => ({\n  props: args,\n})"
                 }
             ],
             "src/environments/environment.prod.ts": [
@@ -1189,6 +1220,18 @@
                     "deprecationMessage": "",
                     "type": "object",
                     "defaultValue": "{\n  production: true,\n}"
+                }
+            ],
+            "src/environments/environment.ts": [
+                {
+                    "name": "environment",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "src/environments/environment.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "object",
+                    "defaultValue": "{\n  production: false,\n}"
                 }
             ],
             "src/app/home/shared/utils/fill-stars.ts": [
@@ -1359,7 +1402,7 @@
                 "linktype": "component",
                 "name": "OtherPackagesComponent",
                 "coveragePercent": 0,
-                "coverageCount": "0/4",
+                "coverageCount": "0/5",
                 "status": "low"
             },
             {

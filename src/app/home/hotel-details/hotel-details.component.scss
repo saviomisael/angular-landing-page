@@ -1,5 +1,5 @@
 @use 'settings' as colors;
-@use 'tools' as fonts;
+@use 'tools' as tools;
 @use 'tools/placeholders';
 
 .hotel-details {
@@ -96,14 +96,18 @@
 }
 
 .pricing-box {
-  // TODO insert phone icon
   background-color: colors.$first;
   padding: 2.9rem 2.3rem;
   border-radius: 0.8rem;
-  @include fonts.font-nunito;
+  @include tools.font-nunito;
   display: grid;
   grid-template-columns: 1fr 1fr;
   color: colors.$white;
+
+  & > .tel {
+    @include tools.flex-icon('/assets/images/phone-call.svg');
+    place-self: center end;
+  }
 
   & > .btn {
     @extend %button-default;
