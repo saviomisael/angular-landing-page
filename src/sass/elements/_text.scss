@@ -1,11 +1,9 @@
 @use 'settings' as colors;
 
 p {
-  color: colors.$gray;
   font-size: 1rem;
 }
 
 strong {
-  color: colors.$gray;
   font-weight: 700;
 }
