@@ -1,0 +1,21 @@
+@use 'settings' as colors;
+@use 'tools' as mixins;
+
+%flash-offer {
+  padding: 0.5rem 1.2rem;
+  color: colors.$white;
+  background-color: colors.$second;
+  border-radius: 0.3rem;
+  display: inline-block;
+}
+
+%button-default {
+  @include mixins.font-nunito;
+  font-weight: 600;
+  background-color: colors.$second;
+  border-radius: 0.4rem;
+  font-size: 1.4rem;
+  padding: 1rem 2rem;
+}
+
+// TODO put package-item-box placeholder
