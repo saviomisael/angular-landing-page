@@ -216,6 +216,68 @@
             "templateData": "<section class=\"hotel-details\">\n  <div class=\"top\">\n    <div class=\"title-box\">\n      <figure class=\"stars\">\n        <img *ngFor=\"let star of stars\" [src]=\"star\" alt=\"star icon\" />\n      </figure>\n      <h1 class=\"text\">Grand Hilton Hotel</h1>\n      <p class=\"offer\">Flash Offer</p>\n      <p class=\"description\">Half-Board/ All Inclusive + Complimentary Activities + Child Stays Free</p>\n    </div>\n\n    <div class=\"user-ratings\">\n      <p class=\"text\">User Rattings</p>\n      <p class=\"value\">4.5/<span class=\"max\">5</span></p>\n    </div>\n  </div>\n\n  <div class=\"main details-box\">\n    <figure class=\"poster\">\n      <img class=\"_border-radius-small\" src=\"/assets/images/grand-hilton.png\" alt=\"Grand Hilton Hotel\" />\n    </figure>\n\n    <div class=\"pricing-box\">\n      <div class=\"price-cell\">\n        <p class=\"text\">price starts as</p>\n        <h2 class=\"price\">$ {{ hotelPrice | number }}</h2>\n        <p class=\"text\">per room / night</p>\n      </div>\n      <div class=\"description-cell\">\n        <p class=\"item\">2 x Guests</p>\n        <p class=\"item -room\">1 x Room</p>\n      </div>\n      <h3 class=\"_text-white\">Quick Booking</h3>\n      <h3 class=\"_text-white _align-text-right\">12100</h3>\n      <button class=\"btn\">View Other Options</button>\n    </div>\n\n    <div class=\"map\">\n      <iframe\n        src=\"https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3153.5072907406525!2d-122.41953338503038!3d37.77814961973894!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8085809be90f0637%3A0xd558ef250f4addf9!2sBill%20Graham%20Civic%20Auditorium!5e0!3m2!1spt-BR!2sbr!4v1638649641042!5m2!1spt-BR!2sbr\"\n        style=\"border: 0; border-radius: 1rem; height: 100%\"\n        allowfullscreen=\"\"\n        loading=\"lazy\"\n      ></iframe>\n    </div>\n  </div>\n</section>\n"
         },
         {
+            "name": "HotelDetailsNavigationComponent",
+            "id": "component-HotelDetailsNavigationComponent-062d0f540b55aabed0015e9f77de70bde6ed9561bc800cb28e575f637326d45602263f2287376fbb324a9e29335014256863915c5439f9dfd02751217d38022b",
+            "file": "src/app/home/hotel-details-navigation/hotel-details-navigation.component.ts",
+            "encapsulation": [],
+            "entryComponents": [],
+            "inputs": [],
+            "outputs": [],
+            "providers": [],
+            "selector": "app-hotel-details-navigation",
+            "styleUrls": [
+                "./hotel-details-navigation.component.scss"
+            ],
+            "styles": [],
+            "templateUrl": [
+                "./hotel-details-navigation.component.html"
+            ],
+            "viewProviders": [],
+            "inputsClass": [],
+            "outputsClass": [],
+            "propertiesClass": [],
+            "methodsClass": [
+                {
+                    "name": "ngOnInit",
+                    "args": [],
+                    "optional": false,
+                    "returnType": "void",
+                    "typeParameters": [],
+                    "line": 12,
+                    "deprecated": false,
+                    "deprecationMessage": ""
+                }
+            ],
+            "deprecated": false,
+            "deprecationMessage": "",
+            "hostBindings": [],
+            "hostListeners": [],
+            "description": "",
+            "rawdescription": "\n",
+            "type": "component",
+            "sourceCode": "import { Component, OnInit } from '@angular/core';\n\n@Component({\n  selector: 'app-hotel-details-navigation',\n  templateUrl: './hotel-details-navigation.component.html',\n  styleUrls: ['./hotel-details-navigation.component.scss']\n})\nexport class HotelDetailsNavigationComponent implements OnInit {\n\n  constructor() { }\n\n  ngOnInit(): void {\n  }\n\n}\n",
+            "assetsDirs": [],
+            "styleUrlsData": [
+                {
+                    "data": "",
+                    "styleUrl": "./hotel-details-navigation.component.scss"
+                }
+            ],
+            "stylesData": "",
+            "constructorObj": {
+                "name": "constructor",
+                "description": "",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "args": [],
+                "line": 8
+            },
+            "implements": [
+                "OnInit"
+            ],
+            "templateData": "<nav class=\"hotel-details-navigation\">\n  <a href=\"#\"></a><a href=\"#\"></a><a href=\"#\"></a><a href=\"#\"></a><a href=\"#\"></a><a href=\"#\"></a><a href=\"#\"></a>\n</nav>\n"
+        },
+        {
             "name": "NavBarComponent",
             "id": "component-NavBarComponent-2559fbc4727ccb606f8eb660521cb7673e1f60a134f90325bde40f9ff5098604570594d125d98bdcb269d2f0c9c1ae58ac1f96c2e5efc95800b1c1ba6ad5e7e2",
             "file": "src/app/home/nav-bar/nav-bar.component.ts",
@@ -386,13 +448,13 @@
         },
         {
             "name": "HomeModule",
-            "id": "module-HomeModule-a8c59d5ce702d1596c5d5d404e5271540ed3b39b94b629650ca5861fb2545c3004c4f030feaecfdb1f92e82b5e58bbd058ce81abbb4f75d145abff4037c06be3",
+            "id": "module-HomeModule-c0f88634652d5a4199cf6015eb2c1f26264010f714e38f72559a0daf697f44af1ee50bbbdaf4a3dc1483faf64809f5194a787bb2737af306dc4349e96ba550a7",
             "description": "",
             "deprecationMessage": "",
             "deprecated": false,
             "file": "src/app/home/home.module.ts",
             "methods": [],
-            "sourceCode": "import { NgModule } from '@angular/core';\nimport { CommonModule } from '@angular/common';\nimport { NavTopComponent } from './nav-top/nav-top.component';\nimport { NavBarComponent } from './nav-bar/nav-bar.component';\nimport { ActiveRouteComponent } from './active-route/active-route.component';\nimport { HotelDetailsComponent } from './hotel-details/hotel-details.component';\n\n@NgModule({\n  declarations: [NavTopComponent, NavBarComponent, ActiveRouteComponent, HotelDetailsComponent],\n  imports: [CommonModule],\n  exports: [],\n})\nexport class HomeModule {}\n",
+            "sourceCode": "import { NgModule } from '@angular/core';\nimport { CommonModule } from '@angular/common';\nimport { NavTopComponent } from './nav-top/nav-top.component';\nimport { NavBarComponent } from './nav-bar/nav-bar.component';\nimport { ActiveRouteComponent } from './active-route/active-route.component';\nimport { HotelDetailsComponent } from './hotel-details/hotel-details.component';\nimport { HotelDetailsNavigationComponent } from './hotel-details-navigation/hotel-details-navigation.component';\n\n@NgModule({\n  declarations: [NavTopComponent, NavBarComponent, ActiveRouteComponent, HotelDetailsComponent, HotelDetailsNavigationComponent],\n  imports: [CommonModule],\n  exports: [],\n})\nexport class HomeModule {}\n",
             "children": [
                 {
                     "type": "providers",
@@ -406,6 +468,9 @@
                         },
                         {
                             "name": "HotelDetailsComponent"
+                        },
+                        {
+                            "name": "HotelDetailsNavigationComponent"
                         },
                         {
                             "name": "NavBarComponent"
@@ -470,11 +535,11 @@
                 "name": "Default",
                 "ctype": "miscellaneous",
                 "subtype": "variable",
-                "file": "src/app/home/nav-top/NavTop.stories.ts",
+                "file": "src/app/home/hotel-details-navigation/HotelDetailsNavigation.stories.ts",
                 "deprecated": false,
                 "deprecationMessage": "",
-                "type": "Story<NavTopComponent>",
-                "defaultValue": "(args: NavTopComponent) => ({\n  props: args,\n})"
+                "type": "Story<HotelDetailsNavigationComponent>",
+                "defaultValue": "(args: HotelDetailsNavigationComponent) => ({\n  props: args,\n})"
             },
             {
                 "name": "Default",
@@ -485,6 +550,16 @@
                 "deprecationMessage": "",
                 "type": "Story<NavBarComponent>",
                 "defaultValue": "(args: NavBarComponent) => ({\n  props: args,\n})"
+            },
+            {
+                "name": "Default",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "src/app/home/nav-top/NavTop.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "Story<NavTopComponent>",
+                "defaultValue": "(args: NavTopComponent) => ({\n  props: args,\n})"
             },
             {
                 "name": "environment",
@@ -565,16 +640,16 @@
                     "defaultValue": "(args: HotelDetailsComponent) => ({\n  props: args,\n})"
                 }
             ],
-            "src/app/home/nav-top/NavTop.stories.ts": [
+            "src/app/home/hotel-details-navigation/HotelDetailsNavigation.stories.ts": [
                 {
                     "name": "Default",
                     "ctype": "miscellaneous",
                     "subtype": "variable",
-                    "file": "src/app/home/nav-top/NavTop.stories.ts",
+                    "file": "src/app/home/hotel-details-navigation/HotelDetailsNavigation.stories.ts",
                     "deprecated": false,
                     "deprecationMessage": "",
-                    "type": "Story<NavTopComponent>",
-                    "defaultValue": "(args: NavTopComponent) => ({\n  props: args,\n})"
+                    "type": "Story<HotelDetailsNavigationComponent>",
+                    "defaultValue": "(args: HotelDetailsNavigationComponent) => ({\n  props: args,\n})"
                 }
             ],
             "src/app/home/nav-bar/NavBar.stories.ts": [
@@ -587,6 +662,18 @@
                     "deprecationMessage": "",
                     "type": "Story<NavBarComponent>",
                     "defaultValue": "(args: NavBarComponent) => ({\n  props: args,\n})"
+                }
+            ],
+            "src/app/home/nav-top/NavTop.stories.ts": [
+                {
+                    "name": "Default",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "src/app/home/nav-top/NavTop.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "Story<NavTopComponent>",
+                    "defaultValue": "(args: NavTopComponent) => ({\n  props: args,\n})"
                 }
             ],
             "src/environments/environment.prod.ts": [
@@ -662,6 +749,25 @@
                 "name": "ActiveRouteComponent",
                 "coveragePercent": 0,
                 "coverageCount": "0/2",
+                "status": "low"
+            },
+            {
+                "filePath": "src/app/home/hotel-details-navigation/HotelDetailsNavigation.stories.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "Default",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "src/app/home/hotel-details-navigation/hotel-details-navigation.component.ts",
+                "type": "component",
+                "linktype": "component",
+                "name": "HotelDetailsNavigationComponent",
+                "coveragePercent": 0,
+                "coverageCount": "0/3",
                 "status": "low"
             },
             {

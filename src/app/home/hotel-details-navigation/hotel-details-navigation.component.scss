@@ -1,0 +1,26 @@
+@use 'settings' as colors;
+
+.hotel-details-navigation {
+  display: flex;
+  justify-content: space-between;
+
+  & > .link {
+    font-size: 1.4rem;
+    font-weight: bold;
+
+    &.-active {
+      color: colors.$second;
+      display: flex;
+      flex-direction: column;
+      row-gap: 1rem;
+
+      &::after {
+        content: '';
+        width: 100%;
+        height: 0.4rem;
+        display: block;
+        background-color: currentColor;
+      }
+    }
+  }
+}
