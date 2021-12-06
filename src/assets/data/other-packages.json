@@ -10,7 +10,8 @@
     "price": 10500,
     "has_discount": true,
     "price_with_discount": 8500,
-    "is_offer": true
+    "is_offer": true,
+    "poster": "/assets/images/hotel-blue-haven.png"
   },
   {
     "id": 2,
@@ -23,7 +24,8 @@
     "price": 8500,
     "has_discount": true,
     "price_with_discount": 3000,
-    "is_offer": true
+    "is_offer": true,
+    "poster": "/assets/images/belle-mare.png"
   },
   {
     "id": 3,
@@ -36,7 +38,8 @@
     "price": 10500,
     "has_discount": true,
     "price_with_discount": 9500,
-    "is_offer": true
+    "is_offer": true,
+    "poster": "/assets/images/white-palace.png"
   },
   {
     "id": 4,
@@ -49,7 +52,8 @@
     "price": 4500,
     "has_discount": true,
     "price_with_discount": 2500,
-    "is_offer": true
+    "is_offer": true,
+    "poster": "/assets/images/luxury-place.png"
   },
   {
     "id": 5,
@@ -62,6 +66,7 @@
     "price": 6500,
     "has_discount": true,
     "price_with_discount": 3500,
-    "is_offer": true
+    "is_offer": true,
+    "poster": "/assets/images/hotel-five-stars.png"
   }
 ]
