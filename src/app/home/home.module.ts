@@ -5,9 +5,10 @@ import { NavBarComponent } from './nav-bar/nav-bar.component';
 import { ActiveRouteComponent } from './active-route/active-route.component';
 import { HotelDetailsComponent } from './hotel-details/hotel-details.component';
 import { HotelDetailsNavigationComponent } from './hotel-details-navigation/hotel-details-navigation.component';
+import { PackageSummeryComponent } from './package-summery/package-summery.component';
 
 @NgModule({
-  declarations: [NavTopComponent, NavBarComponent, ActiveRouteComponent, HotelDetailsComponent, HotelDetailsNavigationComponent],
+  declarations: [NavTopComponent, NavBarComponent, ActiveRouteComponent, HotelDetailsComponent, HotelDetailsNavigationComponent, PackageSummeryComponent],
   imports: [CommonModule],
   exports: [],
 })

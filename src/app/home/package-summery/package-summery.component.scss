@@ -1,0 +1,115 @@
+@use 'settings' as colors;
+@use 'tools' as tools;
+
+%package-item-box {
+  font-size: 1.2rem;
+  border-radius: 0.9rem 0.9rem 0.9rem 0;
+  background-color: colors.$white;
+
+  & > .title {
+    background-color: colors.$first;
+    color: colors.$white;
+    padding: 1.3rem;
+    font-weight: bold;
+    font-size: 1.4rem;
+    border-top-left-radius: 0.8rem;
+    border-top-right-radius: 0.8rem;
+  }
+
+  & > .list {
+    border-bottom-right-radius: 0.8rem;
+    gap: 2.5rem;
+  }
+}
+
+.package-summery {
+  & > .title {
+    margin-bottom: 2.9rem;
+  }
+}
+
+.panel-box {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 3rem;
+
+  & > .summery {
+    grid-column: 1 / span 2;
+  }
+}
+
+.package-highlights {
+  @extend %package-item-box;
+
+  & > .list {
+    @include tools.flex-wrap;
+  }
+}
+
+.offer-details {
+  @extend %package-item-box;
+
+  & > .list {
+    @include tools.flex-wrap;
+
+    & > .itemcalendar {
+      align-self: flex-start;
+    }
+  }
+}
+
+.summery-details {
+  @extend %package-item-box;
+
+  & > .container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 4rem 1rem;
+
+    & > .list {
+      padding: 2rem;
+      display: flex;
+      flex-direction: column;
+      row-gap: 2.5rem;
+    }
+  }
+}
+
+.list-title-package {
+  color: colors.$second;
+  font-size: 1.3rem;
+  font-weight: 600;
+}
+
+.list-item-package {
+  display: flex;
+  align-items: center;
+  column-gap: 1rem;
+  width: 45%;
+
+  &::before {
+    content: url('/assets/images/check-full.svg');
+  }
+
+  &.-calendar {
+    &::before {
+      content: url('/assets/images/calendar.svg');
+    }
+  }
+
+  &.-footer {
+    display: block;
+    padding-left: 2.6rem;
+    margin-top: 4rem;
+
+    &::before {
+      content: '';
+    }
+  }
+
+  &.-align-start {
+    &::before {
+      align-self: flex-start;
+    }
+  }
+}
