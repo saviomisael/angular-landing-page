@@ -5,3 +5,8 @@
 @mixin font-nunito {
   font-family: 'Nunito', sans-serif;
 }
+
+@mixin flex-wrap {
+  display: flex;
+  flex-wrap: wrap;
+}
