@@ -1,4 +1,5 @@
 @use 'tools' as mixins;
+@use 'settings' as colors;
 
 *,
 *::after,
@@ -7,12 +8,14 @@
   margin: 0;
   padding: 0;
   font-family: inherit;
+  color: inherit;
 }
 
 html,
 body {
   @include mixins.font-mulish;
   font-size: 62.5%;
+  color: colors.$gray;
 }
 
 body {
