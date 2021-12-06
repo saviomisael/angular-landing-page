@@ -1,0 +1,47 @@
+<section class="hotel-details">
+  <div class="top">
+    <div class="title-box">
+      <figure class="stars">
+        <img *ngFor="let star of stars" [src]="star" alt="star icon" />
+      </figure>
+      <h1 class="text">Grand Hilton Hotel</h1>
+      <p class="offer">Flash Offer</p>
+      <p class="description">Half-Board/ All Inclusive + Complimentary Activities + Child Stays Free</p>
+    </div>
+
+    <div class="user-ratings">
+      <p class="text">User Rattings</p>
+      <p class="value">4.5/<span class="max">5</span></p>
+    </div>
+  </div>
+
+  <div class="main details-box">
+    <figure class="poster">
+      <img class="_border-radius-small" src="/assets/images/grand-hilton.png" alt="Grand Hilton Hotel" />
+    </figure>
+
+    <div class="pricing-box">
+      <div class="price-cell">
+        <p class="text">price starts as</p>
+        <h2 class="price">$ {{ hotelPrice | number }}</h2>
+        <p class="text">per room / night</p>
+      </div>
+      <div class="description-cell">
+        <p class="item">2 x Guests</p>
+        <p class="item -room">1 x Room</p>
+      </div>
+      <h3 class="_text-white">Quick Booking</h3>
+      <h3 class="_text-white _align-text-right">12100</h3>
+      <button class="btn">View Other Options</button>
+    </div>
+
+    <div class="map">
+      <iframe
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3153.5072907406525!2d-122.41953338503038!3d37.77814961973894!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8085809be90f0637%3A0xd558ef250f4addf9!2sBill%20Graham%20Civic%20Auditorium!5e0!3m2!1spt-BR!2sbr!4v1638649641042!5m2!1spt-BR!2sbr"
+        style="border: 0; border-radius: 1rem; height: 100%"
+        allowfullscreen=""
+        loading="lazy"
+      ></iframe>
+    </div>
+  </div>
+</section>

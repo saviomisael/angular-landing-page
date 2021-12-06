@@ -1,0 +1,148 @@
+@use 'settings' as colors;
+@use 'tools' as fonts;
+
+.hotel-details {
+  // TODO - move 9rem padding to main element when home component create
+  padding: 2rem 9rem 0;
+
+  & > .top {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+}
+
+.title-box {
+  display: grid;
+  grid-template-rows: repeat(3, 1fr);
+  justify-items: start;
+  align-items: center;
+
+  & > .stars {
+    grid-row: 1 / 2;
+    align-self: end;
+
+    & > * {
+      width: 0.8rem;
+      height: 0.8rem;
+    }
+  }
+
+  & > .text {
+    grid-row: 2 / 3;
+  }
+
+  & > .offer {
+    padding: 0.5rem 1.2rem;
+    color: colors.$white;
+    background-color: colors.$second;
+    display: inline-block;
+    border-radius: 0.3rem;
+    grid-row: 2 / 3;
+    transform: translateX(-140%);
+  }
+
+  & > .description {
+    font-size: 1.2rem;
+    grid-row: 3 / 3;
+    align-self: start;
+  }
+}
+
+.user-ratings {
+  background-color: colors.$second;
+  display: inline-block;
+  padding: 1.5rem 1.7rem;
+  border-radius: 0.4rem;
+
+  & > * {
+    color: colors.$white;
+  }
+
+  & > .text {
+    font-size: 0.8rem;
+  }
+
+  & > .value {
+    font-size: 1.4rem;
+
+    & > .max {
+      font-size: 1rem;
+    }
+  }
+}
+
+.details-box {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  gap: 2rem;
+
+  & > .poster {
+    position: relative;
+    flex-basis: 65%;
+    grid-column: 1 / span 3;
+    grid-row: 1 / span 2;
+
+    &::before {
+      content: '';
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      background-image: linear-gradient(to bottom, rgba(colors.$blue, 0.6), rgba(colors.$white, 0.16));
+      border-radius: 1rem;
+    }
+  }
+}
+
+.pricing-box {
+  background-color: colors.$first;
+  padding: 2.9rem 2.3rem;
+  border-radius: 0.8rem;
+  @include fonts.font-nunito;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  color: colors.$white;
+
+  & > .btn {
+    grid-column: 1 / span 2;
+    background-color: colors.$second;
+    border-radius: 0.4rem;
+    font-size: 1.4rem;
+  }
+}
+
+.price-cell {
+  & > * {
+    color: colors.$white;
+  }
+
+  & > .price {
+    font-weight: 800;
+  }
+}
+
+.description-cell {
+  text-align: right;
+  font-weight: 400;
+
+  & > * {
+    font-size: 1.2rem;
+    color: colors.$white;
+  }
+
+  & > .item {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+
+    &::before {
+      content: url('/assets/images/guest.svg');
+    }
+
+    &.-room::before {
+      content: url('/assets/images/room.svg');
+    }
+  }
+}
