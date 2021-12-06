@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { fillStars } from '../shared/utils/fill-stars';
 
 @Component({
   selector: 'app-hotel-details',
@@ -16,8 +17,6 @@ export class HotelDetailsComponent implements OnInit {
   }
 
   fillStars(): void {
-    for (let index = 0; index < this.starsCount; index++) {
-      this.stars.push(this.starIconUrl);
-    }
+    this.stars.push(...fillStars(this.starsCount, this.starIconUrl));
   }
 }
