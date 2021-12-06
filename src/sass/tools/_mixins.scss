@@ -10,3 +10,11 @@
   display: flex;
   flex-wrap: wrap;
 }
+@mixin flex-icon($icon) {
+  display: flex;
+  column-gap: 0.8rem;
+
+  &::before {
+    content: url($icon);
+  }
+}
