@@ -10,4 +10,5 @@ export interface OtherPackage {
   has_discount: boolean;
   price_with_discount: number;
   is_offer: boolean;
+  poster: string;
 }
