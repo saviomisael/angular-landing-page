@@ -1,0 +1,5 @@
+@use 'settings' as colors;
+
+._text-white {
+  color: colors.$white !important;
+}
