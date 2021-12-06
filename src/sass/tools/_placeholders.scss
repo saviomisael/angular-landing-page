@@ -18,4 +18,23 @@
   padding: 1rem 2rem;
 }
 
-// TODO put package-item-box placeholder
+%package-item-box {
+  font-size: 1.2rem;
+  border-radius: 0.9rem 0.9rem 0.9rem 0;
+  background-color: colors.$white;
+
+  & > .title {
+    background-color: colors.$first;
+    color: colors.$white;
+    padding: 1.3rem;
+    font-weight: bold;
+    font-size: 1.4rem;
+    border-top-left-radius: 0.8rem;
+    border-top-right-radius: 0.8rem;
+  }
+
+  & > .list {
+    border-bottom-right-radius: 0.8rem;
+    gap: 2.5rem;
+  }
+}
