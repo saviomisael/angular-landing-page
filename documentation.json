@@ -1,7 +1,315 @@
 {
     "pipes": [],
-    "interfaces": [],
-    "injectables": [],
+    "interfaces": [
+        {
+            "name": "OtherPackage",
+            "id": "interface-OtherPackage-1a3e8c840bc0934385a88057262f94d20b19e061c64d5c8651b027ad9aecac7874907f1bca859804a5387833f746cc5acd34960b44245ac36f1a5f47d3d4431a",
+            "file": "src/app/home/shared/models/other-package.model.ts",
+            "deprecated": false,
+            "deprecationMessage": "",
+            "type": "interface",
+            "sourceCode": "export interface OtherPackage {\n  id: number;\n  name: string;\n  stars_rating_count: number;\n  description: string;\n  location: string;\n  guests_count: number;\n  rooms_count: number;\n  price: number;\n  has_discount: boolean;\n  price_with_discount: number;\n  is_offer: boolean;\n  poster: string;\n}\n",
+            "properties": [
+                {
+                    "name": "description",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "string",
+                    "optional": false,
+                    "description": "",
+                    "line": 5
+                },
+                {
+                    "name": "guests_count",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "number",
+                    "optional": false,
+                    "description": "",
+                    "line": 7
+                },
+                {
+                    "name": "has_discount",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "boolean",
+                    "optional": false,
+                    "description": "",
+                    "line": 10
+                },
+                {
+                    "name": "id",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "number",
+                    "optional": false,
+                    "description": "",
+                    "line": 2
+                },
+                {
+                    "name": "is_offer",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "boolean",
+                    "optional": false,
+                    "description": "",
+                    "line": 12
+                },
+                {
+                    "name": "location",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "string",
+                    "optional": false,
+                    "description": "",
+                    "line": 6
+                },
+                {
+                    "name": "name",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "string",
+                    "optional": false,
+                    "description": "",
+                    "line": 3
+                },
+                {
+                    "name": "poster",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "string",
+                    "optional": false,
+                    "description": "",
+                    "line": 13
+                },
+                {
+                    "name": "price",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "number",
+                    "optional": false,
+                    "description": "",
+                    "line": 9
+                },
+                {
+                    "name": "price_with_discount",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "number",
+                    "optional": false,
+                    "description": "",
+                    "line": 11
+                },
+                {
+                    "name": "rooms_count",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "number",
+                    "optional": false,
+                    "description": "",
+                    "line": 8
+                },
+                {
+                    "name": "stars_rating_count",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "number",
+                    "optional": false,
+                    "description": "",
+                    "line": 4
+                }
+            ],
+            "indexSignatures": [],
+            "kind": 165,
+            "methods": []
+        },
+        {
+            "name": "OtherPackage",
+            "id": "interface-OtherPackage-2f771e5eb378d8baa88ed38f22d6ce1a46adc005472f65981b7ab38026800a499ac6ca5ce8cf07127b84c0b33bdf3195afe3032ba005f7db9330d765a52e773d-1",
+            "file": "src/app/home/shared/viewmodels/other-package.viewmodel.ts",
+            "deprecated": false,
+            "deprecationMessage": "",
+            "type": "interface",
+            "sourceCode": "export interface OtherPackage {\n  id: number;\n  name: string;\n  stars_rating_count: number;\n  description: string;\n  location: string;\n  guests_count: number;\n  rooms_count: number;\n  price: number;\n  has_discount: boolean;\n  price_with_discount: number;\n  is_offer: boolean;\n  poster: string;\n  stars: string[];\n}\n",
+            "properties": [
+                {
+                    "name": "description",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "string",
+                    "optional": false,
+                    "description": "",
+                    "line": 5
+                },
+                {
+                    "name": "guests_count",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "number",
+                    "optional": false,
+                    "description": "",
+                    "line": 7
+                },
+                {
+                    "name": "has_discount",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "boolean",
+                    "optional": false,
+                    "description": "",
+                    "line": 10
+                },
+                {
+                    "name": "id",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "number",
+                    "optional": false,
+                    "description": "",
+                    "line": 2
+                },
+                {
+                    "name": "is_offer",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "boolean",
+                    "optional": false,
+                    "description": "",
+                    "line": 12
+                },
+                {
+                    "name": "location",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "string",
+                    "optional": false,
+                    "description": "",
+                    "line": 6
+                },
+                {
+                    "name": "name",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "string",
+                    "optional": false,
+                    "description": "",
+                    "line": 3
+                },
+                {
+                    "name": "poster",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "string",
+                    "optional": false,
+                    "description": "",
+                    "line": 13
+                },
+                {
+                    "name": "price",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "number",
+                    "optional": false,
+                    "description": "",
+                    "line": 9
+                },
+                {
+                    "name": "price_with_discount",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "number",
+                    "optional": false,
+                    "description": "",
+                    "line": 11
+                },
+                {
+                    "name": "rooms_count",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "number",
+                    "optional": false,
+                    "description": "",
+                    "line": 8
+                },
+                {
+                    "name": "stars",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "string[]",
+                    "optional": false,
+                    "description": "",
+                    "line": 14
+                },
+                {
+                    "name": "stars_rating_count",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "number",
+                    "optional": false,
+                    "description": "",
+                    "line": 4
+                }
+            ],
+            "indexSignatures": [],
+            "kind": 165,
+            "methods": [],
+            "isDuplicate": true,
+            "duplicateId": 1,
+            "duplicateName": "OtherPackage-1"
+        }
+    ],
+    "injectables": [
+        {
+            "name": "OtherPackageService",
+            "id": "injectable-OtherPackageService-d46ad2ec48fb2cadec788d508a2bc6ea5f3bfb0f8e0dca83bc356073435c355c6984bac1079e4c1da39aa878d6f5c06a492872b5386378fabff0c49a793ff2b4",
+            "file": "src/app/home/shared/services/other-package.service.ts",
+            "properties": [],
+            "methods": [
+                {
+                    "name": "getOtherPackages",
+                    "args": [],
+                    "optional": false,
+                    "returnType": "Observable<OtherPackage[]>",
+                    "typeParameters": [],
+                    "line": 10,
+                    "deprecated": false,
+                    "deprecationMessage": ""
+                }
+            ],
+            "deprecated": false,
+            "deprecationMessage": "",
+            "description": "",
+            "rawdescription": "\n",
+            "sourceCode": "import { HttpClient } from '@angular/common/http';\nimport { Injectable } from '@angular/core';\nimport { Observable } from 'rxjs';\nimport { OtherPackage } from '../models/other-package.model';\n\n@Injectable()\nexport class OtherPackageService {\n  constructor(private http: HttpClient) {}\n\n  getOtherPackages(): Observable<OtherPackage[]> {\n    return this.http.get<OtherPackage[]>('/assets/data/other-packages.json');\n  }\n}\n",
+            "constructorObj": {
+                "name": "constructor",
+                "description": "",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "args": [
+                    {
+                        "name": "http",
+                        "type": "HttpClient",
+                        "deprecated": false,
+                        "deprecationMessage": ""
+                    }
+                ],
+                "line": 7,
+                "jsdoctags": [
+                    {
+                        "name": "http",
+                        "type": "HttpClient",
+                        "deprecated": false,
+                        "deprecationMessage": "",
+                        "tagName": {
+                            "text": "param"
+                        }
+                    }
+                ]
+            },
+            "type": "injectable"
+        }
+    ],
     "guards": [],
     "interceptors": [],
     "classes": [],
@@ -100,7 +408,7 @@
         },
         {
             "name": "HotelDetailsComponent",
-            "id": "component-HotelDetailsComponent-f7391821fdf2c102df922b0bf58d5c6503ada7709020beb5ddf2f3905ccdc18cafd998592dcc78f8f9606b1a33322d77a999f2f381790d3e61ff1f4269b41537",
+            "id": "component-HotelDetailsComponent-0a9fd97e1e011133a7a2a62b77750d6ed518c2717acccbe166fd380eb42a0aa13d9a1154683ffcd4ab9d7da0a2005605631a6d190a8397b810eac328107ab9b5",
             "file": "src/app/home/hotel-details/hotel-details.component.ts",
             "encapsulation": [],
             "entryComponents": [],
@@ -127,7 +435,7 @@
                     "type": "number",
                     "optional": false,
                     "description": "",
-                    "line": 12,
+                    "line": 13,
                     "modifierKind": [
                         144
                     ]
@@ -140,7 +448,7 @@
                     "type": "string",
                     "optional": false,
                     "description": "",
-                    "line": 10,
+                    "line": 11,
                     "modifierKind": [
                         121
                     ]
@@ -153,7 +461,7 @@
                     "type": "string[]",
                     "optional": false,
                     "description": "",
-                    "line": 11,
+                    "line": 12,
                     "modifierKind": [
                         144
                     ]
@@ -166,7 +474,7 @@
                     "type": "number",
                     "optional": false,
                     "description": "",
-                    "line": 9,
+                    "line": 10,
                     "modifierKind": [
                         121
                     ]
@@ -179,7 +487,7 @@
                     "optional": false,
                     "returnType": "void",
                     "typeParameters": [],
-                    "line": 18,
+                    "line": 19,
                     "deprecated": false,
                     "deprecationMessage": ""
                 },
@@ -189,7 +497,7 @@
                     "optional": false,
                     "returnType": "void",
                     "typeParameters": [],
-                    "line": 14,
+                    "line": 15,
                     "deprecated": false,
                     "deprecationMessage": ""
                 }
@@ -201,11 +509,11 @@
             "description": "",
             "rawdescription": "\n",
             "type": "component",
-            "sourceCode": "import { Component, OnInit } from '@angular/core';\n\n@Component({\n  selector: 'app-hotel-details',\n  templateUrl: './hotel-details.component.html',\n  styleUrls: ['./hotel-details.component.scss'],\n})\nexport class HotelDetailsComponent implements OnInit {\n  private starsCount = 5;\n  private starIconUrl = '/assets/images/star-rating.svg';\n  readonly stars: string[] = [];\n  readonly hotelPrice = 8500;\n\n  ngOnInit(): void {\n    this.fillStars();\n  }\n\n  fillStars(): void {\n    for (let index = 0; index < this.starsCount; index++) {\n      this.stars.push(this.starIconUrl);\n    }\n  }\n}\n",
+            "sourceCode": "import { Component, OnInit } from '@angular/core';\nimport { fillStars } from '../shared/utils/fill-stars';\n\n@Component({\n  selector: 'app-hotel-details',\n  templateUrl: './hotel-details.component.html',\n  styleUrls: ['./hotel-details.component.scss'],\n})\nexport class HotelDetailsComponent implements OnInit {\n  private starsCount = 5;\n  private starIconUrl = '/assets/images/star-rating.svg';\n  readonly stars: string[] = [];\n  readonly hotelPrice = 8500;\n\n  ngOnInit(): void {\n    this.fillStars();\n  }\n\n  fillStars(): void {\n    this.stars.push(...fillStars(this.starsCount, this.starIconUrl));\n  }\n}\n",
             "assetsDirs": [],
             "styleUrlsData": [
                 {
-                    "data": "@use 'settings' as colors;\n@use 'tools' as fonts;\n\n.hotel-details {\n  // TODO - move 9rem padding to main element when home component create\n  padding: 2rem 9rem 0;\n\n  & > .top {\n    display: flex;\n    align-items: center;\n    justify-content: space-between;\n  }\n}\n\n.title-box {\n  display: grid;\n  grid-template-rows: repeat(3, 1fr);\n  justify-items: start;\n  align-items: center;\n\n  & > .stars {\n    grid-row: 1 / 2;\n    align-self: end;\n\n    & > * {\n      width: 0.8rem;\n      height: 0.8rem;\n    }\n  }\n\n  & > .text {\n    grid-row: 2 / 3;\n  }\n\n  & > .offer {\n    padding: 0.5rem 1.2rem;\n    color: colors.$white;\n    background-color: colors.$second;\n    display: inline-block;\n    border-radius: 0.3rem;\n    grid-row: 2 / 3;\n    transform: translateX(-140%);\n  }\n\n  & > .description {\n    font-size: 1.2rem;\n    grid-row: 3 / 3;\n    align-self: start;\n  }\n}\n\n.user-ratings {\n  background-color: colors.$second;\n  display: inline-block;\n  padding: 1.5rem 1.7rem;\n  border-radius: 0.4rem;\n\n  & > * {\n    color: colors.$white;\n  }\n\n  & > .text {\n    font-size: 0.8rem;\n  }\n\n  & > .value {\n    font-size: 1.4rem;\n\n    & > .max {\n      font-size: 1rem;\n    }\n  }\n}\n\n.details-box {\n  display: grid;\n  grid-template-columns: repeat(4, 1fr);\n  grid-template-rows: repeat(2, 1fr);\n  gap: 2rem;\n\n  & > .poster {\n    position: relative;\n    flex-basis: 65%;\n    grid-column: 1 / span 3;\n    grid-row: 1 / span 2;\n\n    &::before {\n      content: '';\n      position: absolute;\n      left: 0;\n      top: 0;\n      width: 100%;\n      height: 100%;\n      background-image: linear-gradient(to bottom, rgba(colors.$blue, 0.6), rgba(colors.$white, 0.16));\n      border-radius: 1rem;\n    }\n  }\n}\n\n.pricing-box {\n  background-color: colors.$first;\n  padding: 2.9rem 2.3rem;\n  border-radius: 0.8rem;\n  @include fonts.font-nunito;\n  display: grid;\n  grid-template-columns: 1fr 1fr;\n  color: colors.$white;\n\n  & > .btn {\n    grid-column: 1 / span 2;\n    background-color: colors.$second;\n    border-radius: 0.4rem;\n    font-size: 1.4rem;\n  }\n}\n\n.price-cell {\n  & > * {\n    color: colors.$white;\n  }\n\n  & > .price {\n    font-weight: 800;\n  }\n}\n\n.description-cell {\n  text-align: right;\n  font-weight: 400;\n\n  & > * {\n    font-size: 1.2rem;\n    color: colors.$white;\n  }\n\n  & > .item {\n    display: grid;\n    grid-template-columns: 1fr 1fr;\n\n    &::before {\n      content: url('/assets/images/guest.svg');\n    }\n\n    &.-room::before {\n      content: url('/assets/images/room.svg');\n    }\n  }\n}\n",
+                    "data": "@use 'settings' as colors;\n@use 'tools' as fonts;\n@use 'tools/placeholders';\n\n.hotel-details {\n  // TODO - move 9rem padding to main element when home component create\n  padding: 2rem 9rem 0;\n\n  & > .top {\n    display: flex;\n    align-items: center;\n    justify-content: space-between;\n  }\n}\n\n.title-box {\n  display: grid;\n  grid-template-rows: repeat(3, 1fr);\n  justify-items: start;\n  align-items: center;\n\n  & > .stars {\n    grid-row: 1 / 2;\n    align-self: end;\n\n    & > * {\n      width: 0.8rem;\n      height: 0.8rem;\n    }\n  }\n\n  & > .text {\n    grid-row: 2 / 3;\n  }\n\n  & > .offer {\n    @extend %flash-offer;\n\n    grid-row: 2 / 3;\n    transform: translateX(-140%);\n  }\n\n  & > .description {\n    font-size: 1.2rem;\n    grid-row: 3 / 3;\n    align-self: start;\n  }\n}\n\n.user-ratings {\n  background-color: colors.$second;\n  display: inline-block;\n  padding: 1.5rem 1.7rem;\n  border-radius: 0.4rem;\n\n  & > * {\n    color: colors.$white;\n  }\n\n  & > .text {\n    font-size: 0.8rem;\n  }\n\n  & > .value {\n    font-size: 1.4rem;\n\n    & > .max {\n      font-size: 1rem;\n    }\n  }\n}\n\n.details-box {\n  display: grid;\n  grid-template-columns: repeat(4, 1fr);\n  grid-template-rows: repeat(2, 1fr);\n  gap: 2rem;\n\n  & > .poster {\n    position: relative;\n    flex-basis: 65%;\n    grid-column: 1 / span 3;\n    grid-row: 1 / span 2;\n\n    &::before {\n      content: '';\n      position: absolute;\n      left: 0;\n      top: 0;\n      width: 100%;\n      height: 100%;\n      background-image: linear-gradient(to bottom, rgba(colors.$blue, 0.6), rgba(colors.$white, 0.16));\n      border-radius: 1rem;\n    }\n  }\n}\n\n.pricing-box {\n  background-color: colors.$first;\n  padding: 2.9rem 2.3rem;\n  border-radius: 0.8rem;\n  @include fonts.font-nunito;\n  display: grid;\n  grid-template-columns: 1fr 1fr;\n  color: colors.$white;\n\n  & > .btn {\n    // TODO - move to placeholders\n    grid-column: 1 / span 2;\n    background-color: colors.$second;\n    border-radius: 0.4rem;\n    font-size: 1.4rem;\n  }\n}\n\n.price-cell {\n  & > * {\n    color: colors.$white;\n  }\n\n  & > .price {\n    font-weight: 800;\n  }\n}\n\n.description-cell {\n  text-align: right;\n  font-weight: 400;\n\n  & > * {\n    font-size: 1.2rem;\n    color: colors.$white;\n  }\n\n  & > .item {\n    display: grid;\n    grid-template-columns: 1fr 1fr;\n\n    &::before {\n      content: url('/assets/images/guest.svg');\n    }\n\n    &.-room::before {\n      content: url('/assets/images/room.svg');\n    }\n  }\n}\n",
                     "styleUrl": "./hotel-details.component.scss"
                 }
             ],
@@ -334,6 +642,96 @@
             ],
             "stylesData": "",
             "templateData": "<div class=\"nav-top\">\n  <p class=\"helptext\"><strong>Questions? Need Help?</strong> Call us on (+123) 456 1500</p>\n  <a href=\"#\" class=\"link -gifticon\">BTP Gift Card</a>\n  <a href=\"#\" class=\"link -staricon\">Loyalty Program</a>\n</div>\n"
+        },
+        {
+            "name": "OtherPackagesComponent",
+            "id": "component-OtherPackagesComponent-370cf837930c2151afbd11bbf9694e0a526fcb6fd19ee04d3522482249e6aa73cdf806b87e6b34b7e1f29c7463c7bd11eefc22a0a1a3aece15cc12bd31dbcc61",
+            "file": "src/app/home/other-packages/other-packages.component.ts",
+            "encapsulation": [],
+            "entryComponents": [],
+            "inputs": [],
+            "outputs": [],
+            "providers": [],
+            "selector": "app-other-packages",
+            "styleUrls": [
+                "./other-packages.component.scss"
+            ],
+            "styles": [],
+            "templateUrl": [
+                "./other-packages.component.html"
+            ],
+            "viewProviders": [],
+            "inputsClass": [],
+            "outputsClass": [],
+            "propertiesClass": [
+                {
+                    "name": "packages$",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "Observable<ViewModel[]>",
+                    "optional": false,
+                    "description": "",
+                    "line": 13
+                }
+            ],
+            "methodsClass": [
+                {
+                    "name": "ngOnInit",
+                    "args": [],
+                    "optional": false,
+                    "returnType": "void",
+                    "typeParameters": [],
+                    "line": 17,
+                    "deprecated": false,
+                    "deprecationMessage": ""
+                }
+            ],
+            "deprecated": false,
+            "deprecationMessage": "",
+            "hostBindings": [],
+            "hostListeners": [],
+            "description": "",
+            "rawdescription": "\n",
+            "type": "component",
+            "sourceCode": "import { Component, OnInit } from '@angular/core';\nimport { first, Observable } from 'rxjs';\nimport { OtherPackageService } from '../shared/services/other-package.service';\nimport { fillOtherPackageStars } from '../shared/utils/rxjs-operators';\nimport { OtherPackage as ViewModel } from '../shared/viewmodels/other-package.viewmodel';\n\n@Component({\n  selector: 'app-other-packages',\n  templateUrl: './other-packages.component.html',\n  styleUrls: ['./other-packages.component.scss'],\n})\nexport class OtherPackagesComponent implements OnInit {\n  packages$!: Observable<ViewModel[]>;\n\n  constructor(private service: OtherPackageService) {}\n\n  ngOnInit(): void {\n    this.packages$ = this.service.getOtherPackages().pipe(fillOtherPackageStars());\n  }\n}\n",
+            "assetsDirs": [],
+            "styleUrlsData": [
+                {
+                    "data": "@use 'tools/placeholders';\n@use 'settings' as colors;\n\n.other-packages {\n  & > .title {\n    font-size: 3.6rem;\n    text-transform: uppercase;\n    text-align: center;\n  }\n}\n\n.panel-box {\n  display: grid;\n  grid-template-columns: repeat(3, 1fr);\n  gap: 3rem;\n}\n\n.other-package {\n  position: relative;\n  border-radius: 0.8rem;\n  color: colors.$white;\n\n  & > .offer {\n    @extend %flash-offer;\n\n    position: absolute;\n    top: 2%;\n    left: 0;\n  }\n\n  & > .poster {\n    border-top-left-radius: inherit;\n    border-top-right-radius: inherit;\n  }\n\n  & > .left {\n    background-color: colors.$first;\n    border-bottom-left-radius: inherit;\n    border-bottom-right-radius: inherit;\n  }\n}\n\n.stars-box {\n  & > .icon {\n    width: 0.8rem;\n    height: 0.8rem;\n  }\n}\n",
+                    "styleUrl": "./other-packages.component.scss"
+                }
+            ],
+            "stylesData": "",
+            "constructorObj": {
+                "name": "constructor",
+                "description": "",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "args": [
+                    {
+                        "name": "service",
+                        "type": "OtherPackageService",
+                        "deprecated": false,
+                        "deprecationMessage": ""
+                    }
+                ],
+                "line": 13,
+                "jsdoctags": [
+                    {
+                        "name": "service",
+                        "type": "OtherPackageService",
+                        "deprecated": false,
+                        "deprecationMessage": "",
+                        "tagName": {
+                            "text": "param"
+                        }
+                    }
+                ]
+            },
+            "implements": [
+                "OnInit"
+            ],
+            "templateData": "<section class=\"other-packages\">\n  <h2 class=\"title _padding-x-big\">Other Packages</h2>\n\n  <div class=\"panel-box\">\n    <article class=\"other-package\" *ngFor=\"let package of packages$ | async as packages\">\n      <p class=\"offer\">Flash Offer</p>\n      <img class=\"poster\" [src]=\"package.poster\" [alt]=\"package.name\" />\n      <aside class=\"left\">\n        <figure *ngIf=\"packages.indexOf(package) === 0\" class=\"stars-box\">\n          <img *ngFor=\"let star of package.stars\" [src]=\"star\" alt=\"star icon\" class=\"icon\" />\n        </figure>\n\n        <h3>{{ package.name }}</h3>\n\n        <p>{{ package.description }}</p>\n\n        <p>{{ package.location }}</p>\n\n        <p>{{ package.guests_count }}</p>\n\n        <p>{{ package.rooms_count }}</p>\n\n        <p>{{ package.price }}</p>\n        <p>{{ package.price_with_discount }}</p>\n\n        <button>Book Now</button>\n      </aside>\n    </article>\n  </div>\n</section>\n"
         },
         {
             "name": "PackageSummeryComponent",
@@ -466,17 +864,21 @@
         },
         {
             "name": "HomeModule",
-            "id": "module-HomeModule-4ffd78c231c1550810bf779ad39fa3313c77c900582f01c2e37ea20ad094b5e225a1b2c1675fe8358a841275ffb072e6d9cca2197a8baac682e8581715156136",
+            "id": "module-HomeModule-c92c0def4923a273e869d4204ae589226960dbe0bc4f6bb5a0d7b6af21d8d4a10fca3e53008850a24d8f1ae56f8ebfa9b58ddf5ab7f29f14c800b2425c1e59c4",
             "description": "",
             "deprecationMessage": "",
             "deprecated": false,
             "file": "src/app/home/home.module.ts",
             "methods": [],
-            "sourceCode": "import { NgModule } from '@angular/core';\nimport { CommonModule } from '@angular/common';\nimport { NavTopComponent } from './nav-top/nav-top.component';\nimport { NavBarComponent } from './nav-bar/nav-bar.component';\nimport { ActiveRouteComponent } from './active-route/active-route.component';\nimport { HotelDetailsComponent } from './hotel-details/hotel-details.component';\nimport { HotelDetailsNavigationComponent } from './hotel-details-navigation/hotel-details-navigation.component';\nimport { PackageSummeryComponent } from './package-summery/package-summery.component';\n\n@NgModule({\n  declarations: [NavTopComponent, NavBarComponent, ActiveRouteComponent, HotelDetailsComponent, HotelDetailsNavigationComponent, PackageSummeryComponent],\n  imports: [CommonModule],\n  exports: [],\n})\nexport class HomeModule {}\n",
+            "sourceCode": "import { NgModule } from '@angular/core';\nimport { CommonModule } from '@angular/common';\nimport { NavTopComponent } from './nav-top/nav-top.component';\nimport { NavBarComponent } from './nav-bar/nav-bar.component';\nimport { ActiveRouteComponent } from './active-route/active-route.component';\nimport { HotelDetailsComponent } from './hotel-details/hotel-details.component';\nimport { HotelDetailsNavigationComponent } from './hotel-details-navigation/hotel-details-navigation.component';\nimport { PackageSummeryComponent } from './package-summery/package-summery.component';\nimport { OtherPackageService } from './shared/services/other-package.service';\nimport { HttpClientModule } from '@angular/common/http';\nimport { OtherPackagesComponent } from './other-packages/other-packages.component';\n\n@NgModule({\n  declarations: [\n    NavTopComponent,\n    NavBarComponent,\n    ActiveRouteComponent,\n    HotelDetailsComponent,\n    HotelDetailsNavigationComponent,\n    PackageSummeryComponent,\n    OtherPackagesComponent,\n  ],\n  imports: [CommonModule, HttpClientModule],\n  exports: [],\n  providers: [OtherPackageService],\n})\nexport class HomeModule {}\n",
             "children": [
                 {
                     "type": "providers",
-                    "elements": []
+                    "elements": [
+                        {
+                            "name": "OtherPackageService"
+                        }
+                    ]
                 },
                 {
                     "type": "declarations",
@@ -495,6 +897,9 @@
                         },
                         {
                             "name": "NavTopComponent"
+                        },
+                        {
+                            "name": "OtherPackagesComponent"
                         },
                         {
                             "name": "PackageSummeryComponent"
@@ -556,21 +961,21 @@
                 "name": "Default",
                 "ctype": "miscellaneous",
                 "subtype": "variable",
-                "file": "src/app/home/nav-bar/NavBar.stories.ts",
-                "deprecated": false,
-                "deprecationMessage": "",
-                "type": "Story<NavBarComponent>",
-                "defaultValue": "(args: NavBarComponent) => ({\n  props: args,\n})"
-            },
-            {
-                "name": "Default",
-                "ctype": "miscellaneous",
-                "subtype": "variable",
                 "file": "src/app/home/hotel-details-navigation/HotelDetailsNavigation.stories.ts",
                 "deprecated": false,
                 "deprecationMessage": "",
                 "type": "Story<HotelDetailsNavigationComponent>",
                 "defaultValue": "(args: HotelDetailsNavigationComponent) => ({\n  props: args,\n})"
+            },
+            {
+                "name": "Default",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "src/app/home/nav-bar/NavBar.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "Story<NavBarComponent>",
+                "defaultValue": "(args: NavBarComponent) => ({\n  props: args,\n})"
             },
             {
                 "name": "Default",
@@ -586,21 +991,21 @@
                 "name": "Default",
                 "ctype": "miscellaneous",
                 "subtype": "variable",
+                "file": "src/app/home/other-packages/OtherPackages.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "Story<OtherPackagesComponent>",
+                "defaultValue": "(args: OtherPackagesComponent) => ({\n  props: args,\n})"
+            },
+            {
+                "name": "Default",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
                 "file": "src/app/home/package-summery/PackageSummery.stories.ts",
                 "deprecated": false,
                 "deprecationMessage": "",
                 "type": "Story<PackageSummeryComponent>",
                 "defaultValue": "(args: PackageSummeryComponent) => ({\n  props: args,\n})"
-            },
-            {
-                "name": "environment",
-                "ctype": "miscellaneous",
-                "subtype": "variable",
-                "file": "src/environments/environment.prod.ts",
-                "deprecated": false,
-                "deprecationMessage": "",
-                "type": "object",
-                "defaultValue": "{\n  production: true,\n}"
             },
             {
                 "name": "environment",
@@ -613,6 +1018,26 @@
                 "defaultValue": "{\n  production: false,\n}"
             },
             {
+                "name": "environment",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "src/environments/environment.prod.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "object",
+                "defaultValue": "{\n  production: true,\n}"
+            },
+            {
+                "name": "fillStars",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "src/app/home/shared/utils/fill-stars.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "",
+                "defaultValue": "(starsCount: number, content: string): string[] => {\n  const stars: string[] = [];\n\n  for (let index = 0; index < starsCount; index++) {\n    stars.push(content);\n  }\n\n  return stars;\n}"
+            },
+            {
                 "name": "require",
                 "ctype": "miscellaneous",
                 "subtype": "variable",
@@ -622,7 +1047,18 @@
                 "type": "literal type"
             }
         ],
-        "functions": [],
+        "functions": [
+            {
+                "name": "fillOtherPackageStars",
+                "file": "src/app/home/shared/utils/rxjs-operators.ts",
+                "ctype": "miscellaneous",
+                "subtype": "function",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "description": "",
+                "args": []
+            }
+        ],
         "typealiases": [],
         "enumerations": [],
         "groupedVariables": {
@@ -671,18 +1107,6 @@
                     "defaultValue": "(args: HotelDetailsComponent) => ({\n  props: args,\n})"
                 }
             ],
-            "src/app/home/nav-bar/NavBar.stories.ts": [
-                {
-                    "name": "Default",
-                    "ctype": "miscellaneous",
-                    "subtype": "variable",
-                    "file": "src/app/home/nav-bar/NavBar.stories.ts",
-                    "deprecated": false,
-                    "deprecationMessage": "",
-                    "type": "Story<NavBarComponent>",
-                    "defaultValue": "(args: NavBarComponent) => ({\n  props: args,\n})"
-                }
-            ],
             "src/app/home/hotel-details-navigation/HotelDetailsNavigation.stories.ts": [
                 {
                     "name": "Default",
@@ -693,6 +1117,18 @@
                     "deprecationMessage": "",
                     "type": "Story<HotelDetailsNavigationComponent>",
                     "defaultValue": "(args: HotelDetailsNavigationComponent) => ({\n  props: args,\n})"
+                }
+            ],
+            "src/app/home/nav-bar/NavBar.stories.ts": [
+                {
+                    "name": "Default",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "src/app/home/nav-bar/NavBar.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "Story<NavBarComponent>",
+                    "defaultValue": "(args: NavBarComponent) => ({\n  props: args,\n})"
                 }
             ],
             "src/app/home/nav-top/NavTop.stories.ts": [
@@ -707,6 +1143,18 @@
                     "defaultValue": "(args: NavTopComponent) => ({\n  props: args,\n})"
                 }
             ],
+            "src/app/home/other-packages/OtherPackages.stories.ts": [
+                {
+                    "name": "Default",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "src/app/home/other-packages/OtherPackages.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "Story<OtherPackagesComponent>",
+                    "defaultValue": "(args: OtherPackagesComponent) => ({\n  props: args,\n})"
+                }
+            ],
             "src/app/home/package-summery/PackageSummery.stories.ts": [
                 {
                     "name": "Default",
@@ -717,6 +1165,18 @@
                     "deprecationMessage": "",
                     "type": "Story<PackageSummeryComponent>",
                     "defaultValue": "(args: PackageSummeryComponent) => ({\n  props: args,\n})"
+                }
+            ],
+            "src/environments/environment.ts": [
+                {
+                    "name": "environment",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "src/environments/environment.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "object",
+                    "defaultValue": "{\n  production: false,\n}"
                 }
             ],
             "src/environments/environment.prod.ts": [
@@ -731,20 +1191,33 @@
                     "defaultValue": "{\n  production: true,\n}"
                 }
             ],
-            "src/environments/environment.ts": [
+            "src/app/home/shared/utils/fill-stars.ts": [
                 {
-                    "name": "environment",
+                    "name": "fillStars",
                     "ctype": "miscellaneous",
                     "subtype": "variable",
-                    "file": "src/environments/environment.ts",
+                    "file": "src/app/home/shared/utils/fill-stars.ts",
                     "deprecated": false,
                     "deprecationMessage": "",
-                    "type": "object",
-                    "defaultValue": "{\n  production: false,\n}"
+                    "type": "",
+                    "defaultValue": "(starsCount: number, content: string): string[] => {\n  const stars: string[] = [];\n\n  for (let index = 0; index < starsCount; index++) {\n    stars.push(content);\n  }\n\n  return stars;\n}"
                 }
             ]
         },
-        "groupedFunctions": {},
+        "groupedFunctions": {
+            "src/app/home/shared/utils/rxjs-operators.ts": [
+                {
+                    "name": "fillOtherPackageStars",
+                    "file": "src/app/home/shared/utils/rxjs-operators.ts",
+                    "ctype": "miscellaneous",
+                    "subtype": "function",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "description": "",
+                    "args": []
+                }
+            ]
+        },
         "groupedEnumerations": {},
         "groupedTypeAliases": {}
     },
@@ -871,6 +1344,25 @@
                 "status": "low"
             },
             {
+                "filePath": "src/app/home/other-packages/OtherPackages.stories.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "Default",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "src/app/home/other-packages/other-packages.component.ts",
+                "type": "component",
+                "linktype": "component",
+                "name": "OtherPackagesComponent",
+                "coveragePercent": 0,
+                "coverageCount": "0/4",
+                "status": "low"
+            },
+            {
                 "filePath": "src/app/home/package-summery/PackageSummery.stories.ts",
                 "type": "variable",
                 "linktype": "miscellaneous",
@@ -887,6 +1379,53 @@
                 "name": "PackageSummeryComponent",
                 "coveragePercent": 0,
                 "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "src/app/home/shared/models/other-package.model.ts",
+                "type": "interface",
+                "linktype": "interface",
+                "name": "OtherPackage",
+                "coveragePercent": 0,
+                "coverageCount": "0/13",
+                "status": "low"
+            },
+            {
+                "filePath": "src/app/home/shared/services/other-package.service.ts",
+                "type": "injectable",
+                "linktype": "injectable",
+                "name": "OtherPackageService",
+                "coveragePercent": 0,
+                "coverageCount": "0/3",
+                "status": "low"
+            },
+            {
+                "filePath": "src/app/home/shared/utils/fill-stars.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "fillStars",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "src/app/home/shared/utils/rxjs-operators.ts",
+                "type": "function",
+                "linktype": "miscellaneous",
+                "linksubtype": "function",
+                "name": "fillOtherPackageStars",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "src/app/home/shared/viewmodels/other-package.viewmodel.ts",
+                "type": "interface",
+                "linktype": "interface",
+                "name": "OtherPackage",
+                "coveragePercent": 0,
+                "coverageCount": "0/14",
                 "status": "low"
             },
             {

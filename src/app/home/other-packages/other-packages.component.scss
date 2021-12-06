@@ -1,0 +1,150 @@
+@use 'tools/placeholders';
+@use 'settings' as colors;
+@use 'tools' as mixins;
+
+.other-packages {
+  & > .title {
+    font-size: 3.6rem;
+    text-transform: uppercase;
+    text-align: center;
+  }
+}
+
+.panel-box {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 3rem;
+}
+
+.other-package {
+  position: relative;
+  border-radius: 0.8rem;
+  color: colors.$white;
+  display: flex;
+  flex-direction: column;
+
+  & > .offer {
+    @extend %flash-offer;
+
+    position: absolute;
+    top: 2%;
+    left: 0;
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+  }
+
+  & > .poster {
+    border-top-left-radius: inherit;
+    border-top-right-radius: inherit;
+    height: 25rem;
+  }
+
+  & > .left {
+    background-color: colors.$first;
+    border-bottom-left-radius: inherit;
+    border-bottom-right-radius: inherit;
+    padding: 2rem;
+  }
+
+  &:first-child {
+    flex-direction: row;
+    grid-column: 1 / span 2;
+
+    & > .poster {
+      border-radius: 0;
+      border-top-left-radius: inherit;
+      border-bottom-left-radius: inherit;
+      height: 100%;
+    }
+
+    & > .left {
+      border-radius: 0;
+      border-top-right-radius: inherit;
+      border-bottom-right-radius: inherit;
+      row-gap: 1rem;
+
+      & > .griditem:first-child {
+        align-self: flex-end;
+      }
+
+      & > .description {
+        font-size: 1.4rem;
+      }
+
+      & > .location {
+        align-self: flex-end;
+      }
+
+      & > .guests {
+        align-self: center;
+      }
+
+      & > .rooms {
+        align-self: flex-start;
+      }
+    }
+  }
+}
+
+.stars-box {
+  & > .icon {
+    width: 0.8rem;
+    height: 0.8rem;
+  }
+}
+
+.left-panel-box {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  row-gap: 1.5rem;
+  align-items: center;
+
+  & > .griditem {
+    grid-column: 1 / span 2;
+
+    &:last-child {
+      grid-column: 2 / 3;
+    }
+
+    &.-penultimate {
+      grid-column: 1 /2;
+    }
+  }
+
+  & > .text {
+    font-size: 1.2rem;
+    font-weight: 400;
+  }
+
+  & > .location {
+    @include mixins.flex-icon('/assets/images/location.svg');
+  }
+
+  & > .guests {
+    @include mixins.flex-icon('/assets/images/guest.svg');
+  }
+
+  & > .rooms {
+    @include mixins.flex-icon('/assets/images/room.svg');
+  }
+
+  & > .price {
+    font-size: 1.4rem;
+    font-weight: 400;
+
+    &.-line {
+      text-decoration: line-through;
+    }
+  }
+
+  & > .discountprice {
+    font-size: 2.4rem;
+    font-weight: 700;
+  }
+
+  & > .btn {
+    @extend %button-default;
+
+    place-self: center end;
+  }
+}

@@ -1,0 +1,35 @@
+<section class="other-packages">
+  <h2 class="title _padding-x-big">Other Packages</h2>
+
+  <div class="panel-box">
+    <article class="other-package" *ngFor="let package of packages$ | async as packages">
+      <p class="offer" *ngIf="package.is_offer">Flash Offer</p>
+      <img class="poster" [src]="package.poster" [alt]="package.name" />
+      <div class="left left-panel-box">
+        <figure class="stars-box griditem" *ngIf="isFirst(packages, package)">
+          <img *ngFor="let star of package.stars" [src]="star" alt="star icon" class="icon" />
+        </figure>
+
+        <h3 class="griditem _padding-bottom-small">{{ package.name }}</h3>
+
+        <p class="griditem description" *ngIf="isFirst(packages, package)">{{ package.description }}</p>
+
+        <p class="griditem text location">{{ package.location }}</p>
+
+        <p class="griditem text guests">{{ package.guests_count }} x Guests</p>
+
+        <p class="griditem text rooms _padding-bottom-small">{{ package.rooms_count }} x Room</p>
+
+        <p class="griditem price" [class.-penultimate]="!package.has_discount" [class.-line]="package.has_discount">
+          $ {{ package.price | number }}
+        </p>
+
+        <p class="griditem -penultimate discountprice" *ngIf="package.has_discount">
+          $ {{ package.price_with_discount | number }}
+        </p>
+
+        <button class="griditem btn">Book Now</button>
+      </div>
+    </article>
+  </div>
+</section>

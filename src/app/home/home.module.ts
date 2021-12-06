@@ -8,6 +8,7 @@ import { HotelDetailsNavigationComponent } from './hotel-details-navigation/hote
 import { PackageSummeryComponent } from './package-summery/package-summery.component';
 import { OtherPackageService } from './shared/services/other-package.service';
 import { HttpClientModule } from '@angular/common/http';
+import { OtherPackagesComponent } from './other-packages/other-packages.component';
 
 @NgModule({
   declarations: [
@@ -17,6 +18,7 @@ import { HttpClientModule } from '@angular/common/http';
     HotelDetailsComponent,
     HotelDetailsNavigationComponent,
     PackageSummeryComponent,
+    OtherPackagesComponent,
   ],
   imports: [CommonModule, HttpClientModule],
   exports: [],
