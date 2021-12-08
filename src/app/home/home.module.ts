@@ -10,6 +10,7 @@ import { OtherPackageService } from './shared/services/other-package.service';
 import { HttpClientModule } from '@angular/common/http';
 import { OtherPackagesComponent } from './other-packages/other-packages.component';
 import { GuestReviewComponent } from './guest-review/guest-review.component';
+import { StarsBoxComponent } from './stars-box/stars-box.component';
 
 @NgModule({
   declarations: [
@@ -21,6 +22,7 @@ import { GuestReviewComponent } from './guest-review/guest-review.component';
     PackageSummeryComponent,
     OtherPackagesComponent,
     GuestReviewComponent,
+    StarsBoxComponent,
   ],
   imports: [CommonModule, HttpClientModule],
   exports: [],
