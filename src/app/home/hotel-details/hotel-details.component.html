@@ -1,9 +1,7 @@
 <section class="hotel-details">
   <div class="top">
     <div class="title-box">
-      <figure class="stars">
-        <img *ngFor="let star of stars" [src]="star" alt="star icon" />
-      </figure>
+      <app-stars-box [starsCount]="starsCount"></app-stars-box>
       <h1 class="text">Grand Hilton Hotel</h1>
       <p class="offer">Flash Offer</p>
       <p class="description">Half-Board/ All Inclusive + Complimentary Activities + Child Stays Free</p>

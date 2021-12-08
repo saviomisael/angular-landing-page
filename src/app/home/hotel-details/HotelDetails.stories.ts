@@ -1,6 +1,7 @@
 import { Meta, moduleMetadata, Story } from '@storybook/angular';
 import { HotelDetailsNavigationComponent } from '../hotel-details-navigation/hotel-details-navigation.component';
 import { PackageSummeryComponent } from '../package-summery/package-summery.component';
+import { StarsBoxComponent } from '../stars-box/stars-box.component';
 
 import { HotelDetailsComponent } from './hotel-details.component';
 
@@ -9,7 +10,7 @@ export default {
   component: HotelDetailsComponent,
   decorators: [
     moduleMetadata({
-      declarations: [HotelDetailsNavigationComponent, PackageSummeryComponent],
+      declarations: [HotelDetailsNavigationComponent, PackageSummeryComponent, StarsBoxComponent],
     }),
   ],
 } as Meta;
