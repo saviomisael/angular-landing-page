@@ -407,6 +407,46 @@
             "templateData": "<h1>Not implemented yet</h1>\n"
         },
         {
+            "name": "GuestReviewComponent",
+            "id": "component-GuestReviewComponent-3d92789a62005e59780ddcced5d92862f2f92c90305a812c71c932b474cb2ec62063a077353d3a4164852f4849e0aa70af871464e0f7bda4078696bb41a697ae",
+            "file": "src/app/home/guest-review/guest-review.component.ts",
+            "encapsulation": [],
+            "entryComponents": [],
+            "inputs": [],
+            "outputs": [],
+            "providers": [],
+            "selector": "app-guest-review",
+            "styleUrls": [
+                "./guest-review.component.scss"
+            ],
+            "styles": [],
+            "templateUrl": [
+                "./guest-review.component.html"
+            ],
+            "viewProviders": [],
+            "inputsClass": [],
+            "outputsClass": [],
+            "propertiesClass": [],
+            "methodsClass": [],
+            "deprecated": false,
+            "deprecationMessage": "",
+            "hostBindings": [],
+            "hostListeners": [],
+            "description": "",
+            "rawdescription": "\n",
+            "type": "component",
+            "sourceCode": "import { Component } from '@angular/core';\n\n@Component({\n  selector: 'app-guest-review',\n  templateUrl: './guest-review.component.html',\n  styleUrls: ['./guest-review.component.scss'],\n})\nexport class GuestReviewComponent {}\n",
+            "assetsDirs": [],
+            "styleUrlsData": [
+                {
+                    "data": "",
+                    "styleUrl": "./guest-review.component.scss"
+                }
+            ],
+            "stylesData": "",
+            "templateData": "<section class=\"guest-review\">\n  <h2 class=\"title\">What people thinks about us</h2>\n\n  <div class=\"review-box\">\n    <img src=\"/assets/images/guest-image.png\" alt=\"Guest photo\" />\n    <p class=\"guestname\">Megan Fox</p>\n    <time date=\"2019-09-18\" class=\"date\"></time>\n  </div>\n</section>\n"
+        },
+        {
             "name": "HotelDetailsComponent",
             "id": "component-HotelDetailsComponent-0a9fd97e1e011133a7a2a62b77750d6ed518c2717acccbe166fd380eb42a0aa13d9a1154683ffcd4ab9d7da0a2005605631a6d190a8397b810eac328107ab9b5",
             "file": "src/app/home/hotel-details/hotel-details.component.ts",
@@ -513,7 +553,7 @@
             "assetsDirs": [],
             "styleUrlsData": [
                 {
-                    "data": "@use 'settings' as colors;\n@use 'tools' as fonts;\n@use 'tools/placeholders';\n\n.hotel-details {\n  // TODO - move 9rem padding to main element when home component create\n  padding: 2rem 9rem 0;\n\n  & > .top {\n    display: flex;\n    align-items: center;\n    justify-content: space-between;\n  }\n}\n\n.title-box {\n  display: grid;\n  grid-template-rows: repeat(3, 1fr);\n  justify-items: start;\n  align-items: center;\n\n  & > .stars {\n    grid-row: 1 / 2;\n    align-self: end;\n\n    & > * {\n      width: 0.8rem;\n      height: 0.8rem;\n    }\n  }\n\n  & > .text {\n    grid-row: 2 / 3;\n  }\n\n  & > .offer {\n    @extend %flash-offer;\n\n    grid-row: 2 / 3;\n    transform: translateX(-140%);\n  }\n\n  & > .description {\n    font-size: 1.2rem;\n    grid-row: 3 / 3;\n    align-self: start;\n  }\n}\n\n.user-ratings {\n  background-color: colors.$second;\n  display: inline-block;\n  padding: 1.5rem 1.7rem;\n  border-radius: 0.4rem;\n\n  & > * {\n    color: colors.$white;\n  }\n\n  & > .text {\n    font-size: 0.8rem;\n  }\n\n  & > .value {\n    font-size: 1.4rem;\n\n    & > .max {\n      font-size: 1rem;\n    }\n  }\n}\n\n.details-box {\n  display: grid;\n  grid-template-columns: repeat(4, 1fr);\n  grid-template-rows: repeat(2, 1fr);\n  gap: 2rem;\n\n  & > .poster {\n    position: relative;\n    flex-basis: 65%;\n    grid-column: 1 / span 3;\n    grid-row: 1 / span 2;\n\n    &::before {\n      content: '';\n      position: absolute;\n      left: 0;\n      top: 0;\n      width: 100%;\n      height: 100%;\n      background-image: linear-gradient(to bottom, rgba(colors.$blue, 0.6), rgba(colors.$white, 0.16));\n      border-radius: 1rem;\n    }\n  }\n}\n\n.pricing-box {\n  // TODO insert phone icon\n  background-color: colors.$first;\n  padding: 2.9rem 2.3rem;\n  border-radius: 0.8rem;\n  @include fonts.font-nunito;\n  display: grid;\n  grid-template-columns: 1fr 1fr;\n  color: colors.$white;\n\n  & > .btn {\n    @extend %button-default;\n\n    grid-column: 1 / span 2;\n  }\n}\n\n.price-cell {\n  & > * {\n    color: colors.$white;\n  }\n\n  & > .price {\n    font-weight: 800;\n  }\n}\n\n.description-cell {\n  text-align: right;\n  font-weight: 400;\n\n  & > * {\n    font-size: 1.2rem;\n    color: colors.$white;\n  }\n\n  & > .item {\n    display: grid;\n    grid-template-columns: 1fr 1fr;\n\n    &::before {\n      content: url('/assets/images/guest.svg');\n    }\n\n    &.-room::before {\n      content: url('/assets/images/room.svg');\n    }\n  }\n}\n",
+                    "data": "@use 'settings' as colors;\n@use 'tools' as tools;\n@use 'tools/placeholders';\n\n.hotel-details {\n  // TODO - move 9rem padding to main element when home component create\n  padding: 2rem 9rem 0;\n\n  & > .top {\n    display: flex;\n    align-items: center;\n    justify-content: space-between;\n  }\n}\n\n.title-box {\n  display: grid;\n  grid-template-rows: repeat(3, 1fr);\n  justify-items: start;\n  align-items: center;\n\n  & > .stars {\n    grid-row: 1 / 2;\n    align-self: end;\n\n    & > * {\n      width: 0.8rem;\n      height: 0.8rem;\n    }\n  }\n\n  & > .text {\n    grid-row: 2 / 3;\n  }\n\n  & > .offer {\n    @extend %flash-offer;\n\n    grid-row: 2 / 3;\n    transform: translateX(-140%);\n  }\n\n  & > .description {\n    font-size: 1.2rem;\n    grid-row: 3 / 3;\n    align-self: start;\n  }\n}\n\n.user-ratings {\n  background-color: colors.$second;\n  display: inline-block;\n  padding: 1.5rem 1.7rem;\n  border-radius: 0.4rem;\n\n  & > * {\n    color: colors.$white;\n  }\n\n  & > .text {\n    font-size: 0.8rem;\n  }\n\n  & > .value {\n    font-size: 1.4rem;\n\n    & > .max {\n      font-size: 1rem;\n    }\n  }\n}\n\n.details-box {\n  display: grid;\n  grid-template-columns: repeat(4, 1fr);\n  grid-template-rows: repeat(2, 1fr);\n  gap: 2rem;\n\n  & > .poster {\n    position: relative;\n    flex-basis: 65%;\n    grid-column: 1 / span 3;\n    grid-row: 1 / span 2;\n\n    &::before {\n      content: '';\n      position: absolute;\n      left: 0;\n      top: 0;\n      width: 100%;\n      height: 100%;\n      background-image: linear-gradient(to bottom, rgba(colors.$blue, 0.6), rgba(colors.$white, 0.16));\n      border-radius: 1rem;\n    }\n  }\n}\n\n.pricing-box {\n  background-color: colors.$first;\n  padding: 2.9rem 2.3rem;\n  border-radius: 0.8rem;\n  @include tools.font-nunito;\n  display: grid;\n  grid-template-columns: 1fr 1fr;\n  color: colors.$white;\n\n  & > .tel {\n    @include tools.flex-icon('/assets/images/phone-call.svg');\n    place-self: center end;\n  }\n\n  & > .btn {\n    @extend %button-default;\n\n    grid-column: 1 / span 2;\n  }\n}\n\n.price-cell {\n  & > * {\n    color: colors.$white;\n  }\n\n  & > .price {\n    font-weight: 800;\n  }\n}\n\n.description-cell {\n  text-align: right;\n  font-weight: 400;\n\n  & > * {\n    font-size: 1.2rem;\n    color: colors.$white;\n  }\n\n  & > .item {\n    display: grid;\n    grid-template-columns: 1fr 1fr;\n\n    &::before {\n      content: url('/assets/images/guest.svg');\n    }\n\n    &.-room::before {\n      content: url('/assets/images/room.svg');\n    }\n  }\n}\n",
                     "styleUrl": "./hotel-details.component.scss"
                 }
             ],
@@ -521,7 +561,7 @@
             "implements": [
                 "OnInit"
             ],
-            "templateData": "<section class=\"hotel-details\">\n  <div class=\"top\">\n    <div class=\"title-box\">\n      <figure class=\"stars\">\n        <img *ngFor=\"let star of stars\" [src]=\"star\" alt=\"star icon\" />\n      </figure>\n      <h1 class=\"text\">Grand Hilton Hotel</h1>\n      <p class=\"offer\">Flash Offer</p>\n      <p class=\"description\">Half-Board/ All Inclusive + Complimentary Activities + Child Stays Free</p>\n    </div>\n\n    <div class=\"user-ratings\">\n      <p class=\"text\">User Rattings</p>\n      <p class=\"value\">4.5/<span class=\"max\">5</span></p>\n    </div>\n  </div>\n\n  <div class=\"main details-box\">\n    <figure class=\"poster\">\n      <img class=\"_border-radius-small\" src=\"/assets/images/grand-hilton.png\" alt=\"Grand Hilton Hotel\" />\n    </figure>\n\n    <div class=\"pricing-box\">\n      <div class=\"price-cell\">\n        <p class=\"text\">price starts as</p>\n        <h2 class=\"price\">$ {{ hotelPrice | number }}</h2>\n        <p class=\"text\">per room / night</p>\n      </div>\n      <div class=\"description-cell\">\n        <p class=\"item\">2 x Guests</p>\n        <p class=\"item -room\">1 x Room</p>\n      </div>\n      <h3 class=\"_text-white\">Quick Booking</h3>\n      <h3 class=\"_text-white _align-text-right\">12100</h3>\n      <button class=\"btn\">View Other Options</button>\n    </div>\n\n    <div class=\"map\">\n      <iframe\n        src=\"https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3153.5072907406525!2d-122.41953338503038!3d37.77814961973894!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8085809be90f0637%3A0xd558ef250f4addf9!2sBill%20Graham%20Civic%20Auditorium!5e0!3m2!1spt-BR!2sbr!4v1638649641042!5m2!1spt-BR!2sbr\"\n        style=\"border: 0; border-radius: 1rem; height: 100%\"\n        allowfullscreen=\"\"\n        loading=\"lazy\"\n      ></iframe>\n    </div>\n  </div>\n\n  <app-hotel-details-navigation></app-hotel-details-navigation>\n  <app-package-summery></app-package-summery>\n</section>\n"
+            "templateData": "<section class=\"hotel-details\">\n  <div class=\"top\">\n    <div class=\"title-box\">\n      <figure class=\"stars\">\n        <img *ngFor=\"let star of stars\" [src]=\"star\" alt=\"star icon\" />\n      </figure>\n      <h1 class=\"text\">Grand Hilton Hotel</h1>\n      <p class=\"offer\">Flash Offer</p>\n      <p class=\"description\">Half-Board/ All Inclusive + Complimentary Activities + Child Stays Free</p>\n    </div>\n\n    <div class=\"user-ratings\">\n      <p class=\"text\">User Rattings</p>\n      <p class=\"value\">4.5/<span class=\"max\">5</span></p>\n    </div>\n  </div>\n\n  <div class=\"main details-box\">\n    <figure class=\"poster\">\n      <img class=\"_border-radius-small\" src=\"/assets/images/grand-hilton.png\" alt=\"Grand Hilton Hotel\" />\n    </figure>\n\n    <div class=\"pricing-box\">\n      <div class=\"price-cell\">\n        <p class=\"text\">price starts as</p>\n        <h2 class=\"price\">$ {{ hotelPrice | number }}</h2>\n        <p class=\"text\">per room / night</p>\n      </div>\n\n      <div class=\"description-cell\">\n        <p class=\"item\">2 x Guests</p>\n        <p class=\"item -room\">1 x Room</p>\n      </div>\n\n      <h3 class=\"_text-white\">Quick Booking</h3>\n      <h3 class=\"_text-white tel\">12100</h3>\n      <button class=\"btn\">View Other Options</button>\n    </div>\n\n    <div class=\"map\">\n      <iframe\n        src=\"https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3153.5072907406525!2d-122.41953338503038!3d37.77814961973894!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8085809be90f0637%3A0xd558ef250f4addf9!2sBill%20Graham%20Civic%20Auditorium!5e0!3m2!1spt-BR!2sbr!4v1638649641042!5m2!1spt-BR!2sbr\"\n        style=\"border: 0; border-radius: 1rem; height: 100%\"\n        allowfullscreen=\"\"\n        loading=\"lazy\"\n      ></iframe>\n    </div>\n  </div>\n\n  <app-hotel-details-navigation></app-hotel-details-navigation>\n  <app-package-summery></app-package-summery>\n</section>\n"
         },
         {
             "name": "HotelDetailsNavigationComponent",
@@ -809,7 +849,7 @@
             "assetsDirs": [],
             "styleUrlsData": [
                 {
-                    "data": "@use 'settings' as colors;\n@use 'tools' as tools;\n\n%package-item-box {\n  font-size: 1.2rem;\n  border-radius: 0.9rem 0.9rem 0.9rem 0;\n  background-color: colors.$white;\n\n  & > .title {\n    background-color: colors.$first;\n    color: colors.$white;\n    padding: 1.3rem;\n    font-weight: bold;\n    font-size: 1.4rem;\n    border-top-left-radius: 0.8rem;\n    border-top-right-radius: 0.8rem;\n  }\n\n  & > .list {\n    border-bottom-right-radius: 0.8rem;\n    gap: 2.5rem;\n  }\n}\n\n.package-summery {\n  & > .title {\n    margin-bottom: 2.9rem;\n  }\n}\n\n.panel-box {\n  display: grid;\n  grid-template-columns: 1fr 1fr;\n  gap: 3rem;\n\n  & > .summery {\n    grid-column: 1 / span 2;\n  }\n}\n\n.package-highlights {\n  @extend %package-item-box;\n\n  & > .list {\n    @include tools.flex-wrap;\n  }\n}\n\n.offer-details {\n  @extend %package-item-box;\n\n  & > .list {\n    @include tools.flex-wrap;\n\n    & > .itemcalendar {\n      align-self: flex-start;\n    }\n  }\n}\n\n.summery-details {\n  @extend %package-item-box;\n\n  & > .container {\n    display: grid;\n    grid-template-columns: repeat(3, 1fr);\n    gap: 4rem 1rem;\n\n    & > .list {\n      padding: 2rem;\n      display: flex;\n      flex-direction: column;\n      row-gap: 2.5rem;\n    }\n  }\n}\n\n.list-title-package {\n  color: colors.$second;\n  font-size: 1.3rem;\n  font-weight: 600;\n}\n\n.list-item-package {\n  display: flex;\n  align-items: center;\n  column-gap: 1rem;\n  width: 45%;\n\n  &::before {\n    content: url('/assets/images/check-full.svg');\n  }\n\n  &.-calendar {\n    &::before {\n      content: url('/assets/images/calendar.svg');\n    }\n  }\n\n  &.-footer {\n    display: block;\n    padding-left: 2.6rem;\n    margin-top: 4rem;\n\n    &::before {\n      content: '';\n    }\n  }\n\n  &.-align-start {\n    &::before {\n      align-self: flex-start;\n    }\n  }\n}\n",
+                    "data": "@use 'settings' as colors;\n@use 'tools' as tools;\n@use 'tools/placeholders';\n\n.package-summery {\n  & > .title {\n    margin-bottom: 2.9rem;\n  }\n}\n\n.panel-box {\n  display: grid;\n  grid-template-columns: 1fr 1fr;\n  gap: 3rem;\n\n  & > .summery {\n    grid-column: 1 / span 2;\n  }\n}\n\n.package-highlights {\n  @extend %package-item-box;\n\n  & > .list {\n    @include tools.flex-wrap;\n  }\n}\n\n.offer-details {\n  @extend %package-item-box;\n\n  & > .list {\n    @include tools.flex-wrap;\n\n    & > .itemcalendar {\n      align-self: flex-start;\n    }\n  }\n}\n\n.summery-details {\n  @extend %package-item-box;\n\n  & > .container {\n    display: grid;\n    grid-template-columns: repeat(3, 1fr);\n    gap: 4rem 1rem;\n\n    & > .list {\n      padding: 2rem;\n      display: flex;\n      flex-direction: column;\n      row-gap: 2.5rem;\n    }\n  }\n}\n\n.list-title-package {\n  color: colors.$second;\n  font-size: 1.3rem;\n  font-weight: 600;\n}\n\n.list-item-package {\n  display: flex;\n  align-items: center;\n  column-gap: 1rem;\n  width: 45%;\n\n  &::before {\n    content: url('/assets/images/check-full.svg');\n  }\n\n  &.-calendar {\n    &::before {\n      content: url('/assets/images/calendar.svg');\n    }\n  }\n\n  &.-footer {\n    display: block;\n    padding-left: 2.6rem;\n    margin-top: 4rem;\n\n    &::before {\n      content: '';\n    }\n  }\n\n  &.-align-start {\n    &::before {\n      align-self: flex-start;\n    }\n  }\n}\n",
                     "styleUrl": "./package-summery.component.scss"
                 }
             ],
@@ -907,13 +947,13 @@
         },
         {
             "name": "HomeModule",
-            "id": "module-HomeModule-c92c0def4923a273e869d4204ae589226960dbe0bc4f6bb5a0d7b6af21d8d4a10fca3e53008850a24d8f1ae56f8ebfa9b58ddf5ab7f29f14c800b2425c1e59c4",
+            "id": "module-HomeModule-dd0363f8607acb78860704c9d36cb1976f7e8130bbd74e42e9af4d2f227902ff8fca00e7164f5d9a8410836602615eb3a57f03647575a621cec39392c82a9593",
             "description": "",
             "deprecationMessage": "",
             "deprecated": false,
             "file": "src/app/home/home.module.ts",
             "methods": [],
-            "sourceCode": "import { NgModule } from '@angular/core';\nimport { CommonModule } from '@angular/common';\nimport { NavTopComponent } from './nav-top/nav-top.component';\nimport { NavBarComponent } from './nav-bar/nav-bar.component';\nimport { ActiveRouteComponent } from './active-route/active-route.component';\nimport { HotelDetailsComponent } from './hotel-details/hotel-details.component';\nimport { HotelDetailsNavigationComponent } from './hotel-details-navigation/hotel-details-navigation.component';\nimport { PackageSummeryComponent } from './package-summery/package-summery.component';\nimport { OtherPackageService } from './shared/services/other-package.service';\nimport { HttpClientModule } from '@angular/common/http';\nimport { OtherPackagesComponent } from './other-packages/other-packages.component';\n\n@NgModule({\n  declarations: [\n    NavTopComponent,\n    NavBarComponent,\n    ActiveRouteComponent,\n    HotelDetailsComponent,\n    HotelDetailsNavigationComponent,\n    PackageSummeryComponent,\n    OtherPackagesComponent,\n  ],\n  imports: [CommonModule, HttpClientModule],\n  exports: [],\n  providers: [OtherPackageService],\n})\nexport class HomeModule {}\n",
+            "sourceCode": "import { NgModule } from '@angular/core';\nimport { CommonModule } from '@angular/common';\nimport { NavTopComponent } from './nav-top/nav-top.component';\nimport { NavBarComponent } from './nav-bar/nav-bar.component';\nimport { ActiveRouteComponent } from './active-route/active-route.component';\nimport { HotelDetailsComponent } from './hotel-details/hotel-details.component';\nimport { HotelDetailsNavigationComponent } from './hotel-details-navigation/hotel-details-navigation.component';\nimport { PackageSummeryComponent } from './package-summery/package-summery.component';\nimport { OtherPackageService } from './shared/services/other-package.service';\nimport { HttpClientModule } from '@angular/common/http';\nimport { OtherPackagesComponent } from './other-packages/other-packages.component';\nimport { GuestReviewComponent } from './guest-review/guest-review.component';\n\n@NgModule({\n  declarations: [\n    NavTopComponent,\n    NavBarComponent,\n    ActiveRouteComponent,\n    HotelDetailsComponent,\n    HotelDetailsNavigationComponent,\n    PackageSummeryComponent,\n    OtherPackagesComponent,\n    GuestReviewComponent,\n  ],\n  imports: [CommonModule, HttpClientModule],\n  exports: [],\n  providers: [OtherPackageService],\n})\nexport class HomeModule {}\n",
             "children": [
                 {
                     "type": "providers",
@@ -928,6 +968,9 @@
                     "elements": [
                         {
                             "name": "ActiveRouteComponent"
+                        },
+                        {
+                            "name": "GuestReviewComponent"
                         },
                         {
                             "name": "HotelDetailsComponent"
@@ -994,21 +1037,21 @@
                 "name": "Default",
                 "ctype": "miscellaneous",
                 "subtype": "variable",
-                "file": "src/app/home/hotel-details/HotelDetails.stories.ts",
+                "file": "src/app/home/guest-review/GuestReview.stories.ts",
                 "deprecated": false,
                 "deprecationMessage": "",
-                "type": "Story<HotelDetailsComponent>",
-                "defaultValue": "(args: HotelDetailsComponent) => ({\n  props: args,\n})"
+                "type": "Story<GuestReviewComponent>",
+                "defaultValue": "(args: GuestReviewComponent) => ({\n  props: args,\n})"
             },
             {
                 "name": "Default",
                 "ctype": "miscellaneous",
                 "subtype": "variable",
-                "file": "src/app/home/nav-bar/NavBar.stories.ts",
+                "file": "src/app/home/hotel-details/HotelDetails.stories.ts",
                 "deprecated": false,
                 "deprecationMessage": "",
-                "type": "Story<NavBarComponent>",
-                "defaultValue": "(args: NavBarComponent) => ({\n  props: args,\n})"
+                "type": "Story<HotelDetailsComponent>",
+                "defaultValue": "(args: HotelDetailsComponent) => ({\n  props: args,\n})"
             },
             {
                 "name": "Default",
@@ -1024,6 +1067,16 @@
                 "name": "Default",
                 "ctype": "miscellaneous",
                 "subtype": "variable",
+                "file": "src/app/home/nav-bar/NavBar.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "Story<NavBarComponent>",
+                "defaultValue": "(args: NavBarComponent) => ({\n  props: args,\n})"
+            },
+            {
+                "name": "Default",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
                 "file": "src/app/home/nav-top/NavTop.stories.ts",
                 "deprecated": false,
                 "deprecationMessage": "",
@@ -1034,21 +1087,21 @@
                 "name": "Default",
                 "ctype": "miscellaneous",
                 "subtype": "variable",
-                "file": "src/app/home/package-summery/PackageSummery.stories.ts",
-                "deprecated": false,
-                "deprecationMessage": "",
-                "type": "Story<PackageSummeryComponent>",
-                "defaultValue": "(args: PackageSummeryComponent) => ({\n  props: args,\n})"
-            },
-            {
-                "name": "Default",
-                "ctype": "miscellaneous",
-                "subtype": "variable",
                 "file": "src/app/home/other-packages/OtherPackages.stories.ts",
                 "deprecated": false,
                 "deprecationMessage": "",
                 "type": "Story<OtherPackagesComponent>",
                 "defaultValue": "(args: OtherPackagesComponent) => ({\n  props: args,\n})"
+            },
+            {
+                "name": "Default",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "src/app/home/package-summery/PackageSummery.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "Story<PackageSummeryComponent>",
+                "defaultValue": "(args: PackageSummeryComponent) => ({\n  props: args,\n})"
             },
             {
                 "name": "environment",
@@ -1138,6 +1191,18 @@
                     "defaultValue": "(args: ActiveRouteComponent) => ({\n  props: args,\n})"
                 }
             ],
+            "src/app/home/guest-review/GuestReview.stories.ts": [
+                {
+                    "name": "Default",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "src/app/home/guest-review/GuestReview.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "Story<GuestReviewComponent>",
+                    "defaultValue": "(args: GuestReviewComponent) => ({\n  props: args,\n})"
+                }
+            ],
             "src/app/home/hotel-details/HotelDetails.stories.ts": [
                 {
                     "name": "Default",
@@ -1148,18 +1213,6 @@
                     "deprecationMessage": "",
                     "type": "Story<HotelDetailsComponent>",
                     "defaultValue": "(args: HotelDetailsComponent) => ({\n  props: args,\n})"
-                }
-            ],
-            "src/app/home/nav-bar/NavBar.stories.ts": [
-                {
-                    "name": "Default",
-                    "ctype": "miscellaneous",
-                    "subtype": "variable",
-                    "file": "src/app/home/nav-bar/NavBar.stories.ts",
-                    "deprecated": false,
-                    "deprecationMessage": "",
-                    "type": "Story<NavBarComponent>",
-                    "defaultValue": "(args: NavBarComponent) => ({\n  props: args,\n})"
                 }
             ],
             "src/app/home/hotel-details-navigation/HotelDetailsNavigation.stories.ts": [
@@ -1174,6 +1227,18 @@
                     "defaultValue": "(args: HotelDetailsNavigationComponent) => ({\n  props: args,\n})"
                 }
             ],
+            "src/app/home/nav-bar/NavBar.stories.ts": [
+                {
+                    "name": "Default",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "src/app/home/nav-bar/NavBar.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "Story<NavBarComponent>",
+                    "defaultValue": "(args: NavBarComponent) => ({\n  props: args,\n})"
+                }
+            ],
             "src/app/home/nav-top/NavTop.stories.ts": [
                 {
                     "name": "Default",
@@ -1186,18 +1251,6 @@
                     "defaultValue": "(args: NavTopComponent) => ({\n  props: args,\n})"
                 }
             ],
-            "src/app/home/package-summery/PackageSummery.stories.ts": [
-                {
-                    "name": "Default",
-                    "ctype": "miscellaneous",
-                    "subtype": "variable",
-                    "file": "src/app/home/package-summery/PackageSummery.stories.ts",
-                    "deprecated": false,
-                    "deprecationMessage": "",
-                    "type": "Story<PackageSummeryComponent>",
-                    "defaultValue": "(args: PackageSummeryComponent) => ({\n  props: args,\n})"
-                }
-            ],
             "src/app/home/other-packages/OtherPackages.stories.ts": [
                 {
                     "name": "Default",
@@ -1208,6 +1261,18 @@
                     "deprecationMessage": "",
                     "type": "Story<OtherPackagesComponent>",
                     "defaultValue": "(args: OtherPackagesComponent) => ({\n  props: args,\n})"
+                }
+            ],
+            "src/app/home/package-summery/PackageSummery.stories.ts": [
+                {
+                    "name": "Default",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "src/app/home/package-summery/PackageSummery.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "Story<PackageSummeryComponent>",
+                    "defaultValue": "(args: PackageSummeryComponent) => ({\n  props: args,\n})"
                 }
             ],
             "src/environments/environment.prod.ts": [
@@ -1308,6 +1373,25 @@
                 "name": "ActiveRouteComponent",
                 "coveragePercent": 0,
                 "coverageCount": "0/2",
+                "status": "low"
+            },
+            {
+                "filePath": "src/app/home/guest-review/GuestReview.stories.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "Default",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "src/app/home/guest-review/guest-review.component.ts",
+                "type": "component",
+                "linktype": "component",
+                "name": "GuestReviewComponent",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
                 "status": "low"
             },
             {

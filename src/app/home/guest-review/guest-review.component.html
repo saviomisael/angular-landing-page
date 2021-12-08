@@ -1,0 +1,30 @@
+<section class="guest-review">
+  <h2 class="title">What people thinks about us</h2>
+
+  <button class="left"><img src="/assets/images/chevron-left.svg" alt="Arrow left" /></button>
+
+  <div class="main review-box">
+    <figure class="guest-photo">
+      <img class="image" src="/assets/images/guest-image.png" alt="Guest photo" />
+
+      <figcaption class="caption">
+        <p class="guestname _padding-x-small">Megan Fox</p>
+        <p class="date">Stayed <time date="2019-09-18">18 Nov, 2019</time></p>
+
+        <figure class="stars">
+          <img class="star" *ngFor="let star of stars" [src]="star" alt="star icon" />
+        </figure>
+      </figcaption>
+    </figure>
+
+    <blockquote class="reviewtext">
+      It was very nice hotel with cleanliness. Staff behavior was good and polite. They welcome us very well. Issue was
+      only that Lift was not in working and we were allotted to 3rd floor and amenities articles were in corner of
+      gallery which were giving bad feeling. Breakfast was good and support of the staff was also very nice. Location is
+      not good as per atmosphere, it is very nearby most of the popular places but self location in a narrow street is
+      not good. Overall it was a good experience and could recommend.
+    </blockquote>
+  </div>
+
+  <button class="right"><img src="/assets/images/chevron-right.svg" alt="Arrow right" /></button>
+</section>
