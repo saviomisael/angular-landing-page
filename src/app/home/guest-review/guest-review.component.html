@@ -11,9 +11,7 @@
         <p class="guestname _padding-x-small">Megan Fox</p>
         <p class="date">Stayed <time date="2019-09-18">18 Nov, 2019</time></p>
 
-        <figure class="stars">
-          <img class="star" *ngFor="let star of stars" [src]="star" alt="star icon" />
-        </figure>
+        <app-stars-box [starsCount]="count"></app-stars-box>
       </figcaption>
     </figure>
 
