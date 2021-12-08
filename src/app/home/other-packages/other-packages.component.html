@@ -6,9 +6,11 @@
       <p class="offer" *ngIf="package.is_offer">Flash Offer</p>
       <img class="poster" [src]="package.poster" [alt]="package.name" />
       <div class="left left-panel-box">
-        <figure class="stars-box griditem" *ngIf="isFirst(packages, package)">
-          <img *ngFor="let star of package.stars" [src]="star" alt="star icon" class="icon" />
-        </figure>
+        <app-stars-box
+          class="griditem"
+          *ngIf="isFirst(packages, package)"
+          [starsCount]="package.stars_rating_count"
+        ></app-stars-box>
 
         <h3 class="griditem _padding-bottom-small">{{ package.name }}</h3>
 

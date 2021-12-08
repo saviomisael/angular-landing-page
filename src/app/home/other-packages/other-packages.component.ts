@@ -1,8 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Observable } from 'rxjs';
 import { OtherPackageService } from '../shared/services/other-package.service';
-import { fillOtherPackageStars } from '../shared/utils/rxjs-operators';
-import { OtherPackage as ViewModel } from '../shared/viewmodels/other-package.viewmodel';
+import { OtherPackage } from '../shared/models/other-package.model';
 
 @Component({
   selector: 'app-other-packages',
@@ -10,15 +9,15 @@ import { OtherPackage as ViewModel } from '../shared/viewmodels/other-package.vi
   styleUrls: ['./other-packages.component.scss'],
 })
 export class OtherPackagesComponent implements OnInit {
-  packages$!: Observable<ViewModel[]>;
+  packages$!: Observable<OtherPackage[]>;
 
   constructor(private service: OtherPackageService) {}
 
   ngOnInit(): void {
-    this.packages$ = this.service.getOtherPackages().pipe(fillOtherPackageStars());
+    this.packages$ = this.service.getOtherPackages();
   }
 
-  isFirst(array: ViewModel[], item: ViewModel) {
+  isFirst(array: OtherPackage[], item: OtherPackage) {
     return array.indexOf(item) === 0;
   }
 }

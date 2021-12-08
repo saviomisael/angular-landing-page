@@ -408,7 +408,7 @@
         },
         {
             "name": "GuestReviewComponent",
-            "id": "component-GuestReviewComponent-adbebeb6c1b982acfd57a5577146f722e6185f8df7a5a08d1c7ba1c35f1cbb669a43f8c2fba6407589b94f29b848c3649be461aca64e242deb92322d406c7094",
+            "id": "component-GuestReviewComponent-8c6aa7a60fc0fcfe79280982d11f73664e5bf774f33f8f251d2a3940d404952d286a4c681ac1d5b54d0c138c1a6302f5be3fb2fb9cdc87da70251c7b1563f0f6",
             "file": "src/app/home/guest-review/guest-review.component.ts",
             "encapsulation": [],
             "entryComponents": [],
@@ -435,34 +435,10 @@
                     "type": "number",
                     "optional": false,
                     "description": "",
-                    "line": 11,
-                    "modifierKind": [
-                        121
-                    ]
-                },
-                {
-                    "name": "stars",
-                    "defaultValue": "[]",
-                    "deprecated": false,
-                    "deprecationMessage": "",
-                    "type": "string[]",
-                    "optional": false,
-                    "description": "",
-                    "line": 10
+                    "line": 9
                 }
             ],
-            "methodsClass": [
-                {
-                    "name": "ngOnInit",
-                    "args": [],
-                    "optional": false,
-                    "returnType": "void",
-                    "typeParameters": [],
-                    "line": 13,
-                    "deprecated": false,
-                    "deprecationMessage": ""
-                }
-            ],
+            "methodsClass": [],
             "deprecated": false,
             "deprecationMessage": "",
             "hostBindings": [],
@@ -470,7 +446,7 @@
             "description": "",
             "rawdescription": "\n",
             "type": "component",
-            "sourceCode": "import { Component, OnInit } from '@angular/core';\nimport { fillStars } from '../shared/utils/fill-stars';\n\n@Component({\n  selector: 'app-guest-review',\n  templateUrl: './guest-review.component.html',\n  styleUrls: ['./guest-review.component.scss'],\n})\nexport class GuestReviewComponent implements OnInit {\n  stars: string[] = [];\n  private count = 5;\n\n  ngOnInit() {\n    this.stars = fillStars(this.count, '/assets/images/star-rating.svg');\n  }\n}\n",
+            "sourceCode": "import { Component } from '@angular/core';\n\n@Component({\n  selector: 'app-guest-review',\n  templateUrl: './guest-review.component.html',\n  styleUrls: ['./guest-review.component.scss'],\n})\nexport class GuestReviewComponent {\n  count = 5;\n}\n",
             "assetsDirs": [],
             "styleUrlsData": [
                 {
@@ -479,14 +455,11 @@
                 }
             ],
             "stylesData": "",
-            "implements": [
-                "OnInit"
-            ],
-            "templateData": "<section class=\"guest-review\">\n  <h2 class=\"title\">What people thinks about us</h2>\n\n  <button class=\"left\"><img src=\"/assets/images/chevron-left.svg\" alt=\"Arrow left\" /></button>\n\n  <div class=\"main review-box\">\n    <figure class=\"guest-photo\">\n      <img class=\"image\" src=\"/assets/images/guest-image.png\" alt=\"Guest photo\" />\n\n      <figcaption class=\"caption\">\n        <p class=\"guestname _padding-x-small\">Megan Fox</p>\n        <p class=\"date\">Stayed <time date=\"2019-09-18\">18 Nov, 2019</time></p>\n\n        <figure class=\"stars\">\n          <img class=\"star\" *ngFor=\"let star of stars\" [src]=\"star\" alt=\"star icon\" />\n        </figure>\n      </figcaption>\n    </figure>\n\n    <blockquote class=\"reviewtext\">\n      It was very nice hotel with cleanliness. Staff behavior was good and polite. They welcome us very well. Issue was\n      only that Lift was not in working and we were allotted to 3rd floor and amenities articles were in corner of\n      gallery which were giving bad feeling. Breakfast was good and support of the staff was also very nice. Location is\n      not good as per atmosphere, it is very nearby most of the popular places but self location in a narrow street is\n      not good. Overall it was a good experience and could recommend.\n    </blockquote>\n  </div>\n\n  <button class=\"right\"><img src=\"/assets/images/chevron-right.svg\" alt=\"Arrow right\" /></button>\n</section>\n"
+            "templateData": "<section class=\"guest-review\">\n  <h2 class=\"title\">What people thinks about us</h2>\n\n  <button class=\"left\"><img src=\"/assets/images/chevron-left.svg\" alt=\"Arrow left\" /></button>\n\n  <div class=\"main review-box\">\n    <figure class=\"guest-photo\">\n      <img class=\"image\" src=\"/assets/images/guest-image.png\" alt=\"Guest photo\" />\n\n      <figcaption class=\"caption\">\n        <p class=\"guestname _padding-x-small\">Megan Fox</p>\n        <p class=\"date\">Stayed <time date=\"2019-09-18\">18 Nov, 2019</time></p>\n\n        <app-stars-box [starsCount]=\"count\"></app-stars-box>\n      </figcaption>\n    </figure>\n\n    <blockquote class=\"reviewtext\">\n      It was very nice hotel with cleanliness. Staff behavior was good and polite. They welcome us very well. Issue was\n      only that Lift was not in working and we were allotted to 3rd floor and amenities articles were in corner of\n      gallery which were giving bad feeling. Breakfast was good and support of the staff was also very nice. Location is\n      not good as per atmosphere, it is very nearby most of the popular places but self location in a narrow street is\n      not good. Overall it was a good experience and could recommend.\n    </blockquote>\n  </div>\n\n  <button class=\"right\"><img src=\"/assets/images/chevron-right.svg\" alt=\"Arrow right\" /></button>\n</section>\n"
         },
         {
             "name": "HotelDetailsComponent",
-            "id": "component-HotelDetailsComponent-0a9fd97e1e011133a7a2a62b77750d6ed518c2717acccbe166fd380eb42a0aa13d9a1154683ffcd4ab9d7da0a2005605631a6d190a8397b810eac328107ab9b5",
+            "id": "component-HotelDetailsComponent-6525f41e75a221174e5339c9efe971fe6812833a6e853860995a2ed8dcd730c3ee6b406ebc03bad0370afe607cb08443388606fd37b242203988712d80d04f7f",
             "file": "src/app/home/hotel-details/hotel-details.component.ts",
             "encapsulation": [],
             "entryComponents": [],
@@ -513,22 +486,9 @@
                     "type": "number",
                     "optional": false,
                     "description": "",
-                    "line": 13,
-                    "modifierKind": [
-                        144
-                    ]
-                },
-                {
-                    "name": "starIconUrl",
-                    "defaultValue": "'/assets/images/star-rating.svg'",
-                    "deprecated": false,
-                    "deprecationMessage": "",
-                    "type": "string",
-                    "optional": false,
-                    "description": "",
                     "line": 11,
                     "modifierKind": [
-                        121
+                        144
                     ]
                 },
                 {
@@ -539,7 +499,7 @@
                     "type": "string[]",
                     "optional": false,
                     "description": "",
-                    "line": 12,
+                    "line": 10,
                     "modifierKind": [
                         144
                     ]
@@ -552,34 +512,10 @@
                     "type": "number",
                     "optional": false,
                     "description": "",
-                    "line": 10,
-                    "modifierKind": [
-                        121
-                    ]
+                    "line": 9
                 }
             ],
-            "methodsClass": [
-                {
-                    "name": "fillStars",
-                    "args": [],
-                    "optional": false,
-                    "returnType": "void",
-                    "typeParameters": [],
-                    "line": 19,
-                    "deprecated": false,
-                    "deprecationMessage": ""
-                },
-                {
-                    "name": "ngOnInit",
-                    "args": [],
-                    "optional": false,
-                    "returnType": "void",
-                    "typeParameters": [],
-                    "line": 15,
-                    "deprecated": false,
-                    "deprecationMessage": ""
-                }
-            ],
+            "methodsClass": [],
             "deprecated": false,
             "deprecationMessage": "",
             "hostBindings": [],
@@ -587,7 +523,7 @@
             "description": "",
             "rawdescription": "\n",
             "type": "component",
-            "sourceCode": "import { Component, OnInit } from '@angular/core';\nimport { fillStars } from '../shared/utils/fill-stars';\n\n@Component({\n  selector: 'app-hotel-details',\n  templateUrl: './hotel-details.component.html',\n  styleUrls: ['./hotel-details.component.scss'],\n})\nexport class HotelDetailsComponent implements OnInit {\n  private starsCount = 5;\n  private starIconUrl = '/assets/images/star-rating.svg';\n  readonly stars: string[] = [];\n  readonly hotelPrice = 8500;\n\n  ngOnInit(): void {\n    this.fillStars();\n  }\n\n  fillStars(): void {\n    this.stars.push(...fillStars(this.starsCount, this.starIconUrl));\n  }\n}\n",
+            "sourceCode": "import { Component } from '@angular/core';\n\n@Component({\n  selector: 'app-hotel-details',\n  templateUrl: './hotel-details.component.html',\n  styleUrls: ['./hotel-details.component.scss'],\n})\nexport class HotelDetailsComponent {\n  starsCount = 5;\n  readonly stars: string[] = [];\n  readonly hotelPrice = 8500;\n}\n",
             "assetsDirs": [],
             "styleUrlsData": [
                 {
@@ -596,10 +532,7 @@
                 }
             ],
             "stylesData": "",
-            "implements": [
-                "OnInit"
-            ],
-            "templateData": "<section class=\"hotel-details\">\n  <div class=\"top\">\n    <div class=\"title-box\">\n      <figure class=\"stars\">\n        <img *ngFor=\"let star of stars\" [src]=\"star\" alt=\"star icon\" />\n      </figure>\n      <h1 class=\"text\">Grand Hilton Hotel</h1>\n      <p class=\"offer\">Flash Offer</p>\n      <p class=\"description\">Half-Board/ All Inclusive + Complimentary Activities + Child Stays Free</p>\n    </div>\n\n    <div class=\"user-ratings\">\n      <p class=\"text\">User Rattings</p>\n      <p class=\"value\">4.5/<span class=\"max\">5</span></p>\n    </div>\n  </div>\n\n  <div class=\"main details-box\">\n    <figure class=\"poster\">\n      <img class=\"_border-radius-small\" src=\"/assets/images/grand-hilton.png\" alt=\"Grand Hilton Hotel\" />\n    </figure>\n\n    <div class=\"pricing-box\">\n      <div class=\"price-cell\">\n        <p class=\"text\">price starts as</p>\n        <h2 class=\"price\">$ {{ hotelPrice | number }}</h2>\n        <p class=\"text\">per room / night</p>\n      </div>\n\n      <div class=\"description-cell\">\n        <p class=\"item\">2 x Guests</p>\n        <p class=\"item -room\">1 x Room</p>\n      </div>\n\n      <h3 class=\"_text-white\">Quick Booking</h3>\n      <h3 class=\"_text-white tel\">12100</h3>\n      <button class=\"btn\">View Other Options</button>\n    </div>\n\n    <div class=\"map\">\n      <iframe\n        src=\"https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3153.5072907406525!2d-122.41953338503038!3d37.77814961973894!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8085809be90f0637%3A0xd558ef250f4addf9!2sBill%20Graham%20Civic%20Auditorium!5e0!3m2!1spt-BR!2sbr!4v1638649641042!5m2!1spt-BR!2sbr\"\n        style=\"border: 0; border-radius: 1rem; height: 100%\"\n        allowfullscreen=\"\"\n        loading=\"lazy\"\n      ></iframe>\n    </div>\n  </div>\n\n  <app-hotel-details-navigation></app-hotel-details-navigation>\n  <app-package-summery></app-package-summery>\n</section>\n"
+            "templateData": "<section class=\"hotel-details\">\n  <div class=\"top\">\n    <div class=\"title-box\">\n      <app-stars-box [starsCount]=\"starsCount\"></app-stars-box>\n      <h1 class=\"text\">Grand Hilton Hotel</h1>\n      <p class=\"offer\">Flash Offer</p>\n      <p class=\"description\">Half-Board/ All Inclusive + Complimentary Activities + Child Stays Free</p>\n    </div>\n\n    <div class=\"user-ratings\">\n      <p class=\"text\">User Rattings</p>\n      <p class=\"value\">4.5/<span class=\"max\">5</span></p>\n    </div>\n  </div>\n\n  <div class=\"main details-box\">\n    <figure class=\"poster\">\n      <img class=\"_border-radius-small\" src=\"/assets/images/grand-hilton.png\" alt=\"Grand Hilton Hotel\" />\n    </figure>\n\n    <div class=\"pricing-box\">\n      <div class=\"price-cell\">\n        <p class=\"text\">price starts as</p>\n        <h2 class=\"price\">$ {{ hotelPrice | number }}</h2>\n        <p class=\"text\">per room / night</p>\n      </div>\n\n      <div class=\"description-cell\">\n        <p class=\"item\">2 x Guests</p>\n        <p class=\"item -room\">1 x Room</p>\n      </div>\n\n      <h3 class=\"_text-white\">Quick Booking</h3>\n      <h3 class=\"_text-white tel\">12100</h3>\n      <button class=\"btn\">View Other Options</button>\n    </div>\n\n    <div class=\"map\">\n      <iframe\n        src=\"https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3153.5072907406525!2d-122.41953338503038!3d37.77814961973894!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8085809be90f0637%3A0xd558ef250f4addf9!2sBill%20Graham%20Civic%20Auditorium!5e0!3m2!1spt-BR!2sbr!4v1638649641042!5m2!1spt-BR!2sbr\"\n        style=\"border: 0; border-radius: 1rem; height: 100%\"\n        allowfullscreen=\"\"\n        loading=\"lazy\"\n      ></iframe>\n    </div>\n  </div>\n\n  <app-hotel-details-navigation></app-hotel-details-navigation>\n  <app-package-summery></app-package-summery>\n</section>\n"
         },
         {
             "name": "HotelDetailsNavigationComponent",
@@ -896,7 +829,7 @@
         },
         {
             "name": "StarsBoxComponent",
-            "id": "component-StarsBoxComponent-2d39e9c008cdb00fcbe319f7b0be5000701b4f653fa2a01bfa94b857b5300b0dc641dc76139ea464ad2ba5bd149426e46f2ea6e3609cc3f06a6dae25f2658af3",
+            "id": "component-StarsBoxComponent-4615c9a512ce6f3a1e9dfcc11f8c1fa9054aa0aaa87ce17ceb562ad1631f736dfb65ebbf429f3a1e346aef88b67a733ece4bd4809f6ef8986476017cd88f8482",
             "file": "src/app/home/stars-box/stars-box.component.ts",
             "encapsulation": [],
             "entryComponents": [],
@@ -925,6 +858,19 @@
             ],
             "outputsClass": [],
             "propertiesClass": [
+                {
+                    "name": "iconUrl",
+                    "defaultValue": "'/assets/images/star-rating.svg'",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "string",
+                    "optional": false,
+                    "description": "",
+                    "line": 13,
+                    "modifierKind": [
+                        121
+                    ]
+                },
                 {
                     "name": "stars",
                     "defaultValue": "[]",
@@ -956,7 +902,7 @@
                     "optional": false,
                     "returnType": "string[]",
                     "typeParameters": [],
-                    "line": 22,
+                    "line": 25,
                     "deprecated": false,
                     "deprecationMessage": "",
                     "modifierKind": [
@@ -996,7 +942,7 @@
                     "optional": false,
                     "returnType": "void",
                     "typeParameters": [],
-                    "line": 18,
+                    "line": 19,
                     "deprecated": false,
                     "deprecationMessage": "",
                     "jsdoctags": [
@@ -1017,7 +963,7 @@
                     "optional": false,
                     "returnType": "void",
                     "typeParameters": [],
-                    "line": 14,
+                    "line": 15,
                     "deprecated": false,
                     "deprecationMessage": ""
                 }
@@ -1029,7 +975,7 @@
             "description": "",
             "rawdescription": "\n",
             "type": "component",
-            "sourceCode": "import { Component, Input, OnChanges, OnInit, SimpleChanges } from '@angular/core';\n\n@Component({\n  selector: 'app-stars-box',\n  templateUrl: './stars-box.component.html',\n  styleUrls: ['./stars-box.component.scss'],\n})\nexport class StarsBoxComponent implements OnInit, OnChanges {\n  // TODO - remove fill stars function utils\n\n  @Input() starsCount = 0;\n  stars: string[] = [];\n\n  ngOnInit(): void {\n    this.stars = this.fillStars(this.starsCount, '/assets/images/star-rating.svg');\n  }\n\n  ngOnChanges(changes: SimpleChanges) {\n    console.log(changes);\n  }\n\n  private fillStars(starsCount: number, content: string): string[] {\n    const stars: string[] = [];\n\n    for (let index = 0; index < starsCount; index++) {\n      stars.push(content);\n    }\n\n    return stars;\n  }\n}\n",
+            "sourceCode": "import { Component, Input, OnChanges, OnInit, SimpleChanges } from '@angular/core';\n\n@Component({\n  selector: 'app-stars-box',\n  templateUrl: './stars-box.component.html',\n  styleUrls: ['./stars-box.component.scss'],\n})\nexport class StarsBoxComponent implements OnInit, OnChanges {\n  // TODO - remove fill stars function utils\n\n  @Input() starsCount = 0;\n  stars: string[] = [];\n  private iconUrl = '/assets/images/star-rating.svg';\n\n  ngOnInit(): void {\n    this.stars = this.fillStars(this.starsCount, this.iconUrl);\n  }\n\n  ngOnChanges(changes: SimpleChanges) {\n    if (changes['starsCount'].currentValue !== changes['starsCount'].previousValue) {\n      this.stars = this.fillStars(this.starsCount, this.iconUrl);\n    }\n  }\n\n  private fillStars(starsCount: number, content: string): string[] {\n    const stars: string[] = [];\n\n    for (let index = 0; index < starsCount; index++) {\n      stars.push(content);\n    }\n\n    return stars;\n  }\n}\n",
             "assetsDirs": [],
             "styleUrlsData": [
                 {
@@ -1218,21 +1164,21 @@
                 "name": "Default",
                 "ctype": "miscellaneous",
                 "subtype": "variable",
-                "file": "src/app/home/active-route/ActiveRoute.stories.ts",
-                "deprecated": false,
-                "deprecationMessage": "",
-                "type": "Story<ActiveRouteComponent>",
-                "defaultValue": "(args: ActiveRouteComponent) => ({\n  props: args,\n})"
-            },
-            {
-                "name": "Default",
-                "ctype": "miscellaneous",
-                "subtype": "variable",
                 "file": "src/app/home/guest-review/GuestReview.stories.ts",
                 "deprecated": false,
                 "deprecationMessage": "",
                 "type": "Story<GuestReviewComponent>",
                 "defaultValue": "(args: GuestReviewComponent) => ({\n  props: args,\n})"
+            },
+            {
+                "name": "Default",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "src/app/home/active-route/ActiveRoute.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "Story<ActiveRouteComponent>",
+                "defaultValue": "(args: ActiveRouteComponent) => ({\n  props: args,\n})"
             },
             {
                 "name": "Default",
@@ -1332,7 +1278,7 @@
                 "deprecated": false,
                 "deprecationMessage": "",
                 "type": "",
-                "defaultValue": "(starsCount: number, content: string): string[] => {\n  const stars: string[] = [];\n\n  for (let index = 0; index < starsCount; index++) {\n    stars.push(content);\n  }\n\n  return stars;\n}"
+                "defaultValue": "(starsCount: number, content: string): string[] => {\r\n  const stars: string[] = [];\r\n\r\n  for (let index = 0; index < starsCount; index++) {\r\n    stars.push(content);\r\n  }\r\n\r\n  return stars;\r\n}"
             },
             {
                 "name": "require",
@@ -1390,18 +1336,6 @@
                     "type": "literal type"
                 }
             ],
-            "src/app/home/active-route/ActiveRoute.stories.ts": [
-                {
-                    "name": "Default",
-                    "ctype": "miscellaneous",
-                    "subtype": "variable",
-                    "file": "src/app/home/active-route/ActiveRoute.stories.ts",
-                    "deprecated": false,
-                    "deprecationMessage": "",
-                    "type": "Story<ActiveRouteComponent>",
-                    "defaultValue": "(args: ActiveRouteComponent) => ({\n  props: args,\n})"
-                }
-            ],
             "src/app/home/guest-review/GuestReview.stories.ts": [
                 {
                     "name": "Default",
@@ -1412,6 +1346,18 @@
                     "deprecationMessage": "",
                     "type": "Story<GuestReviewComponent>",
                     "defaultValue": "(args: GuestReviewComponent) => ({\n  props: args,\n})"
+                }
+            ],
+            "src/app/home/active-route/ActiveRoute.stories.ts": [
+                {
+                    "name": "Default",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "src/app/home/active-route/ActiveRoute.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "Story<ActiveRouteComponent>",
+                    "defaultValue": "(args: ActiveRouteComponent) => ({\n  props: args,\n})"
                 }
             ],
             "src/app/home/hotel-details/HotelDetails.stories.ts": [
@@ -1541,7 +1487,7 @@
                     "deprecated": false,
                     "deprecationMessage": "",
                     "type": "",
-                    "defaultValue": "(starsCount: number, content: string): string[] => {\n  const stars: string[] = [];\n\n  for (let index = 0; index < starsCount; index++) {\n    stars.push(content);\n  }\n\n  return stars;\n}"
+                    "defaultValue": "(starsCount: number, content: string): string[] => {\r\n  const stars: string[] = [];\r\n\r\n  for (let index = 0; index < starsCount; index++) {\r\n    stars.push(content);\r\n  }\r\n\r\n  return stars;\r\n}"
                 }
             ]
         },
@@ -1624,7 +1570,7 @@
                 "linktype": "component",
                 "name": "GuestReviewComponent",
                 "coveragePercent": 0,
-                "coverageCount": "0/4",
+                "coverageCount": "0/2",
                 "status": "low"
             },
             {
@@ -1662,7 +1608,7 @@
                 "linktype": "component",
                 "name": "HotelDetailsComponent",
                 "coveragePercent": 0,
-                "coverageCount": "0/7",
+                "coverageCount": "0/4",
                 "status": "low"
             },
             {
@@ -1814,7 +1760,7 @@
                 "linktype": "component",
                 "name": "StarsBoxComponent",
                 "coveragePercent": 0,
-                "coverageCount": "0/6",
+                "coverageCount": "0/7",
                 "status": "low"
             },
             {
