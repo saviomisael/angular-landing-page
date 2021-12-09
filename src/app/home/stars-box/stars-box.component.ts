@@ -6,8 +6,6 @@ import { Component, Input, OnChanges, OnInit, SimpleChanges } from '@angular/cor
   styleUrls: ['./stars-box.component.scss'],
 })
 export class StarsBoxComponent implements OnInit, OnChanges {
-  // TODO - remove fill stars function utils
-
   @Input() starsCount = 0;
   stars: string[] = [];
   private iconUrl = '/assets/images/star-rating.svg';
