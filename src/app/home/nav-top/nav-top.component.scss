@@ -1,11 +1,14 @@
 @use 'settings' as colors;
+@use 'tools';
 
 .nav-top {
+  @include tools.padding-y-default;
+
   background-color: colors.$blue-light;
   height: 6rem;
   display: flex;
   align-items: center;
-  justify-content: space-around;
+  justify-content: space-between;
 
   & > .helptext {
     margin-right: 40rem;
