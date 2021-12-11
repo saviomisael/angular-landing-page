@@ -3,8 +3,9 @@
 @use 'tools/placeholders';
 
 .hotel-details {
-  // TODO - move 9rem padding to main element when home component create
-  padding: 2rem 9rem 0;
+  @include tools.padding-y-default;
+
+  padding-top: 2rem;
 
   & > .top {
     display: flex;
