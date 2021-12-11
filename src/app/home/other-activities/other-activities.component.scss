@@ -1,9 +1,12 @@
 @use 'settings' as colors;
-@use 'tools' as tools;
+@use 'tools';
 @use 'tools/placeholders';
 
 .other-activities {
-  padding: 5rem 9rem;
+  @include tools.padding-y-default;
+
+  padding-top: 5rem;
+  padding-bottom: 5rem;
 
   & > .title {
     text-transform: uppercase;
