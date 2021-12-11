@@ -1,12 +1,15 @@
 @use 'settings' as colors;
+@use 'tools';
 
 .nav-bar {
   & > .main {
+    @include tools.padding-y-default;
+
     display: flex;
     align-items: center;
-    justify-content: space-around;
-    padding: 3rem;
-    transform: translateX(-1rem);
+    justify-content: space-between;
+    padding-top: 3rem;
+    padding-bottom: 3rem;
   }
 }
 
@@ -68,14 +71,17 @@
   }
 }
 
-.navigation {
-  padding: 1rem;
+.navigation-box {
+  @include tools.padding-y-default;
+
+  padding-top: 1rem;
+  padding-bottom: 1rem;
   height: 6rem;
   color: colors.$white;
   background-color: colors.$first;
   display: flex;
   align-items: center;
-  justify-content: space-around;
+  justify-content: space-between;
 
   & > * {
     color: inherit;
