@@ -11,6 +11,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { OtherPackagesComponent } from './other-packages/other-packages.component';
 import { GuestReviewComponent } from './guest-review/guest-review.component';
 import { StarsBoxComponent } from './stars-box/stars-box.component';
+import { NewsletterSectionComponent } from './newsletter-section/newsletter-section.component';
 
 @NgModule({
   declarations: [
@@ -23,6 +24,7 @@ import { StarsBoxComponent } from './stars-box/stars-box.component';
     OtherPackagesComponent,
     GuestReviewComponent,
     StarsBoxComponent,
+    NewsletterSectionComponent,
   ],
   imports: [CommonModule, HttpClientModule],
   exports: [],

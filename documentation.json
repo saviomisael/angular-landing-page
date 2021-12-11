@@ -122,140 +122,6 @@
             "indexSignatures": [],
             "kind": 165,
             "methods": []
-        },
-        {
-            "name": "OtherPackage",
-            "id": "interface-OtherPackage-2f771e5eb378d8baa88ed38f22d6ce1a46adc005472f65981b7ab38026800a499ac6ca5ce8cf07127b84c0b33bdf3195afe3032ba005f7db9330d765a52e773d-1",
-            "file": "src/app/home/shared/viewmodels/other-package.viewmodel.ts",
-            "deprecated": false,
-            "deprecationMessage": "",
-            "type": "interface",
-            "sourceCode": "export interface OtherPackage {\n  id: number;\n  name: string;\n  stars_rating_count: number;\n  description: string;\n  location: string;\n  guests_count: number;\n  rooms_count: number;\n  price: number;\n  has_discount: boolean;\n  price_with_discount: number;\n  is_offer: boolean;\n  poster: string;\n  stars: string[];\n}\n",
-            "properties": [
-                {
-                    "name": "description",
-                    "deprecated": false,
-                    "deprecationMessage": "",
-                    "type": "string",
-                    "optional": false,
-                    "description": "",
-                    "line": 5
-                },
-                {
-                    "name": "guests_count",
-                    "deprecated": false,
-                    "deprecationMessage": "",
-                    "type": "number",
-                    "optional": false,
-                    "description": "",
-                    "line": 7
-                },
-                {
-                    "name": "has_discount",
-                    "deprecated": false,
-                    "deprecationMessage": "",
-                    "type": "boolean",
-                    "optional": false,
-                    "description": "",
-                    "line": 10
-                },
-                {
-                    "name": "id",
-                    "deprecated": false,
-                    "deprecationMessage": "",
-                    "type": "number",
-                    "optional": false,
-                    "description": "",
-                    "line": 2
-                },
-                {
-                    "name": "is_offer",
-                    "deprecated": false,
-                    "deprecationMessage": "",
-                    "type": "boolean",
-                    "optional": false,
-                    "description": "",
-                    "line": 12
-                },
-                {
-                    "name": "location",
-                    "deprecated": false,
-                    "deprecationMessage": "",
-                    "type": "string",
-                    "optional": false,
-                    "description": "",
-                    "line": 6
-                },
-                {
-                    "name": "name",
-                    "deprecated": false,
-                    "deprecationMessage": "",
-                    "type": "string",
-                    "optional": false,
-                    "description": "",
-                    "line": 3
-                },
-                {
-                    "name": "poster",
-                    "deprecated": false,
-                    "deprecationMessage": "",
-                    "type": "string",
-                    "optional": false,
-                    "description": "",
-                    "line": 13
-                },
-                {
-                    "name": "price",
-                    "deprecated": false,
-                    "deprecationMessage": "",
-                    "type": "number",
-                    "optional": false,
-                    "description": "",
-                    "line": 9
-                },
-                {
-                    "name": "price_with_discount",
-                    "deprecated": false,
-                    "deprecationMessage": "",
-                    "type": "number",
-                    "optional": false,
-                    "description": "",
-                    "line": 11
-                },
-                {
-                    "name": "rooms_count",
-                    "deprecated": false,
-                    "deprecationMessage": "",
-                    "type": "number",
-                    "optional": false,
-                    "description": "",
-                    "line": 8
-                },
-                {
-                    "name": "stars",
-                    "deprecated": false,
-                    "deprecationMessage": "",
-                    "type": "string[]",
-                    "optional": false,
-                    "description": "",
-                    "line": 14
-                },
-                {
-                    "name": "stars_rating_count",
-                    "deprecated": false,
-                    "deprecationMessage": "",
-                    "type": "number",
-                    "optional": false,
-                    "description": "",
-                    "line": 4
-                }
-            ],
-            "indexSignatures": [],
-            "kind": 165,
-            "methods": [],
-            "isDuplicate": true,
-            "duplicateId": 1,
-            "duplicateName": "OtherPackage-1"
         }
     ],
     "injectables": [
@@ -655,8 +521,48 @@
             "templateData": "<div class=\"nav-top\">\n  <p class=\"helptext\"><strong>Questions? Need Help?</strong> Call us on (+123) 456 1500</p>\n  <a href=\"#\" class=\"link -gifticon\">BTP Gift Card</a>\n  <a href=\"#\" class=\"link -staricon\">Loyalty Program</a>\n</div>\n"
         },
         {
+            "name": "NewsletterSectionComponent",
+            "id": "component-NewsletterSectionComponent-369e804ba523fd73c3eb9de87fe295ebfc020f6e39f7c735564b178a6f12173799b8cb831d4822d34e008084014c17300993bf881e0dc5f5d9403aecfb8c80e2",
+            "file": "src/app/home/newsletter-section/newsletter-section.component.ts",
+            "encapsulation": [],
+            "entryComponents": [],
+            "inputs": [],
+            "outputs": [],
+            "providers": [],
+            "selector": "app-newsletter-section",
+            "styleUrls": [
+                "./newsletter-section.component.scss"
+            ],
+            "styles": [],
+            "templateUrl": [
+                "./newsletter-section.component.html"
+            ],
+            "viewProviders": [],
+            "inputsClass": [],
+            "outputsClass": [],
+            "propertiesClass": [],
+            "methodsClass": [],
+            "deprecated": false,
+            "deprecationMessage": "",
+            "hostBindings": [],
+            "hostListeners": [],
+            "description": "",
+            "rawdescription": "\n",
+            "type": "component",
+            "sourceCode": "import { Component } from '@angular/core';\n\n@Component({\n  selector: 'app-newsletter-section',\n  templateUrl: './newsletter-section.component.html',\n  styleUrls: ['./newsletter-section.component.scss'],\n})\nexport class NewsletterSectionComponent {}\n",
+            "assetsDirs": [],
+            "styleUrlsData": [
+                {
+                    "data": "",
+                    "styleUrl": "./newsletter-section.component.scss"
+                }
+            ],
+            "stylesData": "",
+            "templateData": "<p>newsletter-section works!</p>\n"
+        },
+        {
             "name": "OtherPackagesComponent",
-            "id": "component-OtherPackagesComponent-66f413b01cbbc6354a95b297a4c58b42f1e7b1a431bb27550d8b2063cc380afae658d88f7da52f8b19f18e1b5444138cf28117de845ea747e0c5af3af33da099",
+            "id": "component-OtherPackagesComponent-3ea762e0266b00dd349d63eb90aea00f33f64c0e1a131db836344a24c4d3679290364a3309bded0892bf5ecb684ba893b165baf80539301cbf7b5d3676782c67",
             "file": "src/app/home/other-packages/other-packages.component.ts",
             "encapsulation": [],
             "entryComponents": [],
@@ -679,10 +585,10 @@
                     "name": "packages$",
                     "deprecated": false,
                     "deprecationMessage": "",
-                    "type": "Observable<ViewModel[]>",
+                    "type": "Observable<OtherPackage[]>",
                     "optional": false,
                     "description": "",
-                    "line": 13
+                    "line": 12
                 }
             ],
             "methodsClass": [
@@ -691,13 +597,13 @@
                     "args": [
                         {
                             "name": "array",
-                            "type": "ViewModel[]",
+                            "type": "OtherPackage[]",
                             "deprecated": false,
                             "deprecationMessage": ""
                         },
                         {
                             "name": "item",
-                            "type": "ViewModel",
+                            "type": "OtherPackage",
                             "deprecated": false,
                             "deprecationMessage": ""
                         }
@@ -705,13 +611,13 @@
                     "optional": false,
                     "returnType": "boolean",
                     "typeParameters": [],
-                    "line": 21,
+                    "line": 20,
                     "deprecated": false,
                     "deprecationMessage": "",
                     "jsdoctags": [
                         {
                             "name": "array",
-                            "type": "ViewModel[]",
+                            "type": "OtherPackage[]",
                             "deprecated": false,
                             "deprecationMessage": "",
                             "tagName": {
@@ -720,7 +626,7 @@
                         },
                         {
                             "name": "item",
-                            "type": "ViewModel",
+                            "type": "OtherPackage",
                             "deprecated": false,
                             "deprecationMessage": "",
                             "tagName": {
@@ -735,7 +641,7 @@
                     "optional": false,
                     "returnType": "void",
                     "typeParameters": [],
-                    "line": 17,
+                    "line": 16,
                     "deprecated": false,
                     "deprecationMessage": ""
                 }
@@ -747,7 +653,7 @@
             "description": "",
             "rawdescription": "\n",
             "type": "component",
-            "sourceCode": "import { Component, OnInit } from '@angular/core';\nimport { Observable } from 'rxjs';\nimport { OtherPackageService } from '../shared/services/other-package.service';\nimport { fillOtherPackageStars } from '../shared/utils/rxjs-operators';\nimport { OtherPackage as ViewModel } from '../shared/viewmodels/other-package.viewmodel';\n\n@Component({\n  selector: 'app-other-packages',\n  templateUrl: './other-packages.component.html',\n  styleUrls: ['./other-packages.component.scss'],\n})\nexport class OtherPackagesComponent implements OnInit {\n  packages$!: Observable<ViewModel[]>;\n\n  constructor(private service: OtherPackageService) {}\n\n  ngOnInit(): void {\n    this.packages$ = this.service.getOtherPackages().pipe(fillOtherPackageStars());\n  }\n\n  isFirst(array: ViewModel[], item: ViewModel) {\n    return array.indexOf(item) === 0;\n  }\n}\n",
+            "sourceCode": "import { Component, OnInit } from '@angular/core';\nimport { Observable } from 'rxjs';\nimport { OtherPackageService } from '../shared/services/other-package.service';\nimport { OtherPackage } from '../shared/models/other-package.model';\n\n@Component({\n  selector: 'app-other-packages',\n  templateUrl: './other-packages.component.html',\n  styleUrls: ['./other-packages.component.scss'],\n})\nexport class OtherPackagesComponent implements OnInit {\n  packages$!: Observable<OtherPackage[]>;\n\n  constructor(private service: OtherPackageService) {}\n\n  ngOnInit(): void {\n    this.packages$ = this.service.getOtherPackages();\n  }\n\n  isFirst(array: OtherPackage[], item: OtherPackage) {\n    return array.indexOf(item) === 0;\n  }\n}\n",
             "assetsDirs": [],
             "styleUrlsData": [
                 {
@@ -769,7 +675,7 @@
                         "deprecationMessage": ""
                     }
                 ],
-                "line": 13,
+                "line": 12,
                 "jsdoctags": [
                     {
                         "name": "service",
@@ -785,7 +691,7 @@
             "implements": [
                 "OnInit"
             ],
-            "templateData": "<section class=\"other-packages\">\n  <h2 class=\"title _padding-x-big\">Other Packages</h2>\n\n  <div class=\"panel-box\">\n    <article class=\"other-package\" *ngFor=\"let package of packages$ | async as packages\">\n      <p class=\"offer\" *ngIf=\"package.is_offer\">Flash Offer</p>\n      <img class=\"poster\" [src]=\"package.poster\" [alt]=\"package.name\" />\n      <div class=\"left left-panel-box\">\n        <figure class=\"stars-box griditem\" *ngIf=\"isFirst(packages, package)\">\n          <img *ngFor=\"let star of package.stars\" [src]=\"star\" alt=\"star icon\" class=\"icon\" />\n        </figure>\n\n        <h3 class=\"griditem _padding-bottom-small\">{{ package.name }}</h3>\n\n        <p class=\"griditem description\" *ngIf=\"isFirst(packages, package)\">{{ package.description }}</p>\n\n        <p class=\"griditem text location\">{{ package.location }}</p>\n\n        <p class=\"griditem text guests\">{{ package.guests_count }} x Guests</p>\n\n        <p class=\"griditem text rooms _padding-bottom-small\">{{ package.rooms_count }} x Room</p>\n\n        <p class=\"griditem price\" [class.-penultimate]=\"!package.has_discount\" [class.-line]=\"package.has_discount\">\n          $ {{ package.price | number }}\n        </p>\n\n        <p class=\"griditem -penultimate discountprice\" *ngIf=\"package.has_discount\">\n          $ {{ package.price_with_discount | number }}\n        </p>\n\n        <button class=\"griditem btn\">Book Now</button>\n      </div>\n    </article>\n  </div>\n</section>\n"
+            "templateData": "<section class=\"other-packages\">\n  <h2 class=\"title _padding-x-big\">Other Packages</h2>\n\n  <div class=\"panel-box\">\n    <article class=\"other-package\" *ngFor=\"let package of packages$ | async as packages\">\n      <p class=\"offer\" *ngIf=\"package.is_offer\">Flash Offer</p>\n      <img class=\"poster\" [src]=\"package.poster\" [alt]=\"package.name\" />\n      <div class=\"left left-panel-box\">\n        <app-stars-box\n          class=\"griditem\"\n          *ngIf=\"isFirst(packages, package)\"\n          [starsCount]=\"package.stars_rating_count\"\n        ></app-stars-box>\n\n        <h3 class=\"griditem _padding-bottom-small\">{{ package.name }}</h3>\n\n        <p class=\"griditem description\" *ngIf=\"isFirst(packages, package)\">{{ package.description }}</p>\n\n        <p class=\"griditem text location\">{{ package.location }}</p>\n\n        <p class=\"griditem text guests\">{{ package.guests_count }} x Guests</p>\n\n        <p class=\"griditem text rooms _padding-bottom-small\">{{ package.rooms_count }} x Room</p>\n\n        <p class=\"griditem price\" [class.-penultimate]=\"!package.has_discount\" [class.-line]=\"package.has_discount\">\n          $ {{ package.price | number }}\n        </p>\n\n        <p class=\"griditem -penultimate discountprice\" *ngIf=\"package.has_discount\">\n          $ {{ package.price_with_discount | number }}\n        </p>\n\n        <button class=\"griditem btn\">Book Now</button>\n      </div>\n    </article>\n  </div>\n</section>\n"
         },
         {
             "name": "PackageSummeryComponent",
@@ -829,7 +735,7 @@
         },
         {
             "name": "StarsBoxComponent",
-            "id": "component-StarsBoxComponent-4615c9a512ce6f3a1e9dfcc11f8c1fa9054aa0aaa87ce17ceb562ad1631f736dfb65ebbf429f3a1e346aef88b67a733ece4bd4809f6ef8986476017cd88f8482",
+            "id": "component-StarsBoxComponent-bb28c8734c9b201d36d9cddef26a04be4376852239774b8d97cbd1bf1a4b5694ec95250578d65a33539f82a4f2abab3358204b1ff1a2dac219ef1722731261ba",
             "file": "src/app/home/stars-box/stars-box.component.ts",
             "encapsulation": [],
             "entryComponents": [],
@@ -851,7 +757,7 @@
                     "defaultValue": "0",
                     "deprecated": false,
                     "deprecationMessage": "",
-                    "line": 11,
+                    "line": 9,
                     "type": "number",
                     "decorators": []
                 }
@@ -866,7 +772,7 @@
                     "type": "string",
                     "optional": false,
                     "description": "",
-                    "line": 13,
+                    "line": 11,
                     "modifierKind": [
                         121
                     ]
@@ -879,7 +785,7 @@
                     "type": "string[]",
                     "optional": false,
                     "description": "",
-                    "line": 12
+                    "line": 10
                 }
             ],
             "methodsClass": [
@@ -902,7 +808,7 @@
                     "optional": false,
                     "returnType": "string[]",
                     "typeParameters": [],
-                    "line": 25,
+                    "line": 23,
                     "deprecated": false,
                     "deprecationMessage": "",
                     "modifierKind": [
@@ -942,7 +848,7 @@
                     "optional": false,
                     "returnType": "void",
                     "typeParameters": [],
-                    "line": 19,
+                    "line": 17,
                     "deprecated": false,
                     "deprecationMessage": "",
                     "jsdoctags": [
@@ -963,7 +869,7 @@
                     "optional": false,
                     "returnType": "void",
                     "typeParameters": [],
-                    "line": 15,
+                    "line": 13,
                     "deprecated": false,
                     "deprecationMessage": ""
                 }
@@ -975,7 +881,7 @@
             "description": "",
             "rawdescription": "\n",
             "type": "component",
-            "sourceCode": "import { Component, Input, OnChanges, OnInit, SimpleChanges } from '@angular/core';\n\n@Component({\n  selector: 'app-stars-box',\n  templateUrl: './stars-box.component.html',\n  styleUrls: ['./stars-box.component.scss'],\n})\nexport class StarsBoxComponent implements OnInit, OnChanges {\n  // TODO - remove fill stars function utils\n\n  @Input() starsCount = 0;\n  stars: string[] = [];\n  private iconUrl = '/assets/images/star-rating.svg';\n\n  ngOnInit(): void {\n    this.stars = this.fillStars(this.starsCount, this.iconUrl);\n  }\n\n  ngOnChanges(changes: SimpleChanges) {\n    if (changes['starsCount'].currentValue !== changes['starsCount'].previousValue) {\n      this.stars = this.fillStars(this.starsCount, this.iconUrl);\n    }\n  }\n\n  private fillStars(starsCount: number, content: string): string[] {\n    const stars: string[] = [];\n\n    for (let index = 0; index < starsCount; index++) {\n      stars.push(content);\n    }\n\n    return stars;\n  }\n}\n",
+            "sourceCode": "import { Component, Input, OnChanges, OnInit, SimpleChanges } from '@angular/core';\n\n@Component({\n  selector: 'app-stars-box',\n  templateUrl: './stars-box.component.html',\n  styleUrls: ['./stars-box.component.scss'],\n})\nexport class StarsBoxComponent implements OnInit, OnChanges {\n  @Input() starsCount = 0;\n  stars: string[] = [];\n  private iconUrl = '/assets/images/star-rating.svg';\n\n  ngOnInit(): void {\n    this.stars = this.fillStars(this.starsCount, this.iconUrl);\n  }\n\n  ngOnChanges(changes: SimpleChanges) {\n    if (changes['starsCount'].currentValue !== changes['starsCount'].previousValue) {\n      this.stars = this.fillStars(this.starsCount, this.iconUrl);\n    }\n  }\n\n  private fillStars(starsCount: number, content: string): string[] {\n    const stars: string[] = [];\n\n    for (let index = 0; index < starsCount; index++) {\n      stars.push(content);\n    }\n\n    return stars;\n  }\n}\n",
             "assetsDirs": [],
             "styleUrlsData": [
                 {
@@ -1081,13 +987,13 @@
         },
         {
             "name": "HomeModule",
-            "id": "module-HomeModule-6d1bddd7b16cdc5a26fb297b1f40c933a2ec7d53b93d6d89267159d2c8455893f05e15b2663e98b592caf58c4e43a274a21accc338acd37ebd7a4c77ec335cd9",
+            "id": "module-HomeModule-56a65cb1c50dd573d0e1a6f9939f6f13f6f7818b16cddd8a2643a6d9b66997f929f4a5b429b5474d6d336187b52fc5b53a60ae66eaaea35cab661fcc7befe8df",
             "description": "",
             "deprecationMessage": "",
             "deprecated": false,
             "file": "src/app/home/home.module.ts",
             "methods": [],
-            "sourceCode": "import { NgModule } from '@angular/core';\nimport { CommonModule } from '@angular/common';\nimport { NavTopComponent } from './nav-top/nav-top.component';\nimport { NavBarComponent } from './nav-bar/nav-bar.component';\nimport { ActiveRouteComponent } from './active-route/active-route.component';\nimport { HotelDetailsComponent } from './hotel-details/hotel-details.component';\nimport { HotelDetailsNavigationComponent } from './hotel-details-navigation/hotel-details-navigation.component';\nimport { PackageSummeryComponent } from './package-summery/package-summery.component';\nimport { OtherPackageService } from './shared/services/other-package.service';\nimport { HttpClientModule } from '@angular/common/http';\nimport { OtherPackagesComponent } from './other-packages/other-packages.component';\nimport { GuestReviewComponent } from './guest-review/guest-review.component';\nimport { StarsBoxComponent } from './stars-box/stars-box.component';\n\n@NgModule({\n  declarations: [\n    NavTopComponent,\n    NavBarComponent,\n    ActiveRouteComponent,\n    HotelDetailsComponent,\n    HotelDetailsNavigationComponent,\n    PackageSummeryComponent,\n    OtherPackagesComponent,\n    GuestReviewComponent,\n    StarsBoxComponent,\n  ],\n  imports: [CommonModule, HttpClientModule],\n  exports: [],\n  providers: [OtherPackageService],\n})\nexport class HomeModule {}\n",
+            "sourceCode": "import { NgModule } from '@angular/core';\nimport { CommonModule } from '@angular/common';\nimport { NavTopComponent } from './nav-top/nav-top.component';\nimport { NavBarComponent } from './nav-bar/nav-bar.component';\nimport { ActiveRouteComponent } from './active-route/active-route.component';\nimport { HotelDetailsComponent } from './hotel-details/hotel-details.component';\nimport { HotelDetailsNavigationComponent } from './hotel-details-navigation/hotel-details-navigation.component';\nimport { PackageSummeryComponent } from './package-summery/package-summery.component';\nimport { OtherPackageService } from './shared/services/other-package.service';\nimport { HttpClientModule } from '@angular/common/http';\nimport { OtherPackagesComponent } from './other-packages/other-packages.component';\nimport { GuestReviewComponent } from './guest-review/guest-review.component';\nimport { StarsBoxComponent } from './stars-box/stars-box.component';\nimport { NewsletterSectionComponent } from './newsletter-section/newsletter-section.component';\n\n@NgModule({\n  declarations: [\n    NavTopComponent,\n    NavBarComponent,\n    ActiveRouteComponent,\n    HotelDetailsComponent,\n    HotelDetailsNavigationComponent,\n    PackageSummeryComponent,\n    OtherPackagesComponent,\n    GuestReviewComponent,\n    StarsBoxComponent,\n    NewsletterSectionComponent,\n  ],\n  imports: [CommonModule, HttpClientModule],\n  exports: [],\n  providers: [OtherPackageService],\n})\nexport class HomeModule {}\n",
             "children": [
                 {
                     "type": "providers",
@@ -1117,6 +1023,9 @@
                         },
                         {
                             "name": "NavTopComponent"
+                        },
+                        {
+                            "name": "NewsletterSectionComponent"
                         },
                         {
                             "name": "OtherPackagesComponent"
@@ -1164,21 +1073,21 @@
                 "name": "Default",
                 "ctype": "miscellaneous",
                 "subtype": "variable",
-                "file": "src/app/home/guest-review/GuestReview.stories.ts",
-                "deprecated": false,
-                "deprecationMessage": "",
-                "type": "Story<GuestReviewComponent>",
-                "defaultValue": "(args: GuestReviewComponent) => ({\n  props: args,\n})"
-            },
-            {
-                "name": "Default",
-                "ctype": "miscellaneous",
-                "subtype": "variable",
                 "file": "src/app/home/active-route/ActiveRoute.stories.ts",
                 "deprecated": false,
                 "deprecationMessage": "",
                 "type": "Story<ActiveRouteComponent>",
                 "defaultValue": "(args: ActiveRouteComponent) => ({\n  props: args,\n})"
+            },
+            {
+                "name": "Default",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "src/app/home/guest-review/GuestReview.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "Story<GuestReviewComponent>",
+                "defaultValue": "(args: GuestReviewComponent) => ({\n  props: args,\n})"
             },
             {
                 "name": "Default",
@@ -1219,6 +1128,16 @@
                 "deprecationMessage": "",
                 "type": "Story<NavTopComponent>",
                 "defaultValue": "(args: NavTopComponent) => ({\n  props: args,\n})"
+            },
+            {
+                "name": "Default",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "src/app/home/newsletter-section/NewsletterSection.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "Story<NewsletterSectionComponent>",
+                "defaultValue": "(args: NewsletterSectionComponent) => ({\n  props: args,\n})"
             },
             {
                 "name": "Default",
@@ -1271,16 +1190,6 @@
                 "defaultValue": "{\n  production: false,\n}"
             },
             {
-                "name": "fillStars",
-                "ctype": "miscellaneous",
-                "subtype": "variable",
-                "file": "src/app/home/shared/utils/fill-stars.ts",
-                "deprecated": false,
-                "deprecationMessage": "",
-                "type": "",
-                "defaultValue": "(starsCount: number, content: string): string[] => {\r\n  const stars: string[] = [];\r\n\r\n  for (let index = 0; index < starsCount; index++) {\r\n    stars.push(content);\r\n  }\r\n\r\n  return stars;\r\n}"
-            },
-            {
                 "name": "require",
                 "ctype": "miscellaneous",
                 "subtype": "variable",
@@ -1300,18 +1209,7 @@
                 "defaultValue": "Default.bind({})"
             }
         ],
-        "functions": [
-            {
-                "name": "fillOtherPackageStars",
-                "file": "src/app/home/shared/utils/rxjs-operators.ts",
-                "ctype": "miscellaneous",
-                "subtype": "function",
-                "deprecated": false,
-                "deprecationMessage": "",
-                "description": "",
-                "args": []
-            }
-        ],
+        "functions": [],
         "typealiases": [],
         "enumerations": [],
         "groupedVariables": {
@@ -1336,18 +1234,6 @@
                     "type": "literal type"
                 }
             ],
-            "src/app/home/guest-review/GuestReview.stories.ts": [
-                {
-                    "name": "Default",
-                    "ctype": "miscellaneous",
-                    "subtype": "variable",
-                    "file": "src/app/home/guest-review/GuestReview.stories.ts",
-                    "deprecated": false,
-                    "deprecationMessage": "",
-                    "type": "Story<GuestReviewComponent>",
-                    "defaultValue": "(args: GuestReviewComponent) => ({\n  props: args,\n})"
-                }
-            ],
             "src/app/home/active-route/ActiveRoute.stories.ts": [
                 {
                     "name": "Default",
@@ -1358,6 +1244,18 @@
                     "deprecationMessage": "",
                     "type": "Story<ActiveRouteComponent>",
                     "defaultValue": "(args: ActiveRouteComponent) => ({\n  props: args,\n})"
+                }
+            ],
+            "src/app/home/guest-review/GuestReview.stories.ts": [
+                {
+                    "name": "Default",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "src/app/home/guest-review/GuestReview.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "Story<GuestReviewComponent>",
+                    "defaultValue": "(args: GuestReviewComponent) => ({\n  props: args,\n})"
                 }
             ],
             "src/app/home/hotel-details/HotelDetails.stories.ts": [
@@ -1406,6 +1304,18 @@
                     "deprecationMessage": "",
                     "type": "Story<NavTopComponent>",
                     "defaultValue": "(args: NavTopComponent) => ({\n  props: args,\n})"
+                }
+            ],
+            "src/app/home/newsletter-section/NewsletterSection.stories.ts": [
+                {
+                    "name": "Default",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "src/app/home/newsletter-section/NewsletterSection.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "Story<NewsletterSectionComponent>",
+                    "defaultValue": "(args: NewsletterSectionComponent) => ({\n  props: args,\n})"
                 }
             ],
             "src/app/home/other-packages/OtherPackages.stories.ts": [
@@ -1477,34 +1387,9 @@
                     "type": "object",
                     "defaultValue": "{\n  production: false,\n}"
                 }
-            ],
-            "src/app/home/shared/utils/fill-stars.ts": [
-                {
-                    "name": "fillStars",
-                    "ctype": "miscellaneous",
-                    "subtype": "variable",
-                    "file": "src/app/home/shared/utils/fill-stars.ts",
-                    "deprecated": false,
-                    "deprecationMessage": "",
-                    "type": "",
-                    "defaultValue": "(starsCount: number, content: string): string[] => {\r\n  const stars: string[] = [];\r\n\r\n  for (let index = 0; index < starsCount; index++) {\r\n    stars.push(content);\r\n  }\r\n\r\n  return stars;\r\n}"
-                }
             ]
         },
-        "groupedFunctions": {
-            "src/app/home/shared/utils/rxjs-operators.ts": [
-                {
-                    "name": "fillOtherPackageStars",
-                    "file": "src/app/home/shared/utils/rxjs-operators.ts",
-                    "ctype": "miscellaneous",
-                    "subtype": "function",
-                    "deprecated": false,
-                    "deprecationMessage": "",
-                    "description": "",
-                    "args": []
-                }
-            ]
-        },
+        "groupedFunctions": {},
         "groupedEnumerations": {},
         "groupedTypeAliases": {}
     },
@@ -1650,6 +1535,25 @@
                 "status": "low"
             },
             {
+                "filePath": "src/app/home/newsletter-section/NewsletterSection.stories.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "Default",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "src/app/home/newsletter-section/newsletter-section.component.ts",
+                "type": "component",
+                "linktype": "component",
+                "name": "NewsletterSectionComponent",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
                 "filePath": "src/app/home/other-packages/OtherPackages.stories.ts",
                 "type": "variable",
                 "linktype": "miscellaneous",
@@ -1703,35 +1607,6 @@
                 "name": "OtherPackageService",
                 "coveragePercent": 0,
                 "coverageCount": "0/3",
-                "status": "low"
-            },
-            {
-                "filePath": "src/app/home/shared/utils/fill-stars.ts",
-                "type": "variable",
-                "linktype": "miscellaneous",
-                "linksubtype": "variable",
-                "name": "fillStars",
-                "coveragePercent": 0,
-                "coverageCount": "0/1",
-                "status": "low"
-            },
-            {
-                "filePath": "src/app/home/shared/utils/rxjs-operators.ts",
-                "type": "function",
-                "linktype": "miscellaneous",
-                "linksubtype": "function",
-                "name": "fillOtherPackageStars",
-                "coveragePercent": 0,
-                "coverageCount": "0/1",
-                "status": "low"
-            },
-            {
-                "filePath": "src/app/home/shared/viewmodels/other-package.viewmodel.ts",
-                "type": "interface",
-                "linktype": "interface",
-                "name": "OtherPackage",
-                "coveragePercent": 0,
-                "coverageCount": "0/14",
                 "status": "low"
             },
             {

@@ -1,0 +1,54 @@
+@use 'settings' as colors;
+
+.newsletter-section {
+  background-image: linear-gradient(to right, rgba(colors.$first, 0.8), rgba(colors.$first, 0.8)),
+    url('/assets/images/newsletter-bg.png');
+  background-position: center;
+  background-size: cover;
+  min-height: 24rem;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  column-gap: 13rem;
+  color: colors.$white;
+
+  & > .title {
+    font-size: 3.6rem;
+    text-transform: uppercase;
+    font-weight: 600;
+
+    & > * {
+      font-size: 2.4rem;
+      text-transform: lowercase;
+      font-weight: 300;
+    }
+  }
+}
+
+.form-email-send {
+  border-radius: 0.4rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  & > .input {
+    border-top-left-radius: inherit;
+    border-bottom-left-radius: inherit;
+    padding: 1.5rem 8rem 1.5rem 2rem;
+
+    &::placeholder {
+      font-size: 1.4rem;
+      color: colors.$gray-dark;
+    }
+  }
+
+  & > .btn {
+    border-top-right-radius: inherit;
+    border-bottom-right-radius: inherit;
+    padding: 1.5rem;
+
+    background-color: colors.$second;
+    font-size: 1.2rem;
+  }
+}
