@@ -1,7 +1,11 @@
 @use 'settings' as colors;
+@use 'tools';
 
 .guest-review {
-  padding: 3rem;
+  @include tools.padding-y-default;
+
+  padding-top: 3rem;
+  padding-bottom: 3rem;
 
   display: grid;
   grid-template-columns: 4rem 1fr 4rem;
