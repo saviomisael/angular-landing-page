@@ -3,7 +3,7 @@
 
   <div class="main _margin-top-medium">
     <figure class="activity-box" *ngFor="let activity of activitiesTitles; index as i">
-      <img [src]="activitiesImages[i]" [alt]="activity" />
+      <img class="image" [src]="activitiesImages[i]" [alt]="activity" />
 
       <figcaption class="caption">
         <p class="title">{{ activity }}</p>

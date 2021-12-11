@@ -562,7 +562,7 @@
         },
         {
             "name": "OtherActivitiesComponent",
-            "id": "component-OtherActivitiesComponent-d546541002bb3a2835f005c4b9f87beb40cdba57f589ca7867cfae758a8002b650a7046611b6e7b5fe5809a78e18018f8622d74eaee8bdd4fbc6632b7c90ed1e",
+            "id": "component-OtherActivitiesComponent-913410b79f5085d7af386b96e03006f87f3bdc47161c817fd846970fd8f26dd6ccb18447b1a0be0fe9ed8bc56a11c7c40bd6fcf8e32d9a21faab1caa662289b5",
             "file": "src/app/home/other-activities/other-activities.component.ts",
             "encapsulation": [],
             "entryComponents": [],
@@ -580,19 +580,29 @@
             "viewProviders": [],
             "inputsClass": [],
             "outputsClass": [],
-            "propertiesClass": [],
-            "methodsClass": [
+            "propertiesClass": [
                 {
-                    "name": "ngOnInit",
-                    "args": [],
-                    "optional": false,
-                    "returnType": "void",
-                    "typeParameters": [],
-                    "line": 12,
+                    "name": "activitiesImages",
+                    "defaultValue": "[\n    '/assets/images/activity-1.png',\n    '/assets/images/activity-2.png',\n    '/assets/images/activity-3.png',\n    '/assets/images/activity-4.png',\n  ]",
                     "deprecated": false,
-                    "deprecationMessage": ""
+                    "deprecationMessage": "",
+                    "type": "[]",
+                    "optional": false,
+                    "description": "",
+                    "line": 16
+                },
+                {
+                    "name": "activitiesTitles",
+                    "defaultValue": "[\n    'The curious corner of chamarel',\n    'Gymkhana club golf course',\n    'Tamarind falls hiking trip - full day',\n    'The blue marine discovery quest',\n  ]",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "[]",
+                    "optional": false,
+                    "description": "",
+                    "line": 9
                 }
             ],
+            "methodsClass": [],
             "deprecated": false,
             "deprecationMessage": "",
             "hostBindings": [],
@@ -600,27 +610,16 @@
             "description": "",
             "rawdescription": "\n",
             "type": "component",
-            "sourceCode": "import { Component, OnInit } from '@angular/core';\n\n@Component({\n  selector: 'app-other-activities',\n  templateUrl: './other-activities.component.html',\n  styleUrls: ['./other-activities.component.scss']\n})\nexport class OtherActivitiesComponent implements OnInit {\n\n  constructor() { }\n\n  ngOnInit(): void {\n  }\n\n}\n",
+            "sourceCode": "import { Component } from '@angular/core';\n\n@Component({\n  selector: 'app-other-activities',\n  templateUrl: './other-activities.component.html',\n  styleUrls: ['./other-activities.component.scss'],\n})\nexport class OtherActivitiesComponent {\n  activitiesTitles = [\n    'The curious corner of chamarel',\n    'Gymkhana club golf course',\n    'Tamarind falls hiking trip - full day',\n    'The blue marine discovery quest',\n  ];\n\n  activitiesImages = [\n    '/assets/images/activity-1.png',\n    '/assets/images/activity-2.png',\n    '/assets/images/activity-3.png',\n    '/assets/images/activity-4.png',\n  ];\n}\n",
             "assetsDirs": [],
             "styleUrlsData": [
                 {
-                    "data": "",
+                    "data": "@use 'settings' as colors;\n\n.other-activities {\n  padding: 5rem 9rem;\n\n  & > .title {\n    text-transform: uppercase;\n  }\n\n  & > .main {\n    display: flex;\n    align-items: center;\n    justify-content: space-between;\n  }\n}\n\n.activity-box {\n  position: relative;\n  border-radius: 0.6rem;\n  width: 25.5rem;\n  height: 25.5rem;\n\n  &::before {\n    content: '';\n    background-image: linear-gradient(to bottom, rgba(colors.$gray-light-2, 0), colors.$first);\n    border-radius: inherit;\n    width: 100%;\n    height: 100%;\n    position: absolute;\n    left: 0;\n    top: 0;\n  }\n\n  & > .caption {\n    position: absolute;\n    left: 0;\n    bottom: 0;\n    padding: 2rem;\n    display: flex;\n    flex-direction: column;\n    row-gap: 2rem;\n    align-items: flex-start;\n    justify-content: space-between;\n\n    min-height: 13rem;\n    width: 100%;\n\n    font-size: 1.2rem;\n    color: colors.$white;\n\n    & > .title {\n      font-size: 1.6rem;\n    }\n\n    & > .btn {\n      border-radius: 0.4rem;\n      background-color: colors.$second;\n      padding: 1rem 2.5rem;\n    }\n  }\n}\n",
                     "styleUrl": "./other-activities.component.scss"
                 }
             ],
             "stylesData": "",
-            "constructorObj": {
-                "name": "constructor",
-                "description": "",
-                "deprecated": false,
-                "deprecationMessage": "",
-                "args": [],
-                "line": 8
-            },
-            "implements": [
-                "OnInit"
-            ],
-            "templateData": "<p>other-activities works!</p>\n"
+            "templateData": "<section class=\"other-activities\">\n  <h2 class=\"title\">Other Activities</h2>\n\n  <div class=\"main _margin-top-medium\">\n    <figure class=\"activity-box\" *ngFor=\"let activity of activitiesTitles; index as i\">\n      <img [src]=\"activitiesImages[i]\" [alt]=\"activity\" />\n\n      <figcaption class=\"caption\">\n        <p class=\"title\">{{ activity }}</p>\n\n        <button class=\"btn\">Book Now</button>\n      </figcaption>\n    </figure>\n  </div>\n</section>\n"
         },
         {
             "name": "OtherPackagesComponent",
