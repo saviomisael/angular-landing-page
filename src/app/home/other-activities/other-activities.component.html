@@ -1,0 +1,15 @@
+<section class="other-activities">
+  <h2 class="title">Other Activities</h2>
+
+  <div class="main _margin-top-medium">
+    <figure class="activity-box" *ngFor="let activity of activitiesTitles; index as i">
+      <img [src]="activitiesImages[i]" [alt]="activity" />
+
+      <figcaption class="caption">
+        <p class="title">{{ activity }}</p>
+
+        <button class="btn">Book Now</button>
+      </figcaption>
+    </figure>
+  </div>
+</section>

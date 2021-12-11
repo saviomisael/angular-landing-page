@@ -553,12 +553,74 @@
             "assetsDirs": [],
             "styleUrlsData": [
                 {
-                    "data": "",
+                    "data": "@use 'settings' as colors;\n\n.newsletter-section {\n  background-image: linear-gradient(to right, rgba(colors.$first, 0.8), rgba(colors.$first, 0.8)),\n    url('/assets/images/newsletter-bg.png');\n  background-position: center;\n  background-size: cover;\n  min-height: 24rem;\n\n  display: flex;\n  align-items: center;\n  justify-content: center;\n  column-gap: 13rem;\n  color: colors.$white;\n\n  & > .title {\n    font-size: 3.6rem;\n    text-transform: uppercase;\n    font-weight: 600;\n\n    & > * {\n      font-size: 2.4rem;\n      text-transform: lowercase;\n      font-weight: 300;\n    }\n  }\n}\n\n.form-email-send {\n  border-radius: 0.4rem;\n  display: flex;\n  align-items: center;\n  justify-content: center;\n\n  & > .input {\n    border-top-left-radius: inherit;\n    border-bottom-left-radius: inherit;\n    padding: 1.5rem 8rem 1.5rem 2rem;\n\n    &::placeholder {\n      font-size: 1.4rem;\n      color: colors.$gray-dark;\n    }\n  }\n\n  & > .btn {\n    border-top-right-radius: inherit;\n    border-bottom-right-radius: inherit;\n    padding: 1.5rem;\n\n    background-color: colors.$second;\n    font-size: 1.2rem;\n  }\n}\n",
                     "styleUrl": "./newsletter-section.component.scss"
                 }
             ],
             "stylesData": "",
-            "templateData": "<p>newsletter-section works!</p>\n"
+            "templateData": "<section class=\"newsletter-section\">\n  <h2 class=\"title\">\n    <h2>subscribe to our</h2>\n    Newsletter\n  </h2>\n\n  <form class=\"form form-email-send\">\n    <input type=\"email\" class=\"input\" email placeholder=\"Your email address\" />\n    <button class=\"btn\">Send</button>\n  </form>\n</section>\n"
+        },
+        {
+            "name": "OtherActivitiesComponent",
+            "id": "component-OtherActivitiesComponent-d546541002bb3a2835f005c4b9f87beb40cdba57f589ca7867cfae758a8002b650a7046611b6e7b5fe5809a78e18018f8622d74eaee8bdd4fbc6632b7c90ed1e",
+            "file": "src/app/home/other-activities/other-activities.component.ts",
+            "encapsulation": [],
+            "entryComponents": [],
+            "inputs": [],
+            "outputs": [],
+            "providers": [],
+            "selector": "app-other-activities",
+            "styleUrls": [
+                "./other-activities.component.scss"
+            ],
+            "styles": [],
+            "templateUrl": [
+                "./other-activities.component.html"
+            ],
+            "viewProviders": [],
+            "inputsClass": [],
+            "outputsClass": [],
+            "propertiesClass": [],
+            "methodsClass": [
+                {
+                    "name": "ngOnInit",
+                    "args": [],
+                    "optional": false,
+                    "returnType": "void",
+                    "typeParameters": [],
+                    "line": 12,
+                    "deprecated": false,
+                    "deprecationMessage": ""
+                }
+            ],
+            "deprecated": false,
+            "deprecationMessage": "",
+            "hostBindings": [],
+            "hostListeners": [],
+            "description": "",
+            "rawdescription": "\n",
+            "type": "component",
+            "sourceCode": "import { Component, OnInit } from '@angular/core';\n\n@Component({\n  selector: 'app-other-activities',\n  templateUrl: './other-activities.component.html',\n  styleUrls: ['./other-activities.component.scss']\n})\nexport class OtherActivitiesComponent implements OnInit {\n\n  constructor() { }\n\n  ngOnInit(): void {\n  }\n\n}\n",
+            "assetsDirs": [],
+            "styleUrlsData": [
+                {
+                    "data": "",
+                    "styleUrl": "./other-activities.component.scss"
+                }
+            ],
+            "stylesData": "",
+            "constructorObj": {
+                "name": "constructor",
+                "description": "",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "args": [],
+                "line": 8
+            },
+            "implements": [
+                "OnInit"
+            ],
+            "templateData": "<p>other-activities works!</p>\n"
         },
         {
             "name": "OtherPackagesComponent",
@@ -987,13 +1049,13 @@
         },
         {
             "name": "HomeModule",
-            "id": "module-HomeModule-56a65cb1c50dd573d0e1a6f9939f6f13f6f7818b16cddd8a2643a6d9b66997f929f4a5b429b5474d6d336187b52fc5b53a60ae66eaaea35cab661fcc7befe8df",
+            "id": "module-HomeModule-e8408bc9222cb5a22e5e98f0c47e85f5564c43dec0d6a074447113a6dfae5554caa441491b1dd431a19805ee0c23425d2daecb04001ff0c57590ea8505f4cecf",
             "description": "",
             "deprecationMessage": "",
             "deprecated": false,
             "file": "src/app/home/home.module.ts",
             "methods": [],
-            "sourceCode": "import { NgModule } from '@angular/core';\nimport { CommonModule } from '@angular/common';\nimport { NavTopComponent } from './nav-top/nav-top.component';\nimport { NavBarComponent } from './nav-bar/nav-bar.component';\nimport { ActiveRouteComponent } from './active-route/active-route.component';\nimport { HotelDetailsComponent } from './hotel-details/hotel-details.component';\nimport { HotelDetailsNavigationComponent } from './hotel-details-navigation/hotel-details-navigation.component';\nimport { PackageSummeryComponent } from './package-summery/package-summery.component';\nimport { OtherPackageService } from './shared/services/other-package.service';\nimport { HttpClientModule } from '@angular/common/http';\nimport { OtherPackagesComponent } from './other-packages/other-packages.component';\nimport { GuestReviewComponent } from './guest-review/guest-review.component';\nimport { StarsBoxComponent } from './stars-box/stars-box.component';\nimport { NewsletterSectionComponent } from './newsletter-section/newsletter-section.component';\n\n@NgModule({\n  declarations: [\n    NavTopComponent,\n    NavBarComponent,\n    ActiveRouteComponent,\n    HotelDetailsComponent,\n    HotelDetailsNavigationComponent,\n    PackageSummeryComponent,\n    OtherPackagesComponent,\n    GuestReviewComponent,\n    StarsBoxComponent,\n    NewsletterSectionComponent,\n  ],\n  imports: [CommonModule, HttpClientModule],\n  exports: [],\n  providers: [OtherPackageService],\n})\nexport class HomeModule {}\n",
+            "sourceCode": "import { NgModule } from '@angular/core';\nimport { CommonModule } from '@angular/common';\nimport { NavTopComponent } from './nav-top/nav-top.component';\nimport { NavBarComponent } from './nav-bar/nav-bar.component';\nimport { ActiveRouteComponent } from './active-route/active-route.component';\nimport { HotelDetailsComponent } from './hotel-details/hotel-details.component';\nimport { HotelDetailsNavigationComponent } from './hotel-details-navigation/hotel-details-navigation.component';\nimport { PackageSummeryComponent } from './package-summery/package-summery.component';\nimport { OtherPackageService } from './shared/services/other-package.service';\nimport { HttpClientModule } from '@angular/common/http';\nimport { OtherPackagesComponent } from './other-packages/other-packages.component';\nimport { GuestReviewComponent } from './guest-review/guest-review.component';\nimport { StarsBoxComponent } from './stars-box/stars-box.component';\nimport { NewsletterSectionComponent } from './newsletter-section/newsletter-section.component';\nimport { OtherActivitiesComponent } from './other-activities/other-activities.component';\n\n@NgModule({\n  declarations: [\n    NavTopComponent,\n    NavBarComponent,\n    ActiveRouteComponent,\n    HotelDetailsComponent,\n    HotelDetailsNavigationComponent,\n    PackageSummeryComponent,\n    OtherPackagesComponent,\n    GuestReviewComponent,\n    StarsBoxComponent,\n    NewsletterSectionComponent,\n    OtherActivitiesComponent,\n  ],\n  imports: [CommonModule, HttpClientModule],\n  exports: [],\n  providers: [OtherPackageService],\n})\nexport class HomeModule {}\n",
             "children": [
                 {
                     "type": "providers",
@@ -1026,6 +1088,9 @@
                         },
                         {
                             "name": "NewsletterSectionComponent"
+                        },
+                        {
+                            "name": "OtherActivitiesComponent"
                         },
                         {
                             "name": "OtherPackagesComponent"
@@ -1138,6 +1203,16 @@
                 "deprecationMessage": "",
                 "type": "Story<NewsletterSectionComponent>",
                 "defaultValue": "(args: NewsletterSectionComponent) => ({\n  props: args,\n})"
+            },
+            {
+                "name": "Default",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "src/app/home/other-activities/OtherActivities.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "Story<OtherActivitiesComponent>",
+                "defaultValue": "(args: OtherActivitiesComponent) => ({\n  props: args,\n})"
             },
             {
                 "name": "Default",
@@ -1316,6 +1391,18 @@
                     "deprecationMessage": "",
                     "type": "Story<NewsletterSectionComponent>",
                     "defaultValue": "(args: NewsletterSectionComponent) => ({\n  props: args,\n})"
+                }
+            ],
+            "src/app/home/other-activities/OtherActivities.stories.ts": [
+                {
+                    "name": "Default",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "src/app/home/other-activities/OtherActivities.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "Story<OtherActivitiesComponent>",
+                    "defaultValue": "(args: OtherActivitiesComponent) => ({\n  props: args,\n})"
                 }
             ],
             "src/app/home/other-packages/OtherPackages.stories.ts": [
@@ -1551,6 +1638,25 @@
                 "name": "NewsletterSectionComponent",
                 "coveragePercent": 0,
                 "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "src/app/home/other-activities/OtherActivities.stories.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "Default",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "src/app/home/other-activities/other-activities.component.ts",
+                "type": "component",
+                "linktype": "component",
+                "name": "OtherActivitiesComponent",
+                "coveragePercent": 0,
+                "coverageCount": "0/3",
                 "status": "low"
             },
             {

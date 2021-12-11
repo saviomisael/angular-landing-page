@@ -12,6 +12,7 @@ import { OtherPackagesComponent } from './other-packages/other-packages.componen
 import { GuestReviewComponent } from './guest-review/guest-review.component';
 import { StarsBoxComponent } from './stars-box/stars-box.component';
 import { NewsletterSectionComponent } from './newsletter-section/newsletter-section.component';
+import { OtherActivitiesComponent } from './other-activities/other-activities.component';
 
 @NgModule({
   declarations: [
@@ -25,6 +26,7 @@ import { NewsletterSectionComponent } from './newsletter-section/newsletter-sect
     GuestReviewComponent,
     StarsBoxComponent,
     NewsletterSectionComponent,
+    OtherActivitiesComponent,
   ],
   imports: [CommonModule, HttpClientModule],
   exports: [],
