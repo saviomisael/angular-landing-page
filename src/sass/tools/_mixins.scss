@@ -18,3 +18,8 @@
     content: url($icon);
   }
 }
+
+@mixin padding-y-default {
+  padding-right: 9rem;
+  padding-left: 9rem;
+}
