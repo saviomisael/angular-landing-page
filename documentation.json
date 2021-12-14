@@ -273,6 +273,46 @@
             "templateData": "<h1>Not implemented yet</h1>\n"
         },
         {
+            "name": "ContactDetailsComponent",
+            "id": "component-ContactDetailsComponent-f24471f59e6e9d7137c33f685e99b580461eaf7e119c8c624e18a0afa3fdb7521c6deb152e3fcf35469977ae245afef1166845c695046d14621f38a0fb7d3eb9",
+            "file": "src/app/home/contact-details/contact-details.component.ts",
+            "encapsulation": [],
+            "entryComponents": [],
+            "inputs": [],
+            "outputs": [],
+            "providers": [],
+            "selector": "app-contact-details",
+            "styleUrls": [
+                "./contact-details.component.scss"
+            ],
+            "styles": [],
+            "templateUrl": [
+                "./contact-details.component.html"
+            ],
+            "viewProviders": [],
+            "inputsClass": [],
+            "outputsClass": [],
+            "propertiesClass": [],
+            "methodsClass": [],
+            "deprecated": false,
+            "deprecationMessage": "",
+            "hostBindings": [],
+            "hostListeners": [],
+            "description": "",
+            "rawdescription": "\n",
+            "type": "component",
+            "sourceCode": "import { Component } from '@angular/core';\n\n@Component({\n  selector: 'app-contact-details',\n  templateUrl: './contact-details.component.html',\n  styleUrls: ['./contact-details.component.scss'],\n})\nexport class ContactDetailsComponent {}\n",
+            "assetsDirs": [],
+            "styleUrlsData": [
+                {
+                    "data": "",
+                    "styleUrl": "./contact-details.component.scss"
+                }
+            ],
+            "stylesData": "",
+            "templateData": "<div class=\"contact-details\"></div>\n"
+        },
+        {
             "name": "ContactFormComponent",
             "id": "component-ContactFormComponent-3c9e7684b0ce8c253b175539c743ac6c53948d9238a8776e9e2c208553ad5abfebe2069eef2e9ce94bd677234378406d08e30aa2c17019bf931ce6cab1bba87e",
             "file": "src/app/home/contact-form/contact-form.component.ts",
@@ -1157,13 +1197,13 @@
         },
         {
             "name": "HomeModule",
-            "id": "module-HomeModule-d1499a9f7272d14bfc274c1cbe71b9d1a4850885dbe955b8f8b61e152feb886146dcd6ffac0f9833976429f4e7855f56e567f178e2f84cca6cc1fdff827a0454",
+            "id": "module-HomeModule-7ddc00fd806739b844b5c2323e046ae1b4670749e9c42bde9fc9f94cc880a73d9b6b6c4cf6e49471efa49720cbd196bbb275b28db2c9ba6ce9fc5691bb64dd73",
             "description": "",
             "deprecationMessage": "",
             "deprecated": false,
             "file": "src/app/home/home.module.ts",
             "methods": [],
-            "sourceCode": "import { NgModule } from '@angular/core';\nimport { CommonModule } from '@angular/common';\nimport { NavTopComponent } from './nav-top/nav-top.component';\nimport { NavBarComponent } from './nav-bar/nav-bar.component';\nimport { ActiveRouteComponent } from './active-route/active-route.component';\nimport { HotelDetailsComponent } from './hotel-details/hotel-details.component';\nimport { HotelDetailsNavigationComponent } from './hotel-details-navigation/hotel-details-navigation.component';\nimport { PackageSummeryComponent } from './package-summery/package-summery.component';\nimport { OtherPackageService } from './shared/services/other-package.service';\nimport { HttpClientModule } from '@angular/common/http';\nimport { OtherPackagesComponent } from './other-packages/other-packages.component';\nimport { GuestReviewComponent } from './guest-review/guest-review.component';\nimport { StarsBoxComponent } from './stars-box/stars-box.component';\nimport { NewsletterSectionComponent } from './newsletter-section/newsletter-section.component';\nimport { OtherActivitiesComponent } from './other-activities/other-activities.component';\nimport { ContactFormComponent } from './contact-form/contact-form.component';\nimport { ReactiveFormsModule } from '@angular/forms';\n\n@NgModule({\n  declarations: [\n    NavTopComponent,\n    NavBarComponent,\n    ActiveRouteComponent,\n    HotelDetailsComponent,\n    HotelDetailsNavigationComponent,\n    PackageSummeryComponent,\n    OtherPackagesComponent,\n    GuestReviewComponent,\n    StarsBoxComponent,\n    NewsletterSectionComponent,\n    OtherActivitiesComponent,\n    ContactFormComponent,\n  ],\n  imports: [CommonModule, HttpClientModule, ReactiveFormsModule],\n  exports: [],\n  providers: [OtherPackageService],\n})\nexport class HomeModule {}\n",
+            "sourceCode": "import { NgModule } from '@angular/core';\nimport { CommonModule } from '@angular/common';\nimport { NavTopComponent } from './nav-top/nav-top.component';\nimport { NavBarComponent } from './nav-bar/nav-bar.component';\nimport { ActiveRouteComponent } from './active-route/active-route.component';\nimport { HotelDetailsComponent } from './hotel-details/hotel-details.component';\nimport { HotelDetailsNavigationComponent } from './hotel-details-navigation/hotel-details-navigation.component';\nimport { PackageSummeryComponent } from './package-summery/package-summery.component';\nimport { OtherPackageService } from './shared/services/other-package.service';\nimport { HttpClientModule } from '@angular/common/http';\nimport { OtherPackagesComponent } from './other-packages/other-packages.component';\nimport { GuestReviewComponent } from './guest-review/guest-review.component';\nimport { StarsBoxComponent } from './stars-box/stars-box.component';\nimport { NewsletterSectionComponent } from './newsletter-section/newsletter-section.component';\nimport { OtherActivitiesComponent } from './other-activities/other-activities.component';\nimport { ContactFormComponent } from './contact-form/contact-form.component';\nimport { ReactiveFormsModule } from '@angular/forms';\nimport { ContactDetailsComponent } from './contact-details/contact-details.component';\n\n@NgModule({\n  declarations: [\n    NavTopComponent,\n    NavBarComponent,\n    ActiveRouteComponent,\n    HotelDetailsComponent,\n    HotelDetailsNavigationComponent,\n    PackageSummeryComponent,\n    OtherPackagesComponent,\n    GuestReviewComponent,\n    StarsBoxComponent,\n    NewsletterSectionComponent,\n    OtherActivitiesComponent,\n    ContactFormComponent,\n    ContactDetailsComponent,\n  ],\n  imports: [CommonModule, HttpClientModule, ReactiveFormsModule],\n  exports: [],\n  providers: [OtherPackageService],\n})\nexport class HomeModule {}\n",
             "children": [
                 {
                     "type": "providers",
@@ -1178,6 +1218,9 @@
                     "elements": [
                         {
                             "name": "ActiveRouteComponent"
+                        },
+                        {
+                            "name": "ContactDetailsComponent"
                         },
                         {
                             "name": "ContactFormComponent"
@@ -1259,6 +1302,16 @@
                 "name": "Default",
                 "ctype": "miscellaneous",
                 "subtype": "variable",
+                "file": "src/app/home/contact-details/ContactDetails.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "Story<ContactDetailsComponent>",
+                "defaultValue": "(args: ContactDetailsComponent) => ({\n  props: args,\n})"
+            },
+            {
+                "name": "Default",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
                 "file": "src/app/home/contact-form/ContactForm.stories.ts",
                 "deprecated": false,
                 "deprecationMessage": "",
@@ -1299,16 +1352,6 @@
                 "name": "Default",
                 "ctype": "miscellaneous",
                 "subtype": "variable",
-                "file": "src/app/home/nav-bar/NavBar.stories.ts",
-                "deprecated": false,
-                "deprecationMessage": "",
-                "type": "Story<NavBarComponent>",
-                "defaultValue": "(args: NavBarComponent) => ({\n  props: args,\n})"
-            },
-            {
-                "name": "Default",
-                "ctype": "miscellaneous",
-                "subtype": "variable",
                 "file": "src/app/home/nav-top/NavTop.stories.ts",
                 "deprecated": false,
                 "deprecationMessage": "",
@@ -1324,6 +1367,16 @@
                 "deprecationMessage": "",
                 "type": "Story<NewsletterSectionComponent>",
                 "defaultValue": "(args: NewsletterSectionComponent) => ({\n  props: args,\n})"
+            },
+            {
+                "name": "Default",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "src/app/home/other-packages/OtherPackages.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "Story<OtherPackagesComponent>",
+                "defaultValue": "(args: OtherPackagesComponent) => ({\n  props: args,\n})"
             },
             {
                 "name": "Default",
@@ -1359,11 +1412,11 @@
                 "name": "Default",
                 "ctype": "miscellaneous",
                 "subtype": "variable",
-                "file": "src/app/home/other-packages/OtherPackages.stories.ts",
+                "file": "src/app/home/nav-bar/NavBar.stories.ts",
                 "deprecated": false,
                 "deprecationMessage": "",
-                "type": "Story<OtherPackagesComponent>",
-                "defaultValue": "(args: OtherPackagesComponent) => ({\n  props: args,\n})"
+                "type": "Story<NavBarComponent>",
+                "defaultValue": "(args: NavBarComponent) => ({\n  props: args,\n})"
             },
             {
                 "name": "environment",
@@ -1442,6 +1495,18 @@
                     "defaultValue": "(args: ActiveRouteComponent) => ({\n  props: args,\n})"
                 }
             ],
+            "src/app/home/contact-details/ContactDetails.stories.ts": [
+                {
+                    "name": "Default",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "src/app/home/contact-details/ContactDetails.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "Story<ContactDetailsComponent>",
+                    "defaultValue": "(args: ContactDetailsComponent) => ({\n  props: args,\n})"
+                }
+            ],
             "src/app/home/contact-form/ContactForm.stories.ts": [
                 {
                     "name": "Default",
@@ -1490,18 +1555,6 @@
                     "defaultValue": "(args: HotelDetailsNavigationComponent) => ({\n  props: args,\n})"
                 }
             ],
-            "src/app/home/nav-bar/NavBar.stories.ts": [
-                {
-                    "name": "Default",
-                    "ctype": "miscellaneous",
-                    "subtype": "variable",
-                    "file": "src/app/home/nav-bar/NavBar.stories.ts",
-                    "deprecated": false,
-                    "deprecationMessage": "",
-                    "type": "Story<NavBarComponent>",
-                    "defaultValue": "(args: NavBarComponent) => ({\n  props: args,\n})"
-                }
-            ],
             "src/app/home/nav-top/NavTop.stories.ts": [
                 {
                     "name": "Default",
@@ -1524,6 +1577,18 @@
                     "deprecationMessage": "",
                     "type": "Story<NewsletterSectionComponent>",
                     "defaultValue": "(args: NewsletterSectionComponent) => ({\n  props: args,\n})"
+                }
+            ],
+            "src/app/home/other-packages/OtherPackages.stories.ts": [
+                {
+                    "name": "Default",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "src/app/home/other-packages/OtherPackages.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "Story<OtherPackagesComponent>",
+                    "defaultValue": "(args: OtherPackagesComponent) => ({\n  props: args,\n})"
                 }
             ],
             "src/app/home/other-activities/OtherActivities.stories.ts": [
@@ -1572,16 +1637,16 @@
                     "defaultValue": "Default.bind({})"
                 }
             ],
-            "src/app/home/other-packages/OtherPackages.stories.ts": [
+            "src/app/home/nav-bar/NavBar.stories.ts": [
                 {
                     "name": "Default",
                     "ctype": "miscellaneous",
                     "subtype": "variable",
-                    "file": "src/app/home/other-packages/OtherPackages.stories.ts",
+                    "file": "src/app/home/nav-bar/NavBar.stories.ts",
                     "deprecated": false,
                     "deprecationMessage": "",
-                    "type": "Story<OtherPackagesComponent>",
-                    "defaultValue": "(args: OtherPackagesComponent) => ({\n  props: args,\n})"
+                    "type": "Story<NavBarComponent>",
+                    "defaultValue": "(args: NavBarComponent) => ({\n  props: args,\n})"
                 }
             ],
             "src/environments/environment.ts": [
@@ -1657,6 +1722,25 @@
                 "name": "ActiveRouteComponent",
                 "coveragePercent": 0,
                 "coverageCount": "0/2",
+                "status": "low"
+            },
+            {
+                "filePath": "src/app/home/contact-details/ContactDetails.stories.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "Default",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "src/app/home/contact-details/contact-details.component.ts",
+                "type": "component",
+                "linktype": "component",
+                "name": "ContactDetailsComponent",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
                 "status": "low"
             },
             {

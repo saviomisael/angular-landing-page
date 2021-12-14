@@ -1,0 +1,47 @@
+@use 'settings' as colors;
+@use 'tools';
+
+.contact-details {
+  display: flex;
+  flex-direction: column;
+  row-gap: 2rem;
+  align-items: flex-start;
+  justify-content: center;
+  padding: 1rem;
+
+  & > * {
+    font-size: 1.4rem;
+    color: colors.$gray-dark;
+  }
+
+  & > .title {
+    text-transform: uppercase;
+    color: colors.$white;
+  }
+
+  & > :is(.location, .mail) {
+    align-items: center;
+  }
+
+  & > .location {
+    @include tools.flex-icon('/assets/images/location-full.svg');
+  }
+
+  & > .mail {
+    @include tools.flex-icon('/assets/images/email.svg');
+    column-gap: 1.5rem;
+  }
+}
+
+.phones-box {
+  @include tools.flex-icon('/assets/images/phone-full.svg');
+
+  display: grid;
+  grid-template-columns: 2.5rem 1fr;
+  grid-template-areas: 'icon phone' 'icon phone' 'icon phone';
+  gap: 0.3rem 0.8rem;
+
+  &::before {
+    grid-area: icon;
+  }
+}

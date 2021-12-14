@@ -15,6 +15,7 @@ import { NewsletterSectionComponent } from './newsletter-section/newsletter-sect
 import { OtherActivitiesComponent } from './other-activities/other-activities.component';
 import { ContactFormComponent } from './contact-form/contact-form.component';
 import { ReactiveFormsModule } from '@angular/forms';
+import { ContactDetailsComponent } from './contact-details/contact-details.component';
 
 @NgModule({
   declarations: [
@@ -30,6 +31,7 @@ import { ReactiveFormsModule } from '@angular/forms';
     NewsletterSectionComponent,
     OtherActivitiesComponent,
     ContactFormComponent,
+    ContactDetailsComponent,
   ],
   imports: [CommonModule, HttpClientModule, ReactiveFormsModule],
   exports: [],
