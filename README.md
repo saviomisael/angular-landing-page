@@ -6,7 +6,7 @@ A landing page create with [Angular CLI](https://github.com/angular/angular-cli)
 
 [Info](#info)
 
-[Technolgies](#technologies)
+[Technologies](#technologies)
 
 [How to run](#how-to-run)
 
