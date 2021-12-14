@@ -1,27 +1,51 @@
-# AngularLandingPage
+# Angular Landing Page
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 13.0.1.
+A landing page create with [Angular CLI](https://github.com/angular/angular-cli).
 
-## Development server
+# Table of contents:
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+[Info](#info)
 
-## Code scaffolding
+[Technolgies](#technologies)
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+[How to run](#how-to-run)
 
-## Build
+[Screenshots](#screenshots)
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+# Info:
 
-## Running unit tests
+Template by [Mohammad Ali available in Freebiefy](https://freebiefy.com/free-hotel-booking-website-template-for-figma/).
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+# Technologies:
 
-## Running end-to-end tests
+![Angular](https://img.shields.io/badge/Angular-13.0.3-blue)
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+![NPM](https://img.shields.io/badge/NPM-7.19.1-blue)
 
-## Further help
+![Node JS](https://img.shields.io/badge/Node-16.13.0-blue)
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+![Typescript](https://img.shields.io/badge/Typescript-4.4.3-blue)
+
+![Prettier](https://img.shields.io/badge/Prettier-2.5.0-blue)
+
+![ESLint](https://img.shields.io/badge/ESLint-8.3.0-blue)
+
+![Husky](https://img.shields.io/badge/Husky-7.0.4-blue)
+
+![Storybook](https://img.shields.io/badge/Storybook-6.4.8-blue)
+
+# How to run
+
+### Install all dependencies:
+
+#### `npm i`
+
+### Start development server:
+
+#### `ng serve`
+
+### Open a browser and navigate to `http://localhost:4200/home`.
+
+# Screenshots
+
+![Screenshot of home page](./screenshots/screenshot.png)
