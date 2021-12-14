@@ -16,6 +16,7 @@ import { OtherActivitiesComponent } from './other-activities/other-activities.co
 import { ContactFormComponent } from './contact-form/contact-form.component';
 import { ReactiveFormsModule } from '@angular/forms';
 import { ContactDetailsComponent } from './contact-details/contact-details.component';
+import { FooterBottomComponent } from './footer-bottom/footer-bottom.component';
 
 @NgModule({
   declarations: [
@@ -32,6 +33,7 @@ import { ContactDetailsComponent } from './contact-details/contact-details.compo
     OtherActivitiesComponent,
     ContactFormComponent,
     ContactDetailsComponent,
+    FooterBottomComponent,
   ],
   imports: [CommonModule, HttpClientModule, ReactiveFormsModule],
   exports: [],

@@ -305,12 +305,12 @@
             "assetsDirs": [],
             "styleUrlsData": [
                 {
-                    "data": "",
+                    "data": "@use 'settings' as colors;\n@use 'tools';\n\n.contact-details {\n  display: flex;\n  flex-direction: column;\n  row-gap: 2rem;\n  align-items: flex-start;\n  justify-content: center;\n  padding: 1rem;\n\n  & > * {\n    font-size: 1.4rem;\n    color: colors.$gray-dark;\n  }\n\n  & > .title {\n    text-transform: uppercase;\n    color: colors.$white;\n  }\n\n  & > :is(.location, .mail) {\n    align-items: center;\n  }\n\n  & > .location {\n    @include tools.flex-icon('/assets/images/location-full.svg');\n  }\n\n  & > .mail {\n    @include tools.flex-icon('/assets/images/email.svg');\n    column-gap: 1.5rem;\n  }\n}\n\n.phones-box {\n  @include tools.flex-icon('/assets/images/phone-full.svg');\n\n  display: grid;\n  grid-template-columns: 2.5rem 1fr;\n  grid-template-areas: 'icon phone' 'icon phone' 'icon phone';\n  gap: 0.3rem 0.8rem;\n\n  &::before {\n    grid-area: icon;\n  }\n}\n",
                     "styleUrl": "./contact-details.component.scss"
                 }
             ],
             "stylesData": "",
-            "templateData": "<div class=\"contact-details\"></div>\n"
+            "templateData": "<div class=\"contact-details\">\n  <h3 class=\"title\">Contact details</h3>\n\n  <p>Feel free to contact us by phone, email or by our contact form</p>\n\n  <p class=\"location\">9748 Blossom Hill Rd undefined Lansing, Idaho 68545 United States</p>\n\n  <ul class=\"phones-box\">\n    <li class=\"phone\">Tel (business hours) : 269 1500</li>\n    <li class=\"phone\">Tel (hotline) Monday - Saturday: 52-56-61-38 (08:00 am – 20:00 pm)</li>\n    <li class=\"phone\">Tel (hotline) Sunday: 52-56-61-38 (08:00 am – 14:00 pm)</li>\n  </ul>\n\n  <p class=\"mail\">cherly.lawson@example.com</p>\n</div>\n"
         },
         {
             "name": "ContactFormComponent",
@@ -420,6 +420,46 @@
                 "OnInit"
             ],
             "templateData": "<form class=\"contact-form\" [formGroup]=\"form\" (ngSubmit)=\"handleSubmit()\">\n  <h3 class=\"title\">Send us message</h3>\n\n  <input formControlName=\"fullname\" type=\"text\" class=\"fullname\" placeholder=\"Your Full Name*\" />\n  <input formControlName=\"phone\" type=\"tel\" class=\"phone\" placeholder=\"Phone Number*\" />\n  <textarea formControlName=\"message\" class=\"message\" placeholder=\"Message\"></textarea>\n\n  <button class=\"btn\" type=\"submit\">Send</button>\n\n  <p class=\"required\">* Required Fields</p>\n</form>\n"
+        },
+        {
+            "name": "FooterBottomComponent",
+            "id": "component-FooterBottomComponent-28e5412d6634f3f7229fdc1f16c3f4d55a4e38e69e69076f7ab1d3d7b1358d1c24477ae2185e4ffe22f968d00a39cf08731601eb513e753887a4f3ab1c6d1f7d",
+            "file": "src/app/home/footer-bottom/footer-bottom.component.ts",
+            "encapsulation": [],
+            "entryComponents": [],
+            "inputs": [],
+            "outputs": [],
+            "providers": [],
+            "selector": "app-footer-bottom",
+            "styleUrls": [
+                "./footer-bottom.component.scss"
+            ],
+            "styles": [],
+            "templateUrl": [
+                "./footer-bottom.component.html"
+            ],
+            "viewProviders": [],
+            "inputsClass": [],
+            "outputsClass": [],
+            "propertiesClass": [],
+            "methodsClass": [],
+            "deprecated": false,
+            "deprecationMessage": "",
+            "hostBindings": [],
+            "hostListeners": [],
+            "description": "",
+            "rawdescription": "\n",
+            "type": "component",
+            "sourceCode": "import { Component } from '@angular/core';\n\n@Component({\n  selector: 'app-footer-bottom',\n  templateUrl: './footer-bottom.component.html',\n  styleUrls: ['./footer-bottom.component.scss'],\n})\nexport class FooterBottomComponent {}\n",
+            "assetsDirs": [],
+            "styleUrlsData": [
+                {
+                    "data": "",
+                    "styleUrl": "./footer-bottom.component.scss"
+                }
+            ],
+            "stylesData": "",
+            "templateData": "<p>footer-bottom works!</p>\n"
         },
         {
             "name": "GuestReviewComponent",
@@ -1197,13 +1237,13 @@
         },
         {
             "name": "HomeModule",
-            "id": "module-HomeModule-7ddc00fd806739b844b5c2323e046ae1b4670749e9c42bde9fc9f94cc880a73d9b6b6c4cf6e49471efa49720cbd196bbb275b28db2c9ba6ce9fc5691bb64dd73",
+            "id": "module-HomeModule-af7fab07a017cac4c9a4f6359fb41d612b0ee84ecc16505215501e7efec481237d4b48b318608b61b2831cdb0306116358d6b2733885ebd91ff4efe7357f0b42",
             "description": "",
             "deprecationMessage": "",
             "deprecated": false,
             "file": "src/app/home/home.module.ts",
             "methods": [],
-            "sourceCode": "import { NgModule } from '@angular/core';\nimport { CommonModule } from '@angular/common';\nimport { NavTopComponent } from './nav-top/nav-top.component';\nimport { NavBarComponent } from './nav-bar/nav-bar.component';\nimport { ActiveRouteComponent } from './active-route/active-route.component';\nimport { HotelDetailsComponent } from './hotel-details/hotel-details.component';\nimport { HotelDetailsNavigationComponent } from './hotel-details-navigation/hotel-details-navigation.component';\nimport { PackageSummeryComponent } from './package-summery/package-summery.component';\nimport { OtherPackageService } from './shared/services/other-package.service';\nimport { HttpClientModule } from '@angular/common/http';\nimport { OtherPackagesComponent } from './other-packages/other-packages.component';\nimport { GuestReviewComponent } from './guest-review/guest-review.component';\nimport { StarsBoxComponent } from './stars-box/stars-box.component';\nimport { NewsletterSectionComponent } from './newsletter-section/newsletter-section.component';\nimport { OtherActivitiesComponent } from './other-activities/other-activities.component';\nimport { ContactFormComponent } from './contact-form/contact-form.component';\nimport { ReactiveFormsModule } from '@angular/forms';\nimport { ContactDetailsComponent } from './contact-details/contact-details.component';\n\n@NgModule({\n  declarations: [\n    NavTopComponent,\n    NavBarComponent,\n    ActiveRouteComponent,\n    HotelDetailsComponent,\n    HotelDetailsNavigationComponent,\n    PackageSummeryComponent,\n    OtherPackagesComponent,\n    GuestReviewComponent,\n    StarsBoxComponent,\n    NewsletterSectionComponent,\n    OtherActivitiesComponent,\n    ContactFormComponent,\n    ContactDetailsComponent,\n  ],\n  imports: [CommonModule, HttpClientModule, ReactiveFormsModule],\n  exports: [],\n  providers: [OtherPackageService],\n})\nexport class HomeModule {}\n",
+            "sourceCode": "import { NgModule } from '@angular/core';\nimport { CommonModule } from '@angular/common';\nimport { NavTopComponent } from './nav-top/nav-top.component';\nimport { NavBarComponent } from './nav-bar/nav-bar.component';\nimport { ActiveRouteComponent } from './active-route/active-route.component';\nimport { HotelDetailsComponent } from './hotel-details/hotel-details.component';\nimport { HotelDetailsNavigationComponent } from './hotel-details-navigation/hotel-details-navigation.component';\nimport { PackageSummeryComponent } from './package-summery/package-summery.component';\nimport { OtherPackageService } from './shared/services/other-package.service';\nimport { HttpClientModule } from '@angular/common/http';\nimport { OtherPackagesComponent } from './other-packages/other-packages.component';\nimport { GuestReviewComponent } from './guest-review/guest-review.component';\nimport { StarsBoxComponent } from './stars-box/stars-box.component';\nimport { NewsletterSectionComponent } from './newsletter-section/newsletter-section.component';\nimport { OtherActivitiesComponent } from './other-activities/other-activities.component';\nimport { ContactFormComponent } from './contact-form/contact-form.component';\nimport { ReactiveFormsModule } from '@angular/forms';\nimport { ContactDetailsComponent } from './contact-details/contact-details.component';\nimport { FooterBottomComponent } from './footer-bottom/footer-bottom.component';\n\n@NgModule({\n  declarations: [\n    NavTopComponent,\n    NavBarComponent,\n    ActiveRouteComponent,\n    HotelDetailsComponent,\n    HotelDetailsNavigationComponent,\n    PackageSummeryComponent,\n    OtherPackagesComponent,\n    GuestReviewComponent,\n    StarsBoxComponent,\n    NewsletterSectionComponent,\n    OtherActivitiesComponent,\n    ContactFormComponent,\n    ContactDetailsComponent,\n    FooterBottomComponent,\n  ],\n  imports: [CommonModule, HttpClientModule, ReactiveFormsModule],\n  exports: [],\n  providers: [OtherPackageService],\n})\nexport class HomeModule {}\n",
             "children": [
                 {
                     "type": "providers",
@@ -1224,6 +1264,9 @@
                         },
                         {
                             "name": "ContactFormComponent"
+                        },
+                        {
+                            "name": "FooterBottomComponent"
                         },
                         {
                             "name": "GuestReviewComponent"
@@ -1322,6 +1365,16 @@
                 "name": "Default",
                 "ctype": "miscellaneous",
                 "subtype": "variable",
+                "file": "src/app/home/footer-bottom/FooterBottom.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "Story<FooterBottomComponent>",
+                "defaultValue": "(args: FooterBottomComponent) => ({\n  props: args,\n})"
+            },
+            {
+                "name": "Default",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
                 "file": "src/app/home/guest-review/GuestReview.stories.ts",
                 "deprecated": false,
                 "deprecationMessage": "",
@@ -1372,21 +1425,21 @@
                 "name": "Default",
                 "ctype": "miscellaneous",
                 "subtype": "variable",
-                "file": "src/app/home/other-packages/OtherPackages.stories.ts",
-                "deprecated": false,
-                "deprecationMessage": "",
-                "type": "Story<OtherPackagesComponent>",
-                "defaultValue": "(args: OtherPackagesComponent) => ({\n  props: args,\n})"
-            },
-            {
-                "name": "Default",
-                "ctype": "miscellaneous",
-                "subtype": "variable",
                 "file": "src/app/home/other-activities/OtherActivities.stories.ts",
                 "deprecated": false,
                 "deprecationMessage": "",
                 "type": "Story<OtherActivitiesComponent>",
                 "defaultValue": "(args: OtherActivitiesComponent) => ({\n  props: args,\n})"
+            },
+            {
+                "name": "Default",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "src/app/home/other-packages/OtherPackages.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "Story<OtherPackagesComponent>",
+                "defaultValue": "(args: OtherPackagesComponent) => ({\n  props: args,\n})"
             },
             {
                 "name": "Default",
@@ -1422,21 +1475,21 @@
                 "name": "environment",
                 "ctype": "miscellaneous",
                 "subtype": "variable",
-                "file": "src/environments/environment.ts",
-                "deprecated": false,
-                "deprecationMessage": "",
-                "type": "object",
-                "defaultValue": "{\n  production: false,\n}"
-            },
-            {
-                "name": "environment",
-                "ctype": "miscellaneous",
-                "subtype": "variable",
                 "file": "src/environments/environment.prod.ts",
                 "deprecated": false,
                 "deprecationMessage": "",
                 "type": "object",
                 "defaultValue": "{\n  production: true,\n}"
+            },
+            {
+                "name": "environment",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "src/environments/environment.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "object",
+                "defaultValue": "{\n  production: false,\n}"
             },
             {
                 "name": "require",
@@ -1519,6 +1572,18 @@
                     "defaultValue": "(args: ContactFormComponent) => ({\n  props: args,\n})"
                 }
             ],
+            "src/app/home/footer-bottom/FooterBottom.stories.ts": [
+                {
+                    "name": "Default",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "src/app/home/footer-bottom/FooterBottom.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "Story<FooterBottomComponent>",
+                    "defaultValue": "(args: FooterBottomComponent) => ({\n  props: args,\n})"
+                }
+            ],
             "src/app/home/guest-review/GuestReview.stories.ts": [
                 {
                     "name": "Default",
@@ -1579,18 +1644,6 @@
                     "defaultValue": "(args: NewsletterSectionComponent) => ({\n  props: args,\n})"
                 }
             ],
-            "src/app/home/other-packages/OtherPackages.stories.ts": [
-                {
-                    "name": "Default",
-                    "ctype": "miscellaneous",
-                    "subtype": "variable",
-                    "file": "src/app/home/other-packages/OtherPackages.stories.ts",
-                    "deprecated": false,
-                    "deprecationMessage": "",
-                    "type": "Story<OtherPackagesComponent>",
-                    "defaultValue": "(args: OtherPackagesComponent) => ({\n  props: args,\n})"
-                }
-            ],
             "src/app/home/other-activities/OtherActivities.stories.ts": [
                 {
                     "name": "Default",
@@ -1601,6 +1654,18 @@
                     "deprecationMessage": "",
                     "type": "Story<OtherActivitiesComponent>",
                     "defaultValue": "(args: OtherActivitiesComponent) => ({\n  props: args,\n})"
+                }
+            ],
+            "src/app/home/other-packages/OtherPackages.stories.ts": [
+                {
+                    "name": "Default",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "src/app/home/other-packages/OtherPackages.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "Story<OtherPackagesComponent>",
+                    "defaultValue": "(args: OtherPackagesComponent) => ({\n  props: args,\n})"
                 }
             ],
             "src/app/home/package-summery/PackageSummery.stories.ts": [
@@ -1649,18 +1714,6 @@
                     "defaultValue": "(args: NavBarComponent) => ({\n  props: args,\n})"
                 }
             ],
-            "src/environments/environment.ts": [
-                {
-                    "name": "environment",
-                    "ctype": "miscellaneous",
-                    "subtype": "variable",
-                    "file": "src/environments/environment.ts",
-                    "deprecated": false,
-                    "deprecationMessage": "",
-                    "type": "object",
-                    "defaultValue": "{\n  production: false,\n}"
-                }
-            ],
             "src/environments/environment.prod.ts": [
                 {
                     "name": "environment",
@@ -1671,6 +1724,18 @@
                     "deprecationMessage": "",
                     "type": "object",
                     "defaultValue": "{\n  production: true,\n}"
+                }
+            ],
+            "src/environments/environment.ts": [
+                {
+                    "name": "environment",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "src/environments/environment.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "object",
+                    "defaultValue": "{\n  production: false,\n}"
                 }
             ]
         },
@@ -1760,6 +1825,25 @@
                 "name": "ContactFormComponent",
                 "coveragePercent": 0,
                 "coverageCount": "0/6",
+                "status": "low"
+            },
+            {
+                "filePath": "src/app/home/footer-bottom/FooterBottom.stories.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "Default",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "src/app/home/footer-bottom/footer-bottom.component.ts",
+                "type": "component",
+                "linktype": "component",
+                "name": "FooterBottomComponent",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
                 "status": "low"
             },
             {
