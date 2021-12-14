@@ -1,0 +1,11 @@
+<form class="contact-form" [formGroup]="form" (ngSubmit)="handleSubmit()">
+  <h3 class="title">Send us message</h3>
+
+  <input formControlName="fullname" type="text" class="fullname" placeholder="Your Full Name*" />
+  <input formControlName="phone" type="tel" class="phone" placeholder="Phone Number*" />
+  <textarea formControlName="message" class="message" placeholder="Message"></textarea>
+
+  <button class="btn" type="submit">Send</button>
+
+  <p class="required">* Required Fields</p>
+</form>

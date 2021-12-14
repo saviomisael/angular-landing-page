@@ -225,7 +225,7 @@
             "assetsDirs": [],
             "styleUrlsData": [
                 {
-                    "data": "@use 'settings' as colors;\n\n.active-route {\n  padding: 1.2rem;\n  margin-left: 3rem;\n  background-color: colors.$blue-light;\n}\n",
+                    "data": "@use 'settings' as colors;\n@use 'tools';\n\n.active-route {\n  @include tools.padding-y-default;\n\n  padding-top: 1.2rem;\n  padding-bottom: 1.2rem;\n  background-color: colors.$blue-light;\n}\n",
                     "styleUrl": "./active-route.component.scss"
                 }
             ],
@@ -273,6 +273,115 @@
             "templateData": "<h1>Not implemented yet</h1>\n"
         },
         {
+            "name": "ContactFormComponent",
+            "id": "component-ContactFormComponent-3c9e7684b0ce8c253b175539c743ac6c53948d9238a8776e9e2c208553ad5abfebe2069eef2e9ce94bd677234378406d08e30aa2c17019bf931ce6cab1bba87e",
+            "file": "src/app/home/contact-form/contact-form.component.ts",
+            "encapsulation": [],
+            "entryComponents": [],
+            "inputs": [],
+            "outputs": [],
+            "providers": [],
+            "selector": "app-contact-form",
+            "styleUrls": [
+                "./contact-form.component.scss"
+            ],
+            "styles": [],
+            "templateUrl": [
+                "./contact-form.component.html"
+            ],
+            "viewProviders": [],
+            "inputsClass": [],
+            "outputsClass": [
+                {
+                    "name": "onSubmit",
+                    "defaultValue": "new EventEmitter<{ fullname: string; phone: string; message: string }>()",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "line": 11,
+                    "type": "EventEmitter"
+                }
+            ],
+            "propertiesClass": [
+                {
+                    "name": "form",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "FormGroup",
+                    "optional": false,
+                    "description": "",
+                    "line": 10
+                }
+            ],
+            "methodsClass": [
+                {
+                    "name": "handleSubmit",
+                    "args": [],
+                    "optional": false,
+                    "returnType": "void",
+                    "typeParameters": [],
+                    "line": 23,
+                    "deprecated": false,
+                    "deprecationMessage": ""
+                },
+                {
+                    "name": "ngOnInit",
+                    "args": [],
+                    "optional": false,
+                    "returnType": "void",
+                    "typeParameters": [],
+                    "line": 15,
+                    "deprecated": false,
+                    "deprecationMessage": ""
+                }
+            ],
+            "deprecated": false,
+            "deprecationMessage": "",
+            "hostBindings": [],
+            "hostListeners": [],
+            "description": "",
+            "rawdescription": "\n",
+            "type": "component",
+            "sourceCode": "import { Component, EventEmitter, OnInit, Output } from '@angular/core';\nimport { FormBuilder, FormGroup, Validators } from '@angular/forms';\n\n@Component({\n  selector: 'app-contact-form',\n  templateUrl: './contact-form.component.html',\n  styleUrls: ['./contact-form.component.scss'],\n})\nexport class ContactFormComponent implements OnInit {\n  form!: FormGroup;\n  @Output() onSubmit = new EventEmitter<{ fullname: string; phone: string; message: string }>();\n\n  constructor(private fb: FormBuilder) {}\n\n  ngOnInit(): void {\n    this.form = this.fb.group({\n      fullname: ['', Validators.required],\n      phone: ['', Validators.required],\n      message: [''],\n    });\n  }\n\n  handleSubmit() {\n    if (this.form.valid) {\n      this.onSubmit.emit(this.form.value);\n    }\n  }\n}\n",
+            "assetsDirs": [],
+            "styleUrlsData": [
+                {
+                    "data": "@use 'settings' as colors;\n@use 'tools/placeholders';\n\n.contact-form {\n  display: grid;\n  grid-template-columns: 1fr 1fr;\n  grid-template-areas: 'title .' 'fullname phone' 'message message' 'btn required';\n  gap: 1.5rem 3rem;\n  color: colors.$white;\n  padding: 1rem;\n\n  & > .title {\n    text-transform: uppercase;\n    grid-area: title;\n  }\n\n  & > .fullname {\n    @extend %field-contact-form;\n\n    grid-area: fullname;\n  }\n\n  & > .phone {\n    @extend %field-contact-form;\n\n    grid-area: phone;\n  }\n\n  & > .message {\n    @extend %field-contact-form;\n\n    grid-area: message;\n    min-height: 10rem;\n  }\n\n  & > .btn {\n    @extend %button-default;\n\n    grid-area: btn;\n    place-self: center start;\n    font-size: 1.2rem;\n    padding: 2rem 6.5rem;\n  }\n\n  & > .required {\n    grid-area: required;\n    font-size: 1.2rem;\n    font-weight: 700;\n    place-self: center end;\n  }\n}\n",
+                    "styleUrl": "./contact-form.component.scss"
+                }
+            ],
+            "stylesData": "",
+            "constructorObj": {
+                "name": "constructor",
+                "description": "",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "args": [
+                    {
+                        "name": "fb",
+                        "type": "FormBuilder",
+                        "deprecated": false,
+                        "deprecationMessage": ""
+                    }
+                ],
+                "line": 11,
+                "jsdoctags": [
+                    {
+                        "name": "fb",
+                        "type": "FormBuilder",
+                        "deprecated": false,
+                        "deprecationMessage": "",
+                        "tagName": {
+                            "text": "param"
+                        }
+                    }
+                ]
+            },
+            "implements": [
+                "OnInit"
+            ],
+            "templateData": "<form class=\"contact-form\" [formGroup]=\"form\" (ngSubmit)=\"handleSubmit()\">\n  <h3 class=\"title\">Send us message</h3>\n\n  <input formControlName=\"fullname\" type=\"text\" class=\"fullname\" placeholder=\"Your Full Name*\" />\n  <input formControlName=\"phone\" type=\"tel\" class=\"phone\" placeholder=\"Phone Number*\" />\n  <textarea formControlName=\"message\" class=\"message\" placeholder=\"Message\"></textarea>\n\n  <button class=\"btn\" type=\"submit\">Send</button>\n\n  <p class=\"required\">* Required Fields</p>\n</form>\n"
+        },
+        {
             "name": "GuestReviewComponent",
             "id": "component-GuestReviewComponent-8c6aa7a60fc0fcfe79280982d11f73664e5bf774f33f8f251d2a3940d404952d286a4c681ac1d5b54d0c138c1a6302f5be3fb2fb9cdc87da70251c7b1563f0f6",
             "file": "src/app/home/guest-review/guest-review.component.ts",
@@ -316,7 +425,7 @@
             "assetsDirs": [],
             "styleUrlsData": [
                 {
-                    "data": "@use 'settings' as colors;\n\n.guest-review {\n  padding: 3rem;\n\n  display: grid;\n  grid-template-columns: 4rem 1fr 4rem;\n  grid-template-rows: 10rem 1fr;\n  row-gap: 11rem;\n  justify-items: center;\n  align-items: center;\n\n  & > .title {\n    font-size: 3.6rem;\n    text-transform: uppercase;\n    text-align: center;\n    grid-column: 1 / -1;\n    grid-row: 1 / 2;\n  }\n\n  & > .left {\n    grid-column: 1 / 2;\n  }\n\n  & > .main {\n    grid-column: 2 / 3;\n  }\n\n  & > .right {\n    grid-column: 3 / 4;\n  }\n}\n\n.review-box {\n  text-align: center;\n  background-color: colors.$white;\n  padding: 2rem 5rem 0;\n  border-radius: 0.8rem;\n  width: 73rem;\n  position: relative;\n\n  &::after,\n  &::before {\n    content: url('/assets/images/quote.svg');\n    position: absolute;\n  }\n\n  &::after {\n    top: 5%;\n    left: 2%;\n  }\n\n  &::before {\n    bottom: 32%;\n    right: 3%;\n    transform: rotateZ(180deg);\n  }\n\n  & > .reviewtext {\n    text-align: justify;\n    transform: translateY(-45%);\n  }\n}\n\n.guest-photo {\n  transform: translateY(-45%);\n  margin: 0 auto;\n\n  & > .image {\n    width: 9rem;\n    height: 9rem;\n  }\n\n  & > .caption {\n    display: flex;\n    flex-direction: column;\n    row-gap: 0.5rem;\n\n    & > .guestname {\n      font-size: 1.2rem;\n      color: colors.$second;\n      font-weight: bold;\n    }\n\n    & > .stars {\n      & > .star {\n        width: 0.8rem;\n        height: 0.8rem;\n      }\n    }\n  }\n}\n",
+                    "data": "@use 'settings' as colors;\n@use 'tools';\n\n.guest-review {\n  @include tools.padding-y-default;\n\n  padding-top: 3rem;\n  padding-bottom: 3rem;\n\n  display: grid;\n  grid-template-columns: 4rem 1fr 4rem;\n  grid-template-rows: 10rem 1fr;\n  row-gap: 11rem;\n  justify-items: center;\n  align-items: center;\n\n  & > .title {\n    font-size: 3.6rem;\n    text-transform: uppercase;\n    text-align: center;\n    grid-column: 1 / -1;\n    grid-row: 1 / 2;\n  }\n\n  & > .left {\n    grid-column: 1 / 2;\n  }\n\n  & > .main {\n    grid-column: 2 / 3;\n  }\n\n  & > .right {\n    grid-column: 3 / 4;\n  }\n}\n\n.review-box {\n  text-align: center;\n  background-color: colors.$white;\n  padding: 2rem 5rem 0;\n  border-radius: 0.8rem;\n  width: 73rem;\n  position: relative;\n\n  &::after,\n  &::before {\n    content: url('/assets/images/quote.svg');\n    position: absolute;\n  }\n\n  &::after {\n    top: 5%;\n    left: 2%;\n  }\n\n  &::before {\n    bottom: 32%;\n    right: 3%;\n    transform: rotateZ(180deg);\n  }\n\n  & > .reviewtext {\n    text-align: justify;\n    transform: translateY(-45%);\n  }\n}\n\n.guest-photo {\n  transform: translateY(-45%);\n  margin: 0 auto;\n\n  & > .image {\n    width: 9rem;\n    height: 9rem;\n  }\n\n  & > .caption {\n    display: flex;\n    flex-direction: column;\n    row-gap: 0.5rem;\n\n    & > .guestname {\n      font-size: 1.2rem;\n      color: colors.$second;\n      font-weight: bold;\n    }\n\n    & > .stars {\n      & > .star {\n        width: 0.8rem;\n        height: 0.8rem;\n      }\n    }\n  }\n}\n",
                     "styleUrl": "./guest-review.component.scss"
                 }
             ],
@@ -393,7 +502,7 @@
             "assetsDirs": [],
             "styleUrlsData": [
                 {
-                    "data": "@use 'settings' as colors;\n@use 'tools' as tools;\n@use 'tools/placeholders';\n\n.hotel-details {\n  // TODO - move 9rem padding to main element when home component create\n  padding: 2rem 9rem 0;\n\n  & > .top {\n    display: flex;\n    align-items: center;\n    justify-content: space-between;\n  }\n}\n\n.title-box {\n  display: grid;\n  grid-template-rows: repeat(3, 1fr);\n  justify-items: start;\n  align-items: center;\n\n  & > .stars {\n    grid-row: 1 / 2;\n    align-self: end;\n\n    & > * {\n      width: 0.8rem;\n      height: 0.8rem;\n    }\n  }\n\n  & > .text {\n    grid-row: 2 / 3;\n  }\n\n  & > .offer {\n    @extend %flash-offer;\n\n    grid-row: 2 / 3;\n    transform: translateX(-140%);\n  }\n\n  & > .description {\n    font-size: 1.2rem;\n    grid-row: 3 / 3;\n    align-self: start;\n  }\n}\n\n.user-ratings {\n  background-color: colors.$second;\n  display: inline-block;\n  padding: 1.5rem 1.7rem;\n  border-radius: 0.4rem;\n\n  & > * {\n    color: colors.$white;\n  }\n\n  & > .text {\n    font-size: 0.8rem;\n  }\n\n  & > .value {\n    font-size: 1.4rem;\n\n    & > .max {\n      font-size: 1rem;\n    }\n  }\n}\n\n.details-box {\n  display: grid;\n  grid-template-columns: repeat(4, 1fr);\n  grid-template-rows: repeat(2, 1fr);\n  gap: 2rem;\n\n  & > .poster {\n    position: relative;\n    flex-basis: 65%;\n    grid-column: 1 / span 3;\n    grid-row: 1 / span 2;\n\n    &::before {\n      content: '';\n      position: absolute;\n      left: 0;\n      top: 0;\n      width: 100%;\n      height: 100%;\n      background-image: linear-gradient(to bottom, rgba(colors.$blue, 0.6), rgba(colors.$white, 0.16));\n      border-radius: 1rem;\n    }\n  }\n}\n\n.pricing-box {\n  background-color: colors.$first;\n  padding: 2.9rem 2.3rem;\n  border-radius: 0.8rem;\n  @include tools.font-nunito;\n  display: grid;\n  grid-template-columns: 1fr 1fr;\n  color: colors.$white;\n\n  & > .tel {\n    @include tools.flex-icon('/assets/images/phone-call.svg');\n    place-self: center end;\n  }\n\n  & > .btn {\n    @extend %button-default;\n\n    grid-column: 1 / span 2;\n  }\n}\n\n.price-cell {\n  & > * {\n    color: colors.$white;\n  }\n\n  & > .price {\n    font-weight: 800;\n  }\n}\n\n.description-cell {\n  text-align: right;\n  font-weight: 400;\n\n  & > * {\n    font-size: 1.2rem;\n    color: colors.$white;\n  }\n\n  & > .item {\n    display: grid;\n    grid-template-columns: 1fr 1fr;\n\n    &::before {\n      content: url('/assets/images/guest.svg');\n    }\n\n    &.-room::before {\n      content: url('/assets/images/room.svg');\n    }\n  }\n}\n",
+                    "data": "@use 'settings' as colors;\n@use 'tools' as tools;\n@use 'tools/placeholders';\n\n.hotel-details {\n  @include tools.padding-y-default;\n\n  padding-top: 2rem;\n\n  & > .top {\n    display: flex;\n    align-items: center;\n    justify-content: space-between;\n  }\n}\n\n.title-box {\n  display: grid;\n  grid-template-rows: repeat(3, 1fr);\n  justify-items: start;\n  align-items: center;\n\n  & > .stars {\n    grid-row: 1 / 2;\n    align-self: end;\n\n    & > * {\n      width: 0.8rem;\n      height: 0.8rem;\n    }\n  }\n\n  & > .text {\n    grid-row: 2 / 3;\n  }\n\n  & > .offer {\n    @extend %flash-offer;\n\n    grid-row: 2 / 3;\n    transform: translateX(-140%);\n  }\n\n  & > .description {\n    font-size: 1.2rem;\n    grid-row: 3 / 3;\n    align-self: start;\n  }\n}\n\n.user-ratings {\n  background-color: colors.$second;\n  display: inline-block;\n  padding: 1.5rem 1.7rem;\n  border-radius: 0.4rem;\n\n  & > * {\n    color: colors.$white;\n  }\n\n  & > .text {\n    font-size: 0.8rem;\n  }\n\n  & > .value {\n    font-size: 1.4rem;\n\n    & > .max {\n      font-size: 1rem;\n    }\n  }\n}\n\n.details-box {\n  display: grid;\n  grid-template-columns: repeat(4, 1fr);\n  grid-template-rows: repeat(2, 1fr);\n  gap: 2rem;\n\n  & > .poster {\n    position: relative;\n    flex-basis: 65%;\n    grid-column: 1 / span 3;\n    grid-row: 1 / span 2;\n\n    &::before {\n      content: '';\n      position: absolute;\n      left: 0;\n      top: 0;\n      width: 100%;\n      height: 100%;\n      background-image: linear-gradient(to bottom, rgba(colors.$blue, 0.6), rgba(colors.$white, 0.16));\n      border-radius: 1rem;\n    }\n  }\n}\n\n.pricing-box {\n  background-color: colors.$first;\n  padding: 2.9rem 2.3rem;\n  border-radius: 0.8rem;\n  @include tools.font-nunito;\n  display: grid;\n  grid-template-columns: 1fr 1fr;\n  color: colors.$white;\n\n  & > .tel {\n    @include tools.flex-icon('/assets/images/phone-call.svg');\n    place-self: center end;\n  }\n\n  & > .btn {\n    @extend %button-default;\n\n    grid-column: 1 / span 2;\n  }\n}\n\n.price-cell {\n  & > * {\n    color: colors.$white;\n  }\n\n  & > .price {\n    font-weight: 800;\n  }\n}\n\n.description-cell {\n  text-align: right;\n  font-weight: 400;\n\n  & > * {\n    font-size: 1.2rem;\n    color: colors.$white;\n  }\n\n  & > .item {\n    display: grid;\n    grid-template-columns: 1fr 1fr;\n\n    &::before {\n      content: url('/assets/images/guest.svg');\n    }\n\n    &.-room::before {\n      content: url('/assets/images/room.svg');\n    }\n  }\n}\n",
                     "styleUrl": "./hotel-details.component.scss"
                 }
             ],
@@ -473,12 +582,12 @@
             "assetsDirs": [],
             "styleUrlsData": [
                 {
-                    "data": "@use 'settings' as colors;\n\n.nav-bar {\n  & > .main {\n    display: flex;\n    align-items: center;\n    justify-content: space-around;\n    padding: 3rem;\n    transform: translateX(-1rem);\n  }\n}\n\n.form-search-location {\n  flex-basis: 30%;\n  display: flex;\n  border-radius: 0.6rem;\n  margin-right: 20rem;\n\n  & > .input {\n    color: colors.$gray;\n    background-color: colors.$blue-light;\n    border-top-left-radius: inherit;\n    border-bottom-left-radius: inherit;\n    padding-left: 1rem;\n    flex: 1;\n  }\n\n  & > .btn {\n    padding: 0.7rem 2rem;\n    background-color: colors.$second;\n    border-top-right-radius: inherit;\n    border-bottom-right-radius: inherit;\n  }\n}\n\n.cart-box {\n  position: relative;\n  display: flex;\n\n  &::after {\n    content: attr(data-count);\n    position: absolute;\n    top: -0.8rem;\n    right: -0.8rem;\n    display: flex;\n    align-items: center;\n    justify-content: center;\n    width: 2rem;\n    height: 2rem;\n    background-color: colors.$second;\n    border-radius: 50%;\n    color: colors.$white;\n    font-size: 1rem;\n  }\n}\n\n.profile-box {\n  display: flex;\n  align-items: center;\n  column-gap: 1.4rem;\n\n  & > .name {\n    font-size: 1.4rem;\n  }\n\n  &::after {\n    content: url('/assets/images/chevron-down.svg');\n  }\n}\n\n.navigation {\n  padding: 1rem;\n  height: 6rem;\n  color: colors.$white;\n  background-color: colors.$first;\n  display: flex;\n  align-items: center;\n  justify-content: space-around;\n\n  & > * {\n    color: inherit;\n    font-size: 1.4rem;\n    font-weight: bold;\n  }\n\n  & > .link {\n    text-transform: uppercase;\n  }\n}\n",
+                    "data": "@use 'settings' as colors;\n@use 'tools';\n\n.nav-bar {\n  & > .main {\n    @include tools.padding-y-default;\n\n    display: flex;\n    align-items: center;\n    justify-content: space-between;\n    padding-top: 3rem;\n    padding-bottom: 3rem;\n  }\n}\n\n.form-search-location {\n  flex-basis: 30%;\n  display: flex;\n  border-radius: 0.6rem;\n  margin-right: 20rem;\n\n  & > .input {\n    color: colors.$gray;\n    background-color: colors.$blue-light;\n    border-top-left-radius: inherit;\n    border-bottom-left-radius: inherit;\n    padding-left: 1rem;\n    flex: 1;\n  }\n\n  & > .btn {\n    padding: 0.7rem 2rem;\n    background-color: colors.$second;\n    border-top-right-radius: inherit;\n    border-bottom-right-radius: inherit;\n  }\n}\n\n.cart-box {\n  position: relative;\n  display: flex;\n\n  &::after {\n    content: attr(data-count);\n    position: absolute;\n    top: -0.8rem;\n    right: -0.8rem;\n    display: flex;\n    align-items: center;\n    justify-content: center;\n    width: 2rem;\n    height: 2rem;\n    background-color: colors.$second;\n    border-radius: 50%;\n    color: colors.$white;\n    font-size: 1rem;\n  }\n}\n\n.profile-box {\n  display: flex;\n  align-items: center;\n  column-gap: 1.4rem;\n\n  & > .name {\n    font-size: 1.4rem;\n  }\n\n  &::after {\n    content: url('/assets/images/chevron-down.svg');\n  }\n}\n\n.navigation-box {\n  @include tools.padding-y-default;\n\n  padding-top: 1rem;\n  padding-bottom: 1rem;\n  height: 6rem;\n  color: colors.$white;\n  background-color: colors.$first;\n  display: flex;\n  align-items: center;\n  justify-content: space-between;\n\n  & > * {\n    color: inherit;\n    font-size: 1.4rem;\n    font-weight: bold;\n  }\n\n  & > .link {\n    text-transform: uppercase;\n  }\n}\n",
                     "styleUrl": "./nav-bar.component.scss"
                 }
             ],
             "stylesData": "",
-            "templateData": "<header class=\"nav-bar\">\n  <app-nav-top></app-nav-top>\n  <div class=\"main\">\n    <a class=\"logo\" href=\"#\"><img src=\"/assets/images/logo.png\" alt=\"Logo\" /></a>\n\n    <form class=\"form-search-location\">\n      <input type=\"text\" class=\"input\" placeholder=\"Search Location\" />\n      <button class=\"btn\"><img src=\"/assets/images/search.svg\" alt=\"Search icon\" /></button>\n    </form>\n    <figure data-count=\"2\" class=\"cart-box\">\n      <img src=\"/assets/images/shopping-cart.svg\" alt=\"Cart icon\" />\n    </figure>\n\n    <div class=\"profile-box\">\n      <img src=\"/assets/images/profile.png\" alt=\"User image\" class=\"profile\" />\n      <p class=\"name\">Nathan</p>\n    </div>\n  </div>\n  <nav class=\"navigation\">\n    <a href=\"#\" class=\"link\">All deals</a>\n    <a href=\"#\" class=\"link\">Hotels</a>\n    <a href=\"#\" class=\"link\">Activities</a>\n    <a href=\"#\" class=\"link\">Hotel day packages</a>\n    <a href=\"#\" class=\"link\">Restaurants</a>\n    <a href=\"#\" class=\"link\">Events</a>\n    <a href=\"#\" class=\"link\">Rodrigues</a>\n  </nav>\n  <app-active-route></app-active-route>\n</header>\n"
+            "templateData": "<header class=\"nav-bar\">\n  <app-nav-top></app-nav-top>\n  <div class=\"main\">\n    <a class=\"logo\" href=\"#\"><img src=\"/assets/images/logo.png\" alt=\"Logo\" /></a>\n\n    <form class=\"form-search-location\">\n      <input type=\"text\" class=\"input\" placeholder=\"Search Location\" />\n      <button class=\"btn\"><img src=\"/assets/images/search.svg\" alt=\"Search icon\" /></button>\n    </form>\n    <figure data-count=\"2\" class=\"cart-box\">\n      <img src=\"/assets/images/shopping-cart.svg\" alt=\"Cart icon\" />\n    </figure>\n\n    <div class=\"profile-box\">\n      <img src=\"/assets/images/profile.png\" alt=\"User image\" class=\"profile\" />\n      <p class=\"name\">Nathan</p>\n    </div>\n  </div>\n  <nav class=\"navigation-box\">\n    <a href=\"#\" class=\"link\">All deals</a>\n    <a href=\"#\" class=\"link\">Hotels</a>\n    <a href=\"#\" class=\"link\">Activities</a>\n    <a href=\"#\" class=\"link\">Hotel day packages</a>\n    <a href=\"#\" class=\"link\">Restaurants</a>\n    <a href=\"#\" class=\"link\">Events</a>\n    <a href=\"#\" class=\"link\">Rodrigues</a>\n  </nav>\n  <app-active-route></app-active-route>\n</header>\n"
         },
         {
             "name": "NavTopComponent",
@@ -513,7 +622,7 @@
             "assetsDirs": [],
             "styleUrlsData": [
                 {
-                    "data": "@use 'settings' as colors;\n\n.nav-top {\n  background-color: colors.$blue-light;\n  height: 6rem;\n  display: flex;\n  align-items: center;\n  justify-content: space-around;\n\n  & > .helptext {\n    margin-right: 40rem;\n  }\n\n  & > .link {\n    display: flex;\n    align-items: center;\n    column-gap: 2rem;\n\n    &.-gifticon::before {\n      content: url('/assets/images/gift.svg');\n    }\n\n    &.-staricon::before {\n      content: url('/assets/images/star.svg');\n    }\n  }\n}\n",
+                    "data": "@use 'settings' as colors;\n@use 'tools';\n\n.nav-top {\n  @include tools.padding-y-default;\n\n  background-color: colors.$blue-light;\n  height: 6rem;\n  display: flex;\n  align-items: center;\n  justify-content: space-between;\n\n  & > .helptext {\n    margin-right: 40rem;\n  }\n\n  & > .link {\n    display: flex;\n    align-items: center;\n    column-gap: 2rem;\n\n    &.-gifticon::before {\n      content: url('/assets/images/gift.svg');\n    }\n\n    &.-staricon::before {\n      content: url('/assets/images/star.svg');\n    }\n  }\n}\n",
                     "styleUrl": "./nav-top.component.scss"
                 }
             ],
@@ -614,12 +723,12 @@
             "assetsDirs": [],
             "styleUrlsData": [
                 {
-                    "data": "@use 'settings' as colors;\n\n.other-activities {\n  padding: 5rem 9rem;\n\n  & > .title {\n    text-transform: uppercase;\n  }\n\n  & > .main {\n    display: flex;\n    align-items: center;\n    justify-content: space-between;\n  }\n}\n\n.activity-box {\n  position: relative;\n  border-radius: 0.6rem;\n  width: 25.5rem;\n  height: 25.5rem;\n\n  &::before {\n    content: '';\n    background-image: linear-gradient(to bottom, rgba(colors.$gray-light-2, 0), colors.$first);\n    border-radius: inherit;\n    width: 100%;\n    height: 100%;\n    position: absolute;\n    left: 0;\n    top: 0;\n  }\n\n  & > .caption {\n    position: absolute;\n    left: 0;\n    bottom: 0;\n    padding: 2rem;\n    display: flex;\n    flex-direction: column;\n    row-gap: 2rem;\n    align-items: flex-start;\n    justify-content: space-between;\n\n    min-height: 13rem;\n    width: 100%;\n\n    font-size: 1.2rem;\n    color: colors.$white;\n\n    & > .title {\n      font-size: 1.6rem;\n    }\n\n    & > .btn {\n      border-radius: 0.4rem;\n      background-color: colors.$second;\n      padding: 1rem 2.5rem;\n    }\n  }\n}\n",
+                    "data": "@use 'settings' as colors;\n@use 'tools';\n@use 'tools/placeholders';\n\n.other-activities {\n  @include tools.padding-y-default;\n\n  padding-top: 5rem;\n  padding-bottom: 5rem;\n\n  & > .title {\n    text-transform: uppercase;\n  }\n\n  & > .main {\n    display: flex;\n    align-items: center;\n    justify-content: space-between;\n    column-gap: 1rem;\n  }\n}\n\n.activity-box {\n  position: relative;\n  border-radius: 0.6rem;\n  width: 25.5rem;\n  height: 25.5rem;\n\n  &::before {\n    content: '';\n    background-image: linear-gradient(to bottom, rgba(colors.$gray-light-2, 0), colors.$first);\n    border-radius: inherit;\n    width: 100%;\n    height: 100%;\n    position: absolute;\n    left: 0;\n    top: 0;\n  }\n\n  & > .image {\n    border-radius: inherit;\n  }\n\n  & > .caption {\n    position: absolute;\n    left: 0;\n    bottom: 0;\n    padding: 2rem;\n    display: flex;\n    flex-direction: column;\n    row-gap: 2rem;\n    align-items: flex-start;\n    justify-content: space-between;\n\n    min-height: 13rem;\n    width: 100%;\n\n    font-size: 1.2rem;\n    color: colors.$white;\n\n    & > .title {\n      font-size: 1.6rem;\n    }\n\n    & > .btn {\n      @extend %button-default;\n      @include tools.font-nunito;\n\n      padding-left: 2.5rem;\n      padding-right: 2.5rem;\n    }\n  }\n}\n",
                     "styleUrl": "./other-activities.component.scss"
                 }
             ],
             "stylesData": "",
-            "templateData": "<section class=\"other-activities\">\n  <h2 class=\"title\">Other Activities</h2>\n\n  <div class=\"main _margin-top-medium\">\n    <figure class=\"activity-box\" *ngFor=\"let activity of activitiesTitles; index as i\">\n      <img [src]=\"activitiesImages[i]\" [alt]=\"activity\" />\n\n      <figcaption class=\"caption\">\n        <p class=\"title\">{{ activity }}</p>\n\n        <button class=\"btn\">Book Now</button>\n      </figcaption>\n    </figure>\n  </div>\n</section>\n"
+            "templateData": "<section class=\"other-activities\">\n  <h2 class=\"title\">Other Activities</h2>\n\n  <div class=\"main _margin-top-medium\">\n    <figure class=\"activity-box\" *ngFor=\"let activity of activitiesTitles; index as i\">\n      <img class=\"image\" [src]=\"activitiesImages[i]\" [alt]=\"activity\" />\n\n      <figcaption class=\"caption\">\n        <p class=\"title\">{{ activity }}</p>\n\n        <button class=\"btn\">Book Now</button>\n      </figcaption>\n    </figure>\n  </div>\n</section>\n"
         },
         {
             "name": "OtherPackagesComponent",
@@ -718,7 +827,7 @@
             "assetsDirs": [],
             "styleUrlsData": [
                 {
-                    "data": "@use 'tools/placeholders';\n@use 'settings' as colors;\n@use 'tools' as mixins;\n\n.other-packages {\n  & > .title {\n    font-size: 3.6rem;\n    text-transform: uppercase;\n    text-align: center;\n  }\n}\n\n.panel-box {\n  display: grid;\n  grid-template-columns: repeat(3, 1fr);\n  gap: 3rem;\n}\n\n.other-package {\n  position: relative;\n  border-radius: 0.8rem;\n  color: colors.$white;\n  display: flex;\n  flex-direction: column;\n\n  & > .offer {\n    @extend %flash-offer;\n\n    position: absolute;\n    top: 2%;\n    left: 0;\n    border-top-left-radius: 0;\n    border-bottom-left-radius: 0;\n  }\n\n  & > .poster {\n    border-top-left-radius: inherit;\n    border-top-right-radius: inherit;\n    height: 25rem;\n  }\n\n  & > .left {\n    background-color: colors.$first;\n    border-bottom-left-radius: inherit;\n    border-bottom-right-radius: inherit;\n    padding: 2rem;\n  }\n\n  &:first-child {\n    flex-direction: row;\n    grid-column: 1 / span 2;\n\n    & > .poster {\n      border-radius: 0;\n      border-top-left-radius: inherit;\n      border-bottom-left-radius: inherit;\n      height: 100%;\n    }\n\n    & > .left {\n      border-radius: 0;\n      border-top-right-radius: inherit;\n      border-bottom-right-radius: inherit;\n      row-gap: 1rem;\n\n      & > .griditem:first-child {\n        align-self: flex-end;\n      }\n\n      & > .description {\n        font-size: 1.4rem;\n      }\n\n      & > .location {\n        align-self: flex-end;\n      }\n\n      & > .guests {\n        align-self: center;\n      }\n\n      & > .rooms {\n        align-self: flex-start;\n      }\n    }\n  }\n}\n\n.stars-box {\n  & > .icon {\n    width: 0.8rem;\n    height: 0.8rem;\n  }\n}\n\n.left-panel-box {\n  display: grid;\n  grid-template-columns: 1fr 1fr;\n  row-gap: 1.5rem;\n  align-items: center;\n\n  & > .griditem {\n    grid-column: 1 / span 2;\n\n    &:last-child {\n      grid-column: 2 / 3;\n    }\n\n    &.-penultimate {\n      grid-column: 1 /2;\n    }\n  }\n\n  & > .text {\n    font-size: 1.2rem;\n    font-weight: 400;\n  }\n\n  & > .location {\n    @include mixins.flex-icon('/assets/images/location.svg');\n  }\n\n  & > .guests {\n    @include mixins.flex-icon('/assets/images/guest.svg');\n  }\n\n  & > .rooms {\n    @include mixins.flex-icon('/assets/images/room.svg');\n  }\n\n  & > .price {\n    font-size: 1.4rem;\n    font-weight: 400;\n\n    &.-line {\n      text-decoration: line-through;\n    }\n  }\n\n  & > .discountprice {\n    font-size: 2.4rem;\n    font-weight: 700;\n  }\n\n  & > .btn {\n    @extend %button-default;\n\n    place-self: center end;\n  }\n}\n",
+                    "data": "@use 'tools/placeholders';\n@use 'settings' as colors;\n@use 'tools' as mixins;\n\n.other-packages {\n  & > .title {\n    font-size: 3.6rem;\n    text-transform: uppercase;\n    text-align: center;\n  }\n}\n\n.panel-box {\n  @include mixins.padding-y-default;\n\n  display: grid;\n  grid-template-columns: repeat(3, 1fr);\n  gap: 3rem;\n}\n\n.other-package {\n  position: relative;\n  border-radius: 0.8rem;\n  color: colors.$white;\n  display: flex;\n  flex-direction: column;\n\n  & > .offer {\n    @extend %flash-offer;\n\n    position: absolute;\n    top: 2%;\n    left: 0;\n    border-top-left-radius: 0;\n    border-bottom-left-radius: 0;\n  }\n\n  & > .poster {\n    border-top-left-radius: inherit;\n    border-top-right-radius: inherit;\n    height: 25rem;\n  }\n\n  & > .left {\n    background-color: colors.$first;\n    border-bottom-left-radius: inherit;\n    border-bottom-right-radius: inherit;\n    padding: 2rem;\n  }\n\n  &:first-child {\n    flex-direction: row;\n    grid-column: 1 / span 2;\n\n    & > .poster {\n      border-radius: 0;\n      border-top-left-radius: inherit;\n      border-bottom-left-radius: inherit;\n      height: 100%;\n    }\n\n    & > .left {\n      border-radius: 0;\n      border-top-right-radius: inherit;\n      border-bottom-right-radius: inherit;\n      row-gap: 1rem;\n\n      & > .griditem:first-child {\n        align-self: flex-end;\n      }\n\n      & > .description {\n        font-size: 1.4rem;\n      }\n\n      & > .location {\n        align-self: flex-end;\n      }\n\n      & > .guests {\n        align-self: center;\n      }\n\n      & > .rooms {\n        align-self: flex-start;\n      }\n    }\n  }\n}\n\n.stars-box {\n  & > .icon {\n    width: 0.8rem;\n    height: 0.8rem;\n  }\n}\n\n.left-panel-box {\n  display: grid;\n  grid-template-columns: 1fr 1fr;\n  row-gap: 1.5rem;\n  align-items: center;\n\n  & > .griditem {\n    grid-column: 1 / span 2;\n\n    &:last-child {\n      grid-column: 2 / 3;\n    }\n\n    &.-penultimate {\n      grid-column: 1 /2;\n    }\n  }\n\n  & > .text {\n    font-size: 1.2rem;\n    font-weight: 400;\n  }\n\n  & > .location {\n    @include mixins.flex-icon('/assets/images/location.svg');\n  }\n\n  & > .guests {\n    @include mixins.flex-icon('/assets/images/guest.svg');\n  }\n\n  & > .rooms {\n    @include mixins.flex-icon('/assets/images/room.svg');\n  }\n\n  & > .price {\n    font-size: 1.4rem;\n    font-weight: 400;\n\n    &.-line {\n      text-decoration: line-through;\n    }\n  }\n\n  & > .discountprice {\n    font-size: 2.4rem;\n    font-weight: 700;\n  }\n\n  & > .btn {\n    @extend %button-default;\n\n    place-self: center end;\n  }\n}\n",
                     "styleUrl": "./other-packages.component.scss"
                 }
             ],
@@ -1048,13 +1157,13 @@
         },
         {
             "name": "HomeModule",
-            "id": "module-HomeModule-e8408bc9222cb5a22e5e98f0c47e85f5564c43dec0d6a074447113a6dfae5554caa441491b1dd431a19805ee0c23425d2daecb04001ff0c57590ea8505f4cecf",
+            "id": "module-HomeModule-d1499a9f7272d14bfc274c1cbe71b9d1a4850885dbe955b8f8b61e152feb886146dcd6ffac0f9833976429f4e7855f56e567f178e2f84cca6cc1fdff827a0454",
             "description": "",
             "deprecationMessage": "",
             "deprecated": false,
             "file": "src/app/home/home.module.ts",
             "methods": [],
-            "sourceCode": "import { NgModule } from '@angular/core';\nimport { CommonModule } from '@angular/common';\nimport { NavTopComponent } from './nav-top/nav-top.component';\nimport { NavBarComponent } from './nav-bar/nav-bar.component';\nimport { ActiveRouteComponent } from './active-route/active-route.component';\nimport { HotelDetailsComponent } from './hotel-details/hotel-details.component';\nimport { HotelDetailsNavigationComponent } from './hotel-details-navigation/hotel-details-navigation.component';\nimport { PackageSummeryComponent } from './package-summery/package-summery.component';\nimport { OtherPackageService } from './shared/services/other-package.service';\nimport { HttpClientModule } from '@angular/common/http';\nimport { OtherPackagesComponent } from './other-packages/other-packages.component';\nimport { GuestReviewComponent } from './guest-review/guest-review.component';\nimport { StarsBoxComponent } from './stars-box/stars-box.component';\nimport { NewsletterSectionComponent } from './newsletter-section/newsletter-section.component';\nimport { OtherActivitiesComponent } from './other-activities/other-activities.component';\n\n@NgModule({\n  declarations: [\n    NavTopComponent,\n    NavBarComponent,\n    ActiveRouteComponent,\n    HotelDetailsComponent,\n    HotelDetailsNavigationComponent,\n    PackageSummeryComponent,\n    OtherPackagesComponent,\n    GuestReviewComponent,\n    StarsBoxComponent,\n    NewsletterSectionComponent,\n    OtherActivitiesComponent,\n  ],\n  imports: [CommonModule, HttpClientModule],\n  exports: [],\n  providers: [OtherPackageService],\n})\nexport class HomeModule {}\n",
+            "sourceCode": "import { NgModule } from '@angular/core';\nimport { CommonModule } from '@angular/common';\nimport { NavTopComponent } from './nav-top/nav-top.component';\nimport { NavBarComponent } from './nav-bar/nav-bar.component';\nimport { ActiveRouteComponent } from './active-route/active-route.component';\nimport { HotelDetailsComponent } from './hotel-details/hotel-details.component';\nimport { HotelDetailsNavigationComponent } from './hotel-details-navigation/hotel-details-navigation.component';\nimport { PackageSummeryComponent } from './package-summery/package-summery.component';\nimport { OtherPackageService } from './shared/services/other-package.service';\nimport { HttpClientModule } from '@angular/common/http';\nimport { OtherPackagesComponent } from './other-packages/other-packages.component';\nimport { GuestReviewComponent } from './guest-review/guest-review.component';\nimport { StarsBoxComponent } from './stars-box/stars-box.component';\nimport { NewsletterSectionComponent } from './newsletter-section/newsletter-section.component';\nimport { OtherActivitiesComponent } from './other-activities/other-activities.component';\nimport { ContactFormComponent } from './contact-form/contact-form.component';\nimport { ReactiveFormsModule } from '@angular/forms';\n\n@NgModule({\n  declarations: [\n    NavTopComponent,\n    NavBarComponent,\n    ActiveRouteComponent,\n    HotelDetailsComponent,\n    HotelDetailsNavigationComponent,\n    PackageSummeryComponent,\n    OtherPackagesComponent,\n    GuestReviewComponent,\n    StarsBoxComponent,\n    NewsletterSectionComponent,\n    OtherActivitiesComponent,\n    ContactFormComponent,\n  ],\n  imports: [CommonModule, HttpClientModule, ReactiveFormsModule],\n  exports: [],\n  providers: [OtherPackageService],\n})\nexport class HomeModule {}\n",
             "children": [
                 {
                     "type": "providers",
@@ -1069,6 +1178,9 @@
                     "elements": [
                         {
                             "name": "ActiveRouteComponent"
+                        },
+                        {
+                            "name": "ContactFormComponent"
                         },
                         {
                             "name": "GuestReviewComponent"
@@ -1147,6 +1259,16 @@
                 "name": "Default",
                 "ctype": "miscellaneous",
                 "subtype": "variable",
+                "file": "src/app/home/contact-form/ContactForm.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "Story<ContactFormComponent>",
+                "defaultValue": "(args: ContactFormComponent) => ({\n  props: args,\n})"
+            },
+            {
+                "name": "Default",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
                 "file": "src/app/home/guest-review/GuestReview.stories.ts",
                 "deprecated": false,
                 "deprecationMessage": "",
@@ -1217,16 +1339,6 @@
                 "name": "Default",
                 "ctype": "miscellaneous",
                 "subtype": "variable",
-                "file": "src/app/home/other-packages/OtherPackages.stories.ts",
-                "deprecated": false,
-                "deprecationMessage": "",
-                "type": "Story<OtherPackagesComponent>",
-                "defaultValue": "(args: OtherPackagesComponent) => ({\n  props: args,\n})"
-            },
-            {
-                "name": "Default",
-                "ctype": "miscellaneous",
-                "subtype": "variable",
                 "file": "src/app/home/package-summery/PackageSummery.stories.ts",
                 "deprecated": false,
                 "deprecationMessage": "",
@@ -1244,14 +1356,14 @@
                 "defaultValue": "(args: StarsBoxComponent) => ({\n  props: args,\n})"
             },
             {
-                "name": "environment",
+                "name": "Default",
                 "ctype": "miscellaneous",
                 "subtype": "variable",
-                "file": "src/environments/environment.prod.ts",
+                "file": "src/app/home/other-packages/OtherPackages.stories.ts",
                 "deprecated": false,
                 "deprecationMessage": "",
-                "type": "object",
-                "defaultValue": "{\n  production: true,\n}"
+                "type": "Story<OtherPackagesComponent>",
+                "defaultValue": "(args: OtherPackagesComponent) => ({\n  props: args,\n})"
             },
             {
                 "name": "environment",
@@ -1262,6 +1374,16 @@
                 "deprecationMessage": "",
                 "type": "object",
                 "defaultValue": "{\n  production: false,\n}"
+            },
+            {
+                "name": "environment",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "src/environments/environment.prod.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "object",
+                "defaultValue": "{\n  production: true,\n}"
             },
             {
                 "name": "require",
@@ -1318,6 +1440,18 @@
                     "deprecationMessage": "",
                     "type": "Story<ActiveRouteComponent>",
                     "defaultValue": "(args: ActiveRouteComponent) => ({\n  props: args,\n})"
+                }
+            ],
+            "src/app/home/contact-form/ContactForm.stories.ts": [
+                {
+                    "name": "Default",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "src/app/home/contact-form/ContactForm.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "Story<ContactFormComponent>",
+                    "defaultValue": "(args: ContactFormComponent) => ({\n  props: args,\n})"
                 }
             ],
             "src/app/home/guest-review/GuestReview.stories.ts": [
@@ -1404,18 +1538,6 @@
                     "defaultValue": "(args: OtherActivitiesComponent) => ({\n  props: args,\n})"
                 }
             ],
-            "src/app/home/other-packages/OtherPackages.stories.ts": [
-                {
-                    "name": "Default",
-                    "ctype": "miscellaneous",
-                    "subtype": "variable",
-                    "file": "src/app/home/other-packages/OtherPackages.stories.ts",
-                    "deprecated": false,
-                    "deprecationMessage": "",
-                    "type": "Story<OtherPackagesComponent>",
-                    "defaultValue": "(args: OtherPackagesComponent) => ({\n  props: args,\n})"
-                }
-            ],
             "src/app/home/package-summery/PackageSummery.stories.ts": [
                 {
                     "name": "Default",
@@ -1450,16 +1572,16 @@
                     "defaultValue": "Default.bind({})"
                 }
             ],
-            "src/environments/environment.prod.ts": [
+            "src/app/home/other-packages/OtherPackages.stories.ts": [
                 {
-                    "name": "environment",
+                    "name": "Default",
                     "ctype": "miscellaneous",
                     "subtype": "variable",
-                    "file": "src/environments/environment.prod.ts",
+                    "file": "src/app/home/other-packages/OtherPackages.stories.ts",
                     "deprecated": false,
                     "deprecationMessage": "",
-                    "type": "object",
-                    "defaultValue": "{\n  production: true,\n}"
+                    "type": "Story<OtherPackagesComponent>",
+                    "defaultValue": "(args: OtherPackagesComponent) => ({\n  props: args,\n})"
                 }
             ],
             "src/environments/environment.ts": [
@@ -1472,6 +1594,18 @@
                     "deprecationMessage": "",
                     "type": "object",
                     "defaultValue": "{\n  production: false,\n}"
+                }
+            ],
+            "src/environments/environment.prod.ts": [
+                {
+                    "name": "environment",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "src/environments/environment.prod.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "object",
+                    "defaultValue": "{\n  production: true,\n}"
                 }
             ]
         },
@@ -1523,6 +1657,25 @@
                 "name": "ActiveRouteComponent",
                 "coveragePercent": 0,
                 "coverageCount": "0/2",
+                "status": "low"
+            },
+            {
+                "filePath": "src/app/home/contact-form/ContactForm.stories.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "Default",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "src/app/home/contact-form/contact-form.component.ts",
+                "type": "component",
+                "linktype": "component",
+                "name": "ContactFormComponent",
+                "coveragePercent": 0,
+                "coverageCount": "0/6",
                 "status": "low"
             },
             {

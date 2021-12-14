@@ -13,6 +13,8 @@ import { GuestReviewComponent } from './guest-review/guest-review.component';
 import { StarsBoxComponent } from './stars-box/stars-box.component';
 import { NewsletterSectionComponent } from './newsletter-section/newsletter-section.component';
 import { OtherActivitiesComponent } from './other-activities/other-activities.component';
+import { ContactFormComponent } from './contact-form/contact-form.component';
+import { ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -27,8 +29,9 @@ import { OtherActivitiesComponent } from './other-activities/other-activities.co
     StarsBoxComponent,
     NewsletterSectionComponent,
     OtherActivitiesComponent,
+    ContactFormComponent,
   ],
-  imports: [CommonModule, HttpClientModule],
+  imports: [CommonModule, HttpClientModule, ReactiveFormsModule],
   exports: [],
   providers: [OtherPackageService],
 })
