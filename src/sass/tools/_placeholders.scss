@@ -38,3 +38,13 @@
     gap: 2.5rem;
   }
 }
+
+%field-contact-form {
+  padding: 2rem 3.5rem 2rem 2rem;
+  border-radius: 0.4rem;
+
+  &::placeholder {
+    color: colors.$gray-dark;
+    font-size: 1.2rem;
+  }
+}
