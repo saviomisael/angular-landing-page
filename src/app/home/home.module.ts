@@ -17,6 +17,7 @@ import { ContactFormComponent } from './contact-form/contact-form.component';
 import { ReactiveFormsModule } from '@angular/forms';
 import { ContactDetailsComponent } from './contact-details/contact-details.component';
 import { FooterBottomComponent } from './footer-bottom/footer-bottom.component';
+import { FooterWrapperComponent } from './footer-wrapper/footer-wrapper.component';
 
 @NgModule({
   declarations: [
@@ -34,6 +35,7 @@ import { FooterBottomComponent } from './footer-bottom/footer-bottom.component';
     ContactFormComponent,
     ContactDetailsComponent,
     FooterBottomComponent,
+    FooterWrapperComponent,
   ],
   imports: [CommonModule, HttpClientModule, ReactiveFormsModule],
   exports: [],

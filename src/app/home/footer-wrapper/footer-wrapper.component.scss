@@ -1,0 +1,62 @@
+@use 'settings' as colors;
+@use 'tools';
+
+.footer-wrapper {
+  @include tools.padding-y-default;
+
+  padding-top: 5rem;
+  padding-bottom: 2.5rem;
+  background-color: colors.$first;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  row-gap: 5rem;
+
+  & > :is(.main, .bottom) {
+    grid-column: 1 / -1;
+  }
+
+  & > .main {
+    padding: 1rem;
+    display: grid;
+    grid-template-columns: 20rem repeat(3, 1fr);
+    color: colors.$white;
+    column-gap: 2.4rem;
+    justify-items: center;
+
+    & > .logo {
+      width: 16.6rem;
+      height: 19.2rem;
+      justify-self: start;
+      transform: translateY(4rem);
+    }
+  }
+}
+
+.list-box {
+  & > .title {
+    text-transform: uppercase;
+  }
+
+  & > .listitem {
+    font-size: 1.4rem;
+    color: colors.$gray-dark;
+    line-height: 2rem;
+  }
+}
+
+.social-network {
+  width: 115%;
+  display: flex;
+  justify-content: space-between;
+  column-gap: 0.8rem;
+
+  & > .title {
+    text-transform: uppercase;
+    flex: 1;
+  }
+
+  & > .image {
+    width: 2rem;
+    height: 2rem;
+  }
+}
