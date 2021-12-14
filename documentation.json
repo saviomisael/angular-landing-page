@@ -270,7 +270,7 @@
                 }
             ],
             "stylesData": "",
-            "templateData": "<h1>Not implemented yet</h1>\n"
+            "templateData": "<router-outlet></router-outlet>\n"
         },
         {
             "name": "ContactDetailsComponent",
@@ -494,12 +494,12 @@
             "assetsDirs": [],
             "styleUrlsData": [
                 {
-                    "data": "",
+                    "data": "@use 'settings' as colors;\n@use 'tools';\n\n.footer-wrapper {\n  @include tools.padding-y-default;\n\n  padding-top: 5rem;\n  padding-bottom: 2.5rem;\n  background-color: colors.$first;\n  display: grid;\n  grid-template-columns: 1fr 1fr;\n  row-gap: 5rem;\n\n  & > :is(.main, .bottom) {\n    grid-column: 1 / -1;\n  }\n\n  & > .main {\n    padding: 1rem;\n    display: grid;\n    grid-template-columns: 20rem repeat(3, 1fr);\n    color: colors.$white;\n    column-gap: 2.4rem;\n    justify-items: center;\n\n    & > .logo {\n      width: 16.6rem;\n      height: 19.2rem;\n      justify-self: start;\n      transform: translateY(4rem);\n    }\n  }\n}\n\n.list-box {\n  & > .title {\n    text-transform: uppercase;\n  }\n\n  & > .listitem {\n    font-size: 1.4rem;\n    color: colors.$gray-dark;\n    line-height: 2rem;\n  }\n}\n\n.social-network {\n  width: 115%;\n  display: flex;\n  justify-content: space-between;\n  column-gap: 0.8rem;\n\n  & > .title {\n    text-transform: uppercase;\n    flex: 1;\n  }\n\n  & > .image {\n    width: 2rem;\n    height: 2rem;\n  }\n}\n",
                     "styleUrl": "./footer-wrapper.component.scss"
                 }
             ],
             "stylesData": "",
-            "templateData": "<footer class=\"footer-wrapper\">\n  <div class=\"main\"></div>\n  <app-contact-details></app-contact-details>\n  <app-contact-form></app-contact-form>\n  <app-footer-bottom></app-footer-bottom>\n</footer>\n"
+            "templateData": "<footer class=\"footer-wrapper\">\n  <div class=\"main\">\n    <figure class=\"logo\">\n      <img src=\"/assets/images/logo-vertical.png\" alt=\"logo\" />\n    </figure>\n\n    <ul class=\"list-box\">\n      <h3 class=\"title\">All Categories</h3>\n\n      <li class=\"listitem _padding-top-big\">All Deals</li>\n      <li class=\"listitem\">Hotels</li>\n      <li class=\"listitem\">Activities</li>\n      <li class=\"listitem\">Spa Packages</li>\n      <li class=\"listitem\">Hotel Day Packages</li>\n      <li class=\"listitem\">Restaurants</li>\n      <li class=\"listitem\">Fitness</li>\n      <li class=\"listitem\">Rodrigues</li>\n    </ul>\n\n    <div>\n      <ul class=\"list-box\">\n        <h3 class=\"title\">Additional Information</h3>\n\n        <li class=\"listitem _padding-top-big\">About Us</li>\n        <li class=\"listitem\">Contact Us</li>\n        <li class=\"listitem\">How does it work?</li>\n        <li class=\"listitem\">Frequently Asked Questions</li>\n        <li class=\"listitem\">Deals.mu loyalty program</li>\n        <li class=\"listitem\">Promote your Business on BTP</li>\n      </ul>\n\n      <figure class=\"social-network _padding-top-big\">\n        <figcaption class=\"title\"><h3>Social Network</h3></figcaption>\n\n        <img class=\"image\" src=\"/assets/images/facebook.svg\" alt=\"Facebook icon\" />\n        <img class=\"image\" src=\"/assets/images/youtube.svg\" alt=\"Youtube icon\" />\n        <img class=\"image\" src=\"/assets/images/instagram.svg\" alt=\"Instagram icon\" />\n      </figure>\n    </div>\n\n    <ul class=\"list-box\">\n      <h3 class=\"title\">Legal Information</h3>\n\n      <li class=\"listitem _padding-top-big\">Terms & Conditions</li>\n      <li class=\"listitem\">Disclaimer</li>\n      <li class=\"listitem\">Cancellation policy</li>\n      <li class=\"listitem\">Privacy</li>\n    </ul>\n  </div>\n  <app-contact-details></app-contact-details>\n  <app-contact-form></app-contact-form>\n  <app-footer-bottom class=\"bottom\"></app-footer-bottom>\n</footer>\n"
         },
         {
             "name": "GuestReviewComponent",
@@ -551,6 +551,68 @@
             ],
             "stylesData": "",
             "templateData": "<section class=\"guest-review\">\n  <h2 class=\"title\">What people thinks about us</h2>\n\n  <button class=\"left\"><img src=\"/assets/images/chevron-left.svg\" alt=\"Arrow left\" /></button>\n\n  <div class=\"main review-box\">\n    <figure class=\"guest-photo\">\n      <img class=\"image\" src=\"/assets/images/guest-image.png\" alt=\"Guest photo\" />\n\n      <figcaption class=\"caption\">\n        <p class=\"guestname _padding-x-small\">Megan Fox</p>\n        <p class=\"date\">Stayed <time date=\"2019-09-18\">18 Nov, 2019</time></p>\n\n        <app-stars-box [starsCount]=\"count\"></app-stars-box>\n      </figcaption>\n    </figure>\n\n    <blockquote class=\"reviewtext\">\n      It was very nice hotel with cleanliness. Staff behavior was good and polite. They welcome us very well. Issue was\n      only that Lift was not in working and we were allotted to 3rd floor and amenities articles were in corner of\n      gallery which were giving bad feeling. Breakfast was good and support of the staff was also very nice. Location is\n      not good as per atmosphere, it is very nearby most of the popular places but self location in a narrow street is\n      not good. Overall it was a good experience and could recommend.\n    </blockquote>\n  </div>\n\n  <button class=\"right\"><img src=\"/assets/images/chevron-right.svg\" alt=\"Arrow right\" /></button>\n</section>\n"
+        },
+        {
+            "name": "HomeComponent",
+            "id": "component-HomeComponent-6a1f8a3ca6cc7eed44a0ba506eea3ed24de8cb2e45fd2a9ae3207035c43fdd5c56e6bdff9da407ef8884933b065c19fb967d30a5c40fd8a3472ca2eec39123cd",
+            "file": "src/app/home/home.component.ts",
+            "encapsulation": [],
+            "entryComponents": [],
+            "inputs": [],
+            "outputs": [],
+            "providers": [],
+            "selector": "app-home",
+            "styleUrls": [
+                "./home.component.scss"
+            ],
+            "styles": [],
+            "templateUrl": [
+                "./home.component.html"
+            ],
+            "viewProviders": [],
+            "inputsClass": [],
+            "outputsClass": [],
+            "propertiesClass": [],
+            "methodsClass": [
+                {
+                    "name": "ngOnInit",
+                    "args": [],
+                    "optional": false,
+                    "returnType": "void",
+                    "typeParameters": [],
+                    "line": 12,
+                    "deprecated": false,
+                    "deprecationMessage": ""
+                }
+            ],
+            "deprecated": false,
+            "deprecationMessage": "",
+            "hostBindings": [],
+            "hostListeners": [],
+            "description": "",
+            "rawdescription": "\n",
+            "type": "component",
+            "sourceCode": "import { Component, OnInit } from '@angular/core';\n\n@Component({\n  selector: 'app-home',\n  templateUrl: './home.component.html',\n  styleUrls: ['./home.component.scss']\n})\nexport class HomeComponent implements OnInit {\n\n  constructor() { }\n\n  ngOnInit(): void {\n  }\n\n}\n",
+            "assetsDirs": [],
+            "styleUrlsData": [
+                {
+                    "data": "",
+                    "styleUrl": "./home.component.scss"
+                }
+            ],
+            "stylesData": "",
+            "constructorObj": {
+                "name": "constructor",
+                "description": "",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "args": [],
+                "line": 8
+            },
+            "implements": [
+                "OnInit"
+            ],
+            "templateData": "<p>home works!</p>\n"
         },
         {
             "name": "HotelDetailsComponent",
@@ -1190,13 +1252,13 @@
     "modules": [
         {
             "name": "AppModule",
-            "id": "module-AppModule-67b8774bd6f16cf5feeb79b8ff352c2f068f9b37ab783b3fb6d42f7e7d18b2a244723da71f213b20cc01cfc322a9201a5edf6e2a4074156765cfdf50662b0e0f",
+            "id": "module-AppModule-f136bd38bb543850397b91c14eb6c6b14b9901163bc459b00cf18d2fb49773cdbe3bc4c51a6e6185fa255953650f4fd39db1a8bcb18436e3885b3e2ee26f8afa",
             "description": "",
             "deprecationMessage": "",
             "deprecated": false,
             "file": "src/app/app.module.ts",
             "methods": [],
-            "sourceCode": "import { NgModule } from '@angular/core';\nimport { BrowserModule } from '@angular/platform-browser';\n\nimport { AppRoutingModule } from './app-routing.module';\nimport { AppComponent } from './app.component';\nimport { HomeModule } from './home/home.module';\n\n@NgModule({\n  declarations: [AppComponent],\n  imports: [BrowserModule, AppRoutingModule, HomeModule],\n  providers: [],\n  bootstrap: [AppComponent],\n})\nexport class AppModule {}\n",
+            "sourceCode": "import { NgModule } from '@angular/core';\nimport { BrowserModule } from '@angular/platform-browser';\n\nimport { AppRoutingModule } from './shared/routes/app-routing.module';\nimport { AppComponent } from './app.component';\nimport { HomeModule } from './home/home.module';\n\n@NgModule({\n  declarations: [AppComponent],\n  imports: [BrowserModule, AppRoutingModule, HomeModule],\n  providers: [],\n  bootstrap: [AppComponent],\n})\nexport class AppModule {}\n",
             "children": [
                 {
                     "type": "providers",
@@ -1241,13 +1303,13 @@
         },
         {
             "name": "AppRoutingModule",
-            "id": "module-AppRoutingModule-0dc291a0afd3272506872fe6fa763d13caf4b8fd5fcd9d9673ea721d0260167c3929f23647cd16ac134dd8c37af92788e0497290e40e237a1993e3e2cd47364b",
+            "id": "module-AppRoutingModule-8890b2f4591129135bf319d95404d104cadb71ae9812375b5c32ce2a88ee01b4dbeaf348ec388264f2c93948da81a44c612b4b322278f4c2fe650d69e13ae215",
             "description": "",
             "deprecationMessage": "",
             "deprecated": false,
-            "file": "src/app/app-routing.module.ts",
+            "file": "src/app/shared/routes/app-routing.module.ts",
             "methods": [],
-            "sourceCode": "import { NgModule } from '@angular/core';\nimport { RouterModule, Routes } from '@angular/router';\n\nconst routes: Routes = [];\n\n@NgModule({\n  imports: [RouterModule.forRoot(routes)],\n  exports: [RouterModule],\n})\nexport class AppRoutingModule {}\n",
+            "sourceCode": "import { NgModule } from '@angular/core';\nimport { RouterModule, Routes } from '@angular/router';\nimport { HomeComponent } from 'src/app/home/home.component';\n\nconst routes: Routes = [\n  {\n    path: 'home',\n    component: HomeComponent,\n  },\n  {\n    path: '',\n    redirectTo: '/home',\n    pathMatch: 'full',\n  },\n];\n\n@NgModule({\n  imports: [RouterModule.forRoot(routes)],\n  exports: [RouterModule],\n})\nexport class AppRoutingModule {}\n",
             "children": [
                 {
                     "type": "providers",
@@ -1277,13 +1339,13 @@
         },
         {
             "name": "HomeModule",
-            "id": "module-HomeModule-e370bb5fc0911994420b133aa90e203a6e974e65e804c6c6e6a64e6971ae16b3a2d0d896adba753f1b4925fa55a7a29ef3e8e66232437551e28efafad5c07996",
+            "id": "module-HomeModule-dffc7203f56a51846c6f63bb1ad2c5b7365716ed4dd5ec03b2ab753c357e4ed3835f14f82ec8c03d90eebd4cca7f3c92dd82650f3c0670c02a6fabf90b3121df",
             "description": "",
             "deprecationMessage": "",
             "deprecated": false,
             "file": "src/app/home/home.module.ts",
             "methods": [],
-            "sourceCode": "import { NgModule } from '@angular/core';\nimport { CommonModule } from '@angular/common';\nimport { NavTopComponent } from './nav-top/nav-top.component';\nimport { NavBarComponent } from './nav-bar/nav-bar.component';\nimport { ActiveRouteComponent } from './active-route/active-route.component';\nimport { HotelDetailsComponent } from './hotel-details/hotel-details.component';\nimport { HotelDetailsNavigationComponent } from './hotel-details-navigation/hotel-details-navigation.component';\nimport { PackageSummeryComponent } from './package-summery/package-summery.component';\nimport { OtherPackageService } from './shared/services/other-package.service';\nimport { HttpClientModule } from '@angular/common/http';\nimport { OtherPackagesComponent } from './other-packages/other-packages.component';\nimport { GuestReviewComponent } from './guest-review/guest-review.component';\nimport { StarsBoxComponent } from './stars-box/stars-box.component';\nimport { NewsletterSectionComponent } from './newsletter-section/newsletter-section.component';\nimport { OtherActivitiesComponent } from './other-activities/other-activities.component';\nimport { ContactFormComponent } from './contact-form/contact-form.component';\nimport { ReactiveFormsModule } from '@angular/forms';\nimport { ContactDetailsComponent } from './contact-details/contact-details.component';\nimport { FooterBottomComponent } from './footer-bottom/footer-bottom.component';\nimport { FooterWrapperComponent } from './footer-wrapper/footer-wrapper.component';\n\n@NgModule({\n  declarations: [\n    NavTopComponent,\n    NavBarComponent,\n    ActiveRouteComponent,\n    HotelDetailsComponent,\n    HotelDetailsNavigationComponent,\n    PackageSummeryComponent,\n    OtherPackagesComponent,\n    GuestReviewComponent,\n    StarsBoxComponent,\n    NewsletterSectionComponent,\n    OtherActivitiesComponent,\n    ContactFormComponent,\n    ContactDetailsComponent,\n    FooterBottomComponent,\n    FooterWrapperComponent,\n  ],\n  imports: [CommonModule, HttpClientModule, ReactiveFormsModule],\n  exports: [],\n  providers: [OtherPackageService],\n})\nexport class HomeModule {}\n",
+            "sourceCode": "import { NgModule } from '@angular/core';\nimport { CommonModule } from '@angular/common';\nimport { NavTopComponent } from './nav-top/nav-top.component';\nimport { NavBarComponent } from './nav-bar/nav-bar.component';\nimport { ActiveRouteComponent } from './active-route/active-route.component';\nimport { HotelDetailsComponent } from './hotel-details/hotel-details.component';\nimport { HotelDetailsNavigationComponent } from './hotel-details-navigation/hotel-details-navigation.component';\nimport { PackageSummeryComponent } from './package-summery/package-summery.component';\nimport { OtherPackageService } from './shared/services/other-package.service';\nimport { HttpClientModule } from '@angular/common/http';\nimport { OtherPackagesComponent } from './other-packages/other-packages.component';\nimport { GuestReviewComponent } from './guest-review/guest-review.component';\nimport { StarsBoxComponent } from './stars-box/stars-box.component';\nimport { NewsletterSectionComponent } from './newsletter-section/newsletter-section.component';\nimport { OtherActivitiesComponent } from './other-activities/other-activities.component';\nimport { ContactFormComponent } from './contact-form/contact-form.component';\nimport { ReactiveFormsModule } from '@angular/forms';\nimport { ContactDetailsComponent } from './contact-details/contact-details.component';\nimport { FooterBottomComponent } from './footer-bottom/footer-bottom.component';\nimport { FooterWrapperComponent } from './footer-wrapper/footer-wrapper.component';\nimport { HomeComponent } from './home.component';\n\n@NgModule({\n  declarations: [\n    NavTopComponent,\n    NavBarComponent,\n    ActiveRouteComponent,\n    HotelDetailsComponent,\n    HotelDetailsNavigationComponent,\n    PackageSummeryComponent,\n    OtherPackagesComponent,\n    GuestReviewComponent,\n    StarsBoxComponent,\n    NewsletterSectionComponent,\n    OtherActivitiesComponent,\n    ContactFormComponent,\n    ContactDetailsComponent,\n    FooterBottomComponent,\n    FooterWrapperComponent,\n    HomeComponent,\n  ],\n  imports: [CommonModule, HttpClientModule, ReactiveFormsModule],\n  exports: [HomeComponent],\n  providers: [OtherPackageService],\n})\nexport class HomeModule {}\n",
             "children": [
                 {
                     "type": "providers",
@@ -1313,6 +1375,9 @@
                         },
                         {
                             "name": "GuestReviewComponent"
+                        },
+                        {
+                            "name": "HomeComponent"
                         },
                         {
                             "name": "HotelDetailsComponent"
@@ -1349,7 +1414,11 @@
                 },
                 {
                     "type": "exports",
-                    "elements": []
+                    "elements": [
+                        {
+                            "name": "HomeComponent"
+                        }
+                    ]
                 },
                 {
                     "type": "bootstrap",
@@ -1378,16 +1447,6 @@
                 "name": "Default",
                 "ctype": "miscellaneous",
                 "subtype": "variable",
-                "file": "src/app/home/contact-details/ContactDetails.stories.ts",
-                "deprecated": false,
-                "deprecationMessage": "",
-                "type": "Story<ContactDetailsComponent>",
-                "defaultValue": "(args: ContactDetailsComponent) => ({\n  props: args,\n})"
-            },
-            {
-                "name": "Default",
-                "ctype": "miscellaneous",
-                "subtype": "variable",
                 "file": "src/app/home/active-route/ActiveRoute.stories.ts",
                 "deprecated": false,
                 "deprecationMessage": "",
@@ -1398,11 +1457,11 @@
                 "name": "Default",
                 "ctype": "miscellaneous",
                 "subtype": "variable",
-                "file": "src/app/home/contact-form/ContactForm.stories.ts",
+                "file": "src/app/home/contact-details/ContactDetails.stories.ts",
                 "deprecated": false,
                 "deprecationMessage": "",
-                "type": "Story<ContactFormComponent>",
-                "defaultValue": "(args: ContactFormComponent) => ({\n  props: args,\n})"
+                "type": "Story<ContactDetailsComponent>",
+                "defaultValue": "(args: ContactDetailsComponent) => ({\n  props: args,\n})"
             },
             {
                 "name": "Default",
@@ -1413,6 +1472,16 @@
                 "deprecationMessage": "",
                 "type": "Story<FooterBottomComponent>",
                 "defaultValue": "(args: FooterBottomComponent) => ({\n  props: args,\n})"
+            },
+            {
+                "name": "Default",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "src/app/home/contact-form/ContactForm.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "Story<ContactFormComponent>",
+                "defaultValue": "(args: ContactFormComponent) => ({\n  props: args,\n})"
             },
             {
                 "name": "Default",
@@ -1448,21 +1517,21 @@
                 "name": "Default",
                 "ctype": "miscellaneous",
                 "subtype": "variable",
-                "file": "src/app/home/hotel-details-navigation/HotelDetailsNavigation.stories.ts",
-                "deprecated": false,
-                "deprecationMessage": "",
-                "type": "Story<HotelDetailsNavigationComponent>",
-                "defaultValue": "(args: HotelDetailsNavigationComponent) => ({\n  props: args,\n})"
-            },
-            {
-                "name": "Default",
-                "ctype": "miscellaneous",
-                "subtype": "variable",
                 "file": "src/app/home/nav-bar/NavBar.stories.ts",
                 "deprecated": false,
                 "deprecationMessage": "",
                 "type": "Story<NavBarComponent>",
                 "defaultValue": "(args: NavBarComponent) => ({\n  props: args,\n})"
+            },
+            {
+                "name": "Default",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "src/app/home/hotel-details-navigation/HotelDetailsNavigation.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "Story<HotelDetailsNavigationComponent>",
+                "defaultValue": "(args: HotelDetailsNavigationComponent) => ({\n  props: args,\n})"
             },
             {
                 "name": "Default",
@@ -1589,18 +1658,6 @@
                     "type": "literal type"
                 }
             ],
-            "src/app/home/contact-details/ContactDetails.stories.ts": [
-                {
-                    "name": "Default",
-                    "ctype": "miscellaneous",
-                    "subtype": "variable",
-                    "file": "src/app/home/contact-details/ContactDetails.stories.ts",
-                    "deprecated": false,
-                    "deprecationMessage": "",
-                    "type": "Story<ContactDetailsComponent>",
-                    "defaultValue": "(args: ContactDetailsComponent) => ({\n  props: args,\n})"
-                }
-            ],
             "src/app/home/active-route/ActiveRoute.stories.ts": [
                 {
                     "name": "Default",
@@ -1613,16 +1670,16 @@
                     "defaultValue": "(args: ActiveRouteComponent) => ({\n  props: args,\n})"
                 }
             ],
-            "src/app/home/contact-form/ContactForm.stories.ts": [
+            "src/app/home/contact-details/ContactDetails.stories.ts": [
                 {
                     "name": "Default",
                     "ctype": "miscellaneous",
                     "subtype": "variable",
-                    "file": "src/app/home/contact-form/ContactForm.stories.ts",
+                    "file": "src/app/home/contact-details/ContactDetails.stories.ts",
                     "deprecated": false,
                     "deprecationMessage": "",
-                    "type": "Story<ContactFormComponent>",
-                    "defaultValue": "(args: ContactFormComponent) => ({\n  props: args,\n})"
+                    "type": "Story<ContactDetailsComponent>",
+                    "defaultValue": "(args: ContactDetailsComponent) => ({\n  props: args,\n})"
                 }
             ],
             "src/app/home/footer-bottom/FooterBottom.stories.ts": [
@@ -1635,6 +1692,18 @@
                     "deprecationMessage": "",
                     "type": "Story<FooterBottomComponent>",
                     "defaultValue": "(args: FooterBottomComponent) => ({\n  props: args,\n})"
+                }
+            ],
+            "src/app/home/contact-form/ContactForm.stories.ts": [
+                {
+                    "name": "Default",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "src/app/home/contact-form/ContactForm.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "Story<ContactFormComponent>",
+                    "defaultValue": "(args: ContactFormComponent) => ({\n  props: args,\n})"
                 }
             ],
             "src/app/home/footer-wrapper/FooterWrapper.stories.ts": [
@@ -1673,18 +1742,6 @@
                     "defaultValue": "(args: HotelDetailsComponent) => ({\n  props: args,\n})"
                 }
             ],
-            "src/app/home/hotel-details-navigation/HotelDetailsNavigation.stories.ts": [
-                {
-                    "name": "Default",
-                    "ctype": "miscellaneous",
-                    "subtype": "variable",
-                    "file": "src/app/home/hotel-details-navigation/HotelDetailsNavigation.stories.ts",
-                    "deprecated": false,
-                    "deprecationMessage": "",
-                    "type": "Story<HotelDetailsNavigationComponent>",
-                    "defaultValue": "(args: HotelDetailsNavigationComponent) => ({\n  props: args,\n})"
-                }
-            ],
             "src/app/home/nav-bar/NavBar.stories.ts": [
                 {
                     "name": "Default",
@@ -1695,6 +1752,18 @@
                     "deprecationMessage": "",
                     "type": "Story<NavBarComponent>",
                     "defaultValue": "(args: NavBarComponent) => ({\n  props: args,\n})"
+                }
+            ],
+            "src/app/home/hotel-details-navigation/HotelDetailsNavigation.stories.ts": [
+                {
+                    "name": "Default",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "src/app/home/hotel-details-navigation/HotelDetailsNavigation.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "Story<HotelDetailsNavigationComponent>",
+                    "defaultValue": "(args: HotelDetailsNavigationComponent) => ({\n  props: args,\n})"
                 }
             ],
             "src/app/home/nav-top/NavTop.stories.ts": [
@@ -1815,9 +1884,19 @@
         "children": [
             {
                 "name": "routes",
-                "filename": "src/app/app-routing.module.ts",
+                "filename": "src/app/shared/routes/app-routing.module.ts",
                 "module": "AppRoutingModule",
-                "children": [],
+                "children": [
+                    {
+                        "path": "home",
+                        "component": "HomeComponent"
+                    },
+                    {
+                        "path": "",
+                        "redirectTo": "/home",
+                        "pathMatch": "full"
+                    }
+                ],
                 "kind": "module"
             }
         ]
@@ -1947,6 +2026,15 @@
                 "name": "GuestReviewComponent",
                 "coveragePercent": 0,
                 "coverageCount": "0/2",
+                "status": "low"
+            },
+            {
+                "filePath": "src/app/home/home.component.ts",
+                "type": "component",
+                "linktype": "component",
+                "name": "HomeComponent",
+                "coveragePercent": 0,
+                "coverageCount": "0/3",
                 "status": "low"
             },
             {
