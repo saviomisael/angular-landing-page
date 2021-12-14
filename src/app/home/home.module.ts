@@ -18,6 +18,7 @@ import { ReactiveFormsModule } from '@angular/forms';
 import { ContactDetailsComponent } from './contact-details/contact-details.component';
 import { FooterBottomComponent } from './footer-bottom/footer-bottom.component';
 import { FooterWrapperComponent } from './footer-wrapper/footer-wrapper.component';
+import { HomeComponent } from './home.component';
 
 @NgModule({
   declarations: [
@@ -36,9 +37,10 @@ import { FooterWrapperComponent } from './footer-wrapper/footer-wrapper.componen
     ContactDetailsComponent,
     FooterBottomComponent,
     FooterWrapperComponent,
+    HomeComponent,
   ],
   imports: [CommonModule, HttpClientModule, ReactiveFormsModule],
-  exports: [],
+  exports: [HomeComponent],
   providers: [OtherPackageService],
 })
 export class HomeModule {}

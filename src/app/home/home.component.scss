@@ -1,0 +1,5 @@
+@use 'settings' as colors;
+
+.main-content {
+  background-color: colors.$blue-light;
+}
